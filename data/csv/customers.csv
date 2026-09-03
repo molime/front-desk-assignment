@@ -1,0 +1,733 @@
+customer_id,first_name,last_name,company,kind,job_count,first_job,last_job,addresses
+cus_3fa02a2e5e944cb1952b019a40d3afc5,,,Starfish Hospitality,homeowner,145,2026-03-04T16:00:00Z,2026-09-01T20:24:17Z,101 Glasswort Terrace Rd Homestead FL 33155 | 69 Sanddollar Pointe Trail East Pinecrest FL 33155 | 10343 E Old Mangrove Rd F308 Pinecrest FL 33155 | 10343 E Old Mangrove Rd B324 Pinecrest FL 33155 | 104 N Grouper Hollow Square Palmetto Bay FL 33155 | 4220 E Old Mangrove Rd Unit A Coral Gables FL 33162 | 8504 E Old Mangrove Rd Palmetto Bay FL 33155 | 103 Bowline Isle Rd Pinecrest FL 33155 | 265 Plover Key Loop E Pinecrest FL 33155 | 44 Plumeria Harbor Dr Homestead FL 33155 | 87 Marlin Ridge Rd Coral Gables FL 33162 | 78 Cowrie Ln Cutler Bay FL 33162 | 8 Saltbush Terrace Ln Palmetto Bay FL 33155 | 104 North Grouper Hollow Square 3F Palmetto Bay FL 33155 | 8046 E Old Mangrove Rd Cutler Bay FL 33155 | 7 Kingfisher Hollow Lane Coral Gables FL 33162 | 45 Saltbush Bluff Ct Palmetto Bay FL 33155 | 90 N Nautilus Key Ln Pinecrest FL 33155 | 20 Bowline Isle Rd Pinecrest FL 33155 | 336 Wahoo Dr Coral Gables FL 33162 | 13 Seahorse Isle Lane Coral Gables FL 33162 | 27 Wahoo Glen Ln Pinecrest FL 33155 | 10254 E Old Mangrove Rd Unit 325 Pinecrest FL 33155 | 16 Seagrape Terrace Ln Coral Gables FL 33162 | 46 Palmetto Glen Loop Homestead FL 33162 | 17281 Amberjack Cay Rd Unit 301 Homestead FL 33162 | 227 Grouper Key Ln Pinecrest FL 33162 | 144 Amberjack Key Ln Unit 401 Coral Gables FL 33162 | 52 Portside Blvd E Pinecrest FL 33155 | 21 Marlin Cove Ln Palmetto Bay FL 33155 | 10140 E Old Mangrove Rd Unit 102C Palmetto Bay FL 33155 | 23011 Amberjack Cay Rd Ramsgate #16 Homestead FL 33162 | 279 Plover Key Loop E Pinecrest FL 33162 | 8600 E Old Mangrove Rd Unit 210 Homestead FL 33155 | 114 S Leeward Glen St Cutler Bay FL 33155 | 13 Rudder Reef Loop Pinecrest FL 33162 | 64 Tidewater Shores Ln Palmetto Bay FL 33162 | 1660 E Old Mangrove Rd Unit #302 Coral Gables FL 33162 | 255 Cormorant Rd Unit #8 Coral Gables FL 33162 | 90 Sanddollar Isle Ave Coral Gables FL 33162 | 23223 Amberjack Cay Road C1 - 704 Homestead FL 33162 | 321 Buttonwood Key St Coral Gables FL 33162 | 45 Wahoo Landing St Unit 45C Pinecrest FL 33155 | 399 Plumeria Harbor Drive Homestead FL 33162 | 192 E Egret Hollow Loop Homestead FL 33155 | 8266 East Old Mangrove Rd Palmetto Bay FL 33155 | 32 Permit Harbor Ln Coral Gables FL 33162 | 395 Bayberry Pointe Way Coral Gables FL 33162 | 41 E Egret Hollow Loop Homestead FL 33162 | 144 Osprey Reef Ln Coral Gables FL 33162 | 47 Osprey Reef Ln Coral Gables FL 33162 | 195 Skimmer Cove Ln Cutler Bay FL 33162 | 256 Windward Shores Way Cutler Bay FL 33155 | 40 Seashell Terrace Dr Homestead FL 33155 | 127 Wahoo Hollow St Coral Gables FL 33162 | 101 Seashell Cove Street Palmetto Bay FL 33155 | 10254 E Old Mangrove Rd High Pointe 422 Pinecrest FL 33155 | 349 Plumeria Harbor Dr Homestead FL 33155 | 13 Skimmer Ridge Loop Pinecrest FL 33162 | 157 Seagrape Glen Run E Homestead FL 33162 | 469 Wahoo Dr Coral Gables FL 33162 | 10254 E Old Mangrove Rd High Pointe Unit 36W Pinecrest FL 33155 | 639 Plumeria Cay Rd Coral Gables FL 33162 | 11 Egret Bluff Cv Cutler Bay FL 33155 | 21715 Amberjack Cay Rd Homestead FL 33162 | 83 Cowrie Ln Palmetto Bay FL 33155 | 10 Banyan Glen Ln Coral Gables FL 33162 | 9 E Egret Hollow Loop Cutler Bay FL 33155 | 56 E Egret Hollow Loop Homestead FL 33162 | 100 Plover Key Loop East Cutler Bay FL 33155 | 46 Palmetto Glen Loop Homestead FL 33155 | 350 Saltbush Reef Trail Unit 4 Coral Gables FL 33162 | 78 N Grouper Hollow Square Unit 6 Cutler Bay FL 33155 | 10254 E Old Mangrove Rd Unit 42W Pinecrest FL 33155 | 8 Osprey Landing Ct Cutler Bay FL 33155 | 11 Windward Shores Way Homestead FL 33155 | 8638 E Old Mangrove Rd 402A Homestead FL 33155 | 35 Spinnaker Harbor Drive Coral Gables FL 33162 | 134 Cocoplum Isle Dr Palmetto Bay FL 33155 | 10254 E Old Mangrove Rd 23W Pinecrest FL 33155 | 80 Portside Blvd W Unit #104 Homestead FL 33162
+cus_a5ac7cbfb1b143188345e511ec0b2c21,Lighthouse,Hospitality,,homeowner,101,2026-03-02T15:00:00Z,2026-09-11T16:00:00Z,"103 Grouper Landing Rd Casa de Egret Key Biscayne FL 33182 | 22 Cowrie Glen Way Coral Gables FL 33162 | 9300 Coquina Glen Blvd Unit 507 Key Biscayne FL 33182 | 4016 Sandcastle Harbor Dr Miami Beach FL 33182 | 1358 Ibis Cay Dr 1358 Davenport Sellers Key Biscayne FL 33182 | 9300 Coquina Glen Blvd Unit 509 Key Biscayne FL 33182 | 4555 Rudder Loop East Miami Beach FL 33182 | 5271 Skimmer Isle Drive Key Biscayne FL 33182 | 9800 Seahorse Ridge Blvd Unit 5612 Key Biscayne FL 33182 | 716 Amberjack Bluff Dr Key Biscayne FL 33182 | 4053 Sandcastle Harbor Dr Key Biscayne FL 33182 | 4101 Sandcastle Harbor Dr Miami Beach FL 33182 | 95 Gulfstream Reef Dr Daniels Retreat Coral Gables FL 33162 | 1892 Tidewater Landing Dr 1892 Villa Lago Key Biscayne FL 33182 | 8532 Spinnaker Ridge Ct Key Biscayne FL 33182 | 80 Hibiscus Reef Dr Bayberry Terrace Hibiscus Reef Key Biscayne FL 33182 | 1977 Flamingo Harbor Loop Key Biscayne FL 33182 | 4056 Sandcastle Harbor Dr Key Biscayne FL 33182 | 122 Marlin Hollow Dr Ariel Dunes II, 302 Miami Beach FL 33182 | 122 Marlin Hollow Dr Ariel Dunes II, 602 Miami Beach FL 33182 | 1922 Flamingo Harbor Loop Key Biscayne FL 33182 | 416 S Coral Ridge Pkwy Lighthouse Warehouse Coral Gables FL 33162 | 5274 Skimmer Isle Way Key Biscayne FL 33182 | 4287 Firebush Pointe 2 Key Biscayne FL 33182 | 9800 Seahorse Ridge Blvd Unit 5610 Key Biscayne FL 33182 | 823 Marlin Cay Dr Miami Beach FL 33182 | 4348 Firebush Pointe 2 Key Biscayne FL 33182 | 220 Ibis Hollow Dr Key Biscayne FL 33182 | 1843 Tidewater Landing Dr Key Biscayne FL 33182 | 8971 Rudder Cay Dr 8971 Rudder Cay Key Biscayne FL 33182 | 715 Amberjack Bluff Drive Miami Beach FL 33182 | 4806 Allamanda Shores Blvd Lavish Escape Miami Beach FL 33182 | 5245 Harborlight Cay Rd 30A Unit B Coral Gables FL 33162 | 1978 Flamingo Harbor Loop Key Biscayne FL 33182 | 1860 Cowrie Hollow Drive Key Biscayne FL 33182 | 218 Tern Landing Street Coral Gables FL 33162 | 212 Ixora Hollow Way Miami Beach FL 33182 | 1889 Flamingo Harbor Loop Key Biscayne FL 33182 | 1338 Seafoam Harbor Run E Key Biscayne FL 33182 | 4816 Allamanda Shores Boulevard Miami Beach FL 33182 | 505 Allamanda Pointe Pl Miami Beach FL 33182 | 5245 Harborlight Cay Rd 30A Unit A Coral Gables FL 33162 | 4468 Flamingo Bluff Drive Miami Beach FL 33182 | 1848 Tidewater Landing Drive Key Biscayne FL 33182 | 53 Sabal Bluff Court Key Biscayne FL 33182 | 4744 Allamanda Shores Blvd Miami Beach FL 33182 | 8609 Rudder Landing Lane Miami Beach FL 33182 | 8985 Rudder Cay Dr Miami Beach FL 33182 | 956 Cowrie Hollow Drive Unit 119 Key Biscayne FL 33182 | 2441 Seashell Ln Miami Beach FL 33182 | 2470 Seashell Ln Key Biscayne FL 33182 | 5087 Grouper Ridge Way Miami Beach FL 33182 | 9700 Seahorse Ridge Blvd Unit 4118 Key Biscayne FL 33182 | 9700 Seahorse Ridge Blvd Unit 4120 Key Biscayne FL 33182 | 1860 Tidewater Landing Drive Key Biscayne FL 33182 | 5000 S Sabal Shores Blvd Unit 7102 Key Biscayne FL 33182 | 70 Plumeria Isle Lane Unit C Homestead FL 33162 | 9100 Coquina Glen Blvd 454 Key Biscayne FL 33182 | 4848 Ixora Key Dr Key Biscayne FL 33182 | Rudder Shores 5155 Key Biscayne FL 33182 | 8111 Keel Cove Way Key Biscayne FL 33182"
+cus_d37b4a33f592412593e7d6d6b6dd44de,,,Whitecap Hospitality,homeowner,83,2026-03-04T20:00:00Z,2026-09-10T14:00:00Z,239 Wahoo Hollow St Coral Gables FL 33162 | 9955 E Old Mangrove Rd Unit 110 Homestead FL 33162 | 81 Portside Boulevard 103 Homestead FL 33162 | 130 Wahoo Glen Ln Pinecrest FL 33155 | 75 Wahoo Cay St Kendall FL 33155 | 219 Grouper Key Lane Pinecrest FL 33162 | 46 Bougainvillea Glen Road Coral Gables FL 33162 | 40 Nautilus Hollow Lane Unit A3 Homestead FL 33162 | 277 Portside Key Rd Coral Gables FL 33162 | 121 Rudder Glen St Coral Gables FL 33162 | 69 Permit Trail Homestead FL 33162 | 36 Wahoo Reef Ln Homestead FL 33162 | 144 Amberjack Key Ln Unit 107 Coral Gables FL 33162 | 70 Halyard Isle Circle Cutler Bay FL 33155 | 255 Allamanda Cay Cir Unit 5 Homestead FL 33155 | 143 Frangipani Terrace Way Pinecrest FL 33162 | 4 Harborlight Shores Blvd S Unit 202 Coral Gables FL 33162 | 81 S Portside Isle St 203 Cutler Bay FL 33155 | 172 E Egret Hollow Loop Palmetto Bay FL 33155 | 54 Plover Terrace St Pinecrest FL 33162 | 4045 West Old Mangrove Rd 301 Coral Gables FL 33162 | 4100 East Old Mangrove Rd 907 Coral Gables FL 33162 | 107 Seagrape Glen Run E Homestead FL 33162 | 8 Saltbush Pointe Ln Palmetto Bay FL 33162 | 336 West Glasswort Pointe Avenue Homestead FL 33162 | 38 Snapper Hollow Street Coral Gables FL 33162 | 281 Snapper Hollow St Coral Gables FL 33162 | 40 Seashell Terrace Drive Homestead FL 33155 | 8191 E Old Mangrove Rd Cutler Bay FL 33155 | 565 Tern Harbor Loop Coral Gables FL 33162 | 82 Plover Key Loop West Cutler Bay FL 33155 | 134 Wahoo Hollow St Coral Gables FL 33162 | 303 Sandcastle Shores Drive Coral Gables FL 33162 | 11 Sanddollar Pointe Trail West Palmetto Bay FL 33155 | 4 Harborlight Shores Blvd S unit 202 Coral Gables FL 33162 | 216 Cormorant Rd Unit 4B Coral Gables FL 33162 | 14 Saltbush Terrace Lane Homestead FL 33162 | 10254 East Old Mangrove Rd Unit 434 Pinecrest FL 33155 | 128 Cormorant Rd Unit 13 Coral Gables FL 33162 | 2050 W Old Mangrove Rd 219 Coral Gables FL 33162 | 184 E Coquina Key Ave Coral Gables FL 33162 | 316 S Seagrape Pkwy Coral Gables FL 33162 | 3210 E Old Mangrove Rd Coral Gables FL 33162 | 93 Barnacle Key St Coral Gables FL 33162 | 52 Palmetto Bluff Ct Coral Gables FL 33162 | 561 Bougainvillea Glen Rd Unit 202 Coral Gables FL 33162 | 70 Seahorse Isle Lane Coral Gables FL 33162 | 100 S Seashell Reef Ln Unit 5D Coral Gables FL 33162 | 11 Firebush Pointe Dr Unit 723 Coral Gables FL 33162 | 2441 West Old Mangrove Rd D204 Coral Gables FL 33162 | 18 Plover Shores Drive Unit B Coral Gables FL 33162 | 44 Sargassum Pointe Dr #B Coral Gables FL 33162
+cus_999b657ded4e46749c0618f176be1320,Windward,Hospitality,,homeowner,59,2026-03-07T23:00:00Z,2026-08-31T16:00:00Z,105 Bowline Pointe Cir Coral Gables FL 33162 | 429 Kingfisher Pointe Ln Unit 425A Palmetto Bay FL 33155 | 5 Bayberry Glen St Coral Gables FL 33162 | 2804 E Old Mangrove Rd Coral Gables FL 33162 | 21 Moonraker Key Street Coral Gables FL 33162 | 169 Moonraker Landing Circle Coral Gables FL 33162 | 29 E Cowrie Cove St Coral Gables FL 33162 | 23 E Cowrie Cove St Coral Gables FL 33162 | 146 Buttonwood Key St Coral Gables FL 33162 | 274 Orchid Bluff Street Cutler Bay FL 33155 | 164 Limestone Glen Way Coral Gables FL 33162 | 213 Moonraker Landing Circle Coral Gables FL 33162 | 21 Seashell Key Cir Coral Gables FL 33162 | 1235 Egret Pointe Dr Coral Gables FL 33162 | 299 Orchid Bluff St Homestead FL 33155 | 115 Tidewater Shores Lane Palmetto Bay FL 33155 | 194 West Bowline Isle Cutler Bay FL 33155 | 305 Orchid Bluff St Cutler Bay FL 33155 | 97 Amberjack Isle Lane Kendall FL 33155 | 54 Firebush Isle Lane Coral Gables FL 33162 | 89 Harborlight Shores Blvd W Coral Gables FL 33162 | 1938 E Old Mangrove Rd Coral Gables FL 33162 | 605 Egret Pointe Drive Coral Gables FL 33162 | 126 Moonraker Key St Coral Gables FL 33162 | 37 Cowrie Pointe Way 419 Palmetto Bay FL 33155 | 305 Orchid Bluff St Cutler Bay FL 33155 | 113A Saltbush Bluff Ct Palmetto Bay FL 33155 | 337 Kingfisher Pointe Lane 316B Palmetto Bay FL 33155 | 45 Kelp Harbor Lane Coral Gables FL 33162 | 136 Moonraker Key St Coral Gables FL 33162 | 17 Bayberry Glen Lane Coral Gables FL 33162 | 11 Permit Terrace Ct Coral Gables FL 33162 | 323 Orchid Bluff St Cutler Bay FL 33155 | 128 Kelp Terrace St Coral Gables FL 33162 | 51 Cowrie Terrace Ln Coral Gables FL 33162
+cus_d2880f9db8464fdeb7dfee5109c9a86f,Tamara,Cruz,,business,48,2026-03-17T19:00:00Z,2026-09-01T20:00:00Z,4122 Sandcastle Harbor Dr Key Biscayne FL 33182 | 15817 Amberjack Cay Rd 407E Homestead FL 33143 | 90 Rudder Ridge Dr E Miami Beach FL 33182 | 2076 Cowrie Hollow Dr Unit 3013 Key Biscayne FL 33182 | Firebush Pointe 2 Unit 4295 Key Biscayne FL 33182 | 4303 Firebush Pointe 2 Key Biscayne FL 33182 | 4144 Sandcastle Harbor Dr Miami Beach FL 33182 | 5277 Skimmer Isle Dr Key Biscayne FL 33182 | 9600 Seahorse Ridge Boulevard Lasata 3216 Key Biscayne FL 33182 | Firebush Pointe 2 Unit 4252 Key Biscayne FL 33182 | 16819 Amberjack Cay Rd Unit 2608 Homestead FL 33162 | 9011 Cormorant Reef Blvd 1206 Key Biscayne FL 33182 | 16819 Amberjack Cay Rd Tidewater 2204 Homestead FL 33162 | 4302 Firebush Pointe 2 Key Biscayne FL 33182 | 15200 Mangrove Isle Parkway 0906 Miami Beach FL 33182 | 4324 Firebush Pointe 2 Miami Beach FL 33182 | 9011 Cormorant Reef Blvd Unit 0212 Key Biscayne FL 33182 | 4283 Firebush Pointe 2 Key Biscayne FL 33182 | 9011 Cormorant Reef Blvd Unit 0802 Key Biscayne FL 33182 | 1874 Tidewater Landing Dr Villa Lago 1874 Key Biscayne FL 33182 | 296 Sabal Shores Boulevard West Key Biscayne FL 33182 | 16819 Amberjack Cay Road Homestead FL 33162 | 296 Sabal Shores Blvd W Key Biscayne FL 33182 | 9011 Cormorant Reef Blvd Beach Manor 0812 Key Biscayne FL 33182 | 9011 Cormorant Reef Boulevard Key Biscayne FL 33182 | 9011 Bayfront Hwy Tennis Village 37 Key Biscayne FL 33182 | 550 Cormorant Reef Blvd Unit 0901 Key Biscayne FL 33182 | Firebush Pointe 2 Unit 4231 Key Biscayne FL 33182 | 5440 Orchid Isle Circle Key Biscayne FL 33182 | 5246 Orchid Isle Dr Key Biscayne FL 33182
+cus_acade4679d9d47dc92b182672fbff811,Janice,Donovan,Osprey Hospitality,business,46,2026-03-06T15:00:00Z,2026-08-11T00:00:00Z,34 Egret Harbor St Coral Gables FL 33162 | 27 Barnacle Landing Ln Coral Gables FL 33162 | 128 Banyan Terrace Way Coral Gables FL 33162 | 33 Seahorse Hollow Lane Coral Gables FL 33162 | 42 Allamanda Ridge Blvd Coral Gables FL 33162 | 91 Allamanda Ridge Blvd Coral Gables FL 33162 | 63 Mangrove N Coral Gables FL 33162 | 36 Bougainvillea Harbor Lane Coral Gables FL 33162 | 34 Palmetto Isle Way Coral Gables FL 33162 | 35 Seashell Harbor Rd Coral Gables FL 33162 | 7998 East Old Mangrove Rd Homestead FL 33162 | 178 S Seagrape Dr Cutler Bay FL 33155 | 2542 E Old Mangrove Rd Coral Gables FL 33162 | 25 S Halyard Ridge Dr Unit 211 Coral Gables FL 33162 | 81 Hibiscus Bluff Rd Pinecrest FL 33155 | 15 Oleander Court Coral Gables FL 33162 | 44 Coquina Isle Way Coral Gables FL 33162 | 94 Sanddollar Cove Trail Coral Gables FL 33162 | 145 Amberjack Key Lane Saltbush Key 203 Coral Gables FL 33162 | 49 Mangrove N Coral Gables FL 33162 | 11 Firebush Pointe Drive 831 Coral Gables FL 33162 | 17 Coquina Harbor Way Coral Gables FL 33162 | 144 Amberjack Key Ln 205 Coral Gables FL 33162 | 3092 W Old Mangrove Rd Coral Gables FL 33162 | 2743 East Old Mangrove Rd 201 Coral Gables FL 33162 | 105 Ixora Isle Dr Coral Gables FL 33162 | 126 Ixora Isle Walk Coral Gables FL 33162 | 61 Cowrie Terrace Ln Coral Gables FL 33162 | 40 Wahoo Harbor Ln Cutler Bay FL 33155 | 2421 W Old Mangrove Rd 205 Coral Gables FL 33162 | 234 W Sargassum Shores Ave Coral Gables FL 33162
+cus_0f7b6320d618477a973d44675b1a28a2,,,Tidewater Hospitality,homeowner,45,2026-03-04T17:00:00Z,2026-08-24T16:00:00Z,130 Egret Way Coral Gables FL 33162 | 65 Permit Landing Ln Coral Gables FL 33162 | 10343 E Old Mangrove Rd Building G unit 375 Pinecrest FL 33155 | 3880 E Old Mangrove Rd Unti 505 Coral Gables FL 33162 | 128 Marlin Ridge Rd Coral Gables FL 33162 | 3880 E Old Mangrove Rd Unit 502 Coral Gables FL 33162 | 10343 East Old Mangrove Rd Building G - B377 Palmetto Bay FL 33162 | 90 Bonefish Reef Cir Homestead FL 33162 | 11 Firebush Pointe Drive Unit 931 Coral Gables FL 33162 | 53 Palmetto Bluff Court Coral Gables FL 33162 | 3799 E Old Mangrove Rd 12C Coral Gables FL 33162 | 231 Portside Key Rd Unit 1304 Coral Gables FL 33162 | 35 Kelp Terrace St Coral Gables FL 33162 | 51 Ixora Isle Street 273 Coral Gables FL 33162 | 35 Frangipani Cay Ct Cutler Bay FL 33155 | 67 W Egret Hollow Loop Homestead FL 33162 | 28 Nautilus Cove Ln Coral Gables FL 33162 | 10140 East Old Mangrove Rd Unit 19 Palmetto Bay FL 33155 | 3880 E Old Mangrove Rd Unit 506 Coral Gables FL 33162 | 94 Cowrie Harbor Circle Coral Gables FL 33162 | 410 Ixora Isle Dr Coral Gables FL 33162 | 213 Skimmer Cove Ln Cutler Bay FL 33162 | 8 Amberjack Shores Ln Homestead FL 33162 | 5472 W Old Mangrove Rd Coral Gables FL 33162 | 416 South Coral Ridge Pkwy Coral Gables FL 33162 | 80 Permit Landing Lane Coral Gables FL 33162 | 68 Bougainvillea Isle Way Coral Gables FL 33162 | 107 Sargassum Ridge Lane Coral Gables FL 33162 | 11 Firebush Pointe Dr 131 Coral Gables FL 33162 | 11 Firebush Pointe Drive 214 Coral Gables FL 33162 | 13 Whitecap Isle Ct Coral Gables FL 33162 | 142 Permit Shores Cir Cutler Bay FL 33155
+cus_7e6ca914b7644668b09accb4644592c9,Palmetto,Hospitality,Whitecap Hospitality,business,26,2026-03-11T22:00:00Z,2026-08-31T16:00:00Z,550 Cormorant Reef Blvd 302 Key Biscayne FL 33182 | 722 Cormorant Reef Blvd 704 Key Biscayne FL 33182 | 550 Cormorant Reef Blvd Unit 309 Key Biscayne FL 33182 | 722 Cormorant Reef Boulevard 909 Key Biscayne FL 33182 | Oleander Glen Key Biscayne 33182 | 550 Cormorant Reef Boulevard Tides Unit 503 Key Biscayne FL 33182 | 722 Cormorant Reef Blvd 314 Key Biscayne FL 33182 | 515 Cormorant Reef Blvd Unit 103 Coral Gables FL 33162 | 515 Cormorant Reef Blvd Unit 103 Coral Gables FL 33162 | 9011 Bayfront Hwy Key Biscayne FL 33182 | 550 Cormorant Reef Blvd 410 Key Biscayne FL 33182 | 515 Cormorant Reef Boulevard Unit 1105A Coral Gables FL 33162 | 338 Cormorant Reef Blvd Key Biscayne FL 33182 | 515 Cormorant Reef Blvd 107 Coral Gables FL 33162 | 550 Cormorant Reef Blvd 1310 Key Biscayne FL 33182 | 550 Cormorant Reef Boulevard Unit 803 Key Biscayne FL 33182 | 338 Cormorant Reef Boulevard Key Biscayne FL 33182 | 515 Cormorant Reef Blvd 1006 Coral Gables FL 33162
+cus_83d7ed8701ae4659aab3ed23c73c3a23,Tanya,Delaney,Lighthouse Hospitality,business,26,2026-07-20T13:00:00Z,2026-09-03T17:00:00Z,4311 Banyan Ridge Blvd R Building Fort Lauderdale FL 33176 | 4311 Banyan Ridge Blvd 114 Fort Lauderdale FL 33176 | 4311 Banyan Ridge Boulevard 13 Fort Lauderdale FL 33176 | 4311 Banyan Ridge Blvd 41 Fort Lauderdale FL 33176 | 4311 Banyan Ridge Blvd 89 Fort Lauderdale FL 33176 | 4311 Banyan Ridge Boulevard 126 Fort Lauderdale FL 33176 | 4311 Banyan Ridge Boulevard 13 Fort Lauderdale FL 33176 | 4311 Banyan Ridge Blvd 102 Fort Lauderdale FL 33176 | 4311 Banyan Ridge Blvd Unit 64 Fort Lauderdale FL 33176 | 4311 Banyan Ridge Blvd Unit 134 Fort Lauderdale FL 33176 | 4311 Banyan Ridge Blvd Unit 135 Fort Lauderdale FL 33176 | 4311 Banyan Ridge Boulevard Building E Fort Lauderdale FL 33176 | 4311 Banyan Ridge Blvd Unit 195 Fort Lauderdale FL 33176 | 4311 Banyan Ridge Boulevard 132 Fort Lauderdale FL 33176 | 4311 Banyan Ridge Blvd Unit 54 Fort Lauderdale FL 33176 | 4311 Banyan Ridge Blvd Unit 41 Fort Lauderdale FL 33176 | 4311 Banyan Ridge Blvd Unit 43 Fort Lauderdale FL 33176 | 4311 Banyan Ridge Blvd Unit 20 Fort Lauderdale FL 33176 | 4311 Banyan Ridge Blvd 106 Fort Lauderdale FL 33176 | 4311 Banyan Ridge Boulevard Building S Fort Lauderdale FL 33176
+cus_adbfe65309a14d3aa33c5da5efb03882,Palmetto,Hospitality,Palmetto Hospitality,homeowner,23,2026-03-06T19:30:00Z,2026-08-28T00:00:00Z,277 E Kelp Key St Pinecrest FL 33162 | 108 Limestone Isle Drive Homestead FL 33162 | 48 Whitecap Glen Ln Cutler Bay FL 33162 | 727 Plumeria Cay Rd B104 Coral Gables FL 33162 | 772 Plumeria Cay Rd Unit A104 Coral Gables FL 33162 | 491 Halyard Rd Coral Gables FL 33162 | 2226 S Seagrape Pkwy Coral Gables FL 33162 | 51 Bayberry Reef Avenue Coral Gables FL 33162 | 303 Cowrie Cove Pl Coral Gables FL 33162 | 337 Cormorant Rd Coral Gables FL 33162 | 5055 West Old Mangrove Rd 1025 Coral Gables FL 33162 | 277 E Kelp Key St Pinecrest FL 33155 | 76 Permit Trail Cutler Bay FL 33155
+cus_850b89ea32694506bce75935b21d5a14,Sofia,Rowe,,business,18,2026-04-07T16:30:00Z,2026-08-19T16:00:00Z,125 Plumeria Glen Dr Unit 109 Miami Beach FL 33182 | 485 Buttonwood Isle Dr Coral Gables FL 33162 | 208 59th St Homestead FL 33162 | 53 Saltgrass Pointe Ct Coral Gables FL 33162 | 65 Saltgrass Pointe Ct Coral Gables FL 33162 | 4650 Cocoplum Cove Miami Beach FL 33182 | 114 Skimmer Landing Dr 174 Key Biscayne FL 33182 | 543 Plumeria Harbor Dr Homestead FL 33162 | 29 Palmetto Harbor Dr Unit B Coral Gables FL 33162 | 1152 North Coral Ridge Pkwy Coral Gables FL 33162
+cus_62b65afb039f4a859a1d2c60bd0cda12,Tidewater,,Tidewater Hospitality,business,18,2026-03-16T00:00:00Z,2026-07-16T20:30:00Z,25 Permit Terrace Ct Coral Gables FL 33162 | 52 Frangipani Reef Ave Coral Gables FL 33162 | 3959 W Old Mangrove Rd Coral Gables FL 33162 | 111 Windward Pointe Road Coral Gables FL 33162 | 3604 E Old Mangrove Rd C10 Coral Gables FL 33162 | 414 Buttonwood Isle Drive Coral Gables FL 33162 | 4923 E Old Mangrove Rd Unit E105 Coral Gables FL 33162 | 1984 S Seagrape Pkwy Coral Gables FL 33162 | 5634 W Old Mangrove Rd Coral Gables FL 33162 | 23 Bowline Shores Drive Coral Gables FL 33162 | 380 Bowline Pointe Circle Coral Gables FL 33162 | 92 Kelp Bluff Avenue Coral Gables FL 33162 | 3604 East Old Mangrove Rd A8 Coral Gables FL 33162 | 207 Egret Ridge Circle Coral Gables FL 33162 | 34 Portside Glen Drive Coral Gables FL 33162 | 91 Kelp Bluff Ave Coral Gables FL 33162 | 79 Frangipani Reef Ave Coral Gables FL 33162
+cus_f144afd638ad4bdea73e336d386e56f5,Kayla,,Tidewater Hospitality,business,16,2026-04-09T19:30:00Z,2026-08-07T18:00:00Z,219 Plover Street Miami Beach FL 33182 | 1935 Cowrie Hollow Dr Key Biscayne FL 33182 | 4728 Saltgrass Cove Cove Miami Beach FL 33182 | 83 Seahorse Landing St Miami Beach FL 33182 | 90 Seahorse Landing St Miami Beach FL 33182 | 62 Amberjack Harbor St Miami Beach FL 33182 | 47 Glasswort Cove Ln Miami Beach FL 33182 | 23 Tidewater Pointe Wy Key Biscayne FL 33182 | 1881 Flamingo Harbor Loop Key Biscayne FL 33182
+cus_2d0db62c7b1e4a01bf08e91182569761,Starfish,Hospitality,Tidewater Hospitality,homeowner,15,2026-03-04T16:00:00Z,2026-09-01T18:00:00Z,294 Bowline Pointe Cir Coral Gables FL 33162 | 32 E Firebush Terrace Place Unit 102 Homestead FL 33162 | 31 Jacaranda Shores St Coral Gables FL 33162 | 120 Nautilus Ridge Street Coral Gables FL 33162 | 1680 E Old Mangrove Rd Unit 301 Coral Gables FL 33162 | 245 W Cocoplum Glen Dr Coral Gables FL 33162 | 517 Bougainvillea Glen Road Coral Gables FL 33162 | 42 Flamingo St Coral Gables FL 33162 | 1312 Egret Pointe Drive Coral Gables FL 33162 | 49 Wahoo Cay St Cutler Bay FL 33155 | 359 Bowline Pointe Cir Coral Gables FL 33162 | 31 Jacaranda Cay St Coral Gables FL 33162
+cus_5ca6b2e045ed4d86ac87de532774e50b,Martha,Olsen,Saltmarsh Hospitality,business,15,2026-03-11T20:00:00Z,2026-08-31T18:00:00Z,29 Moonraker Pointe Miami Beach FL 33182 | 20 Plover Landing Lane Cutler Bay FL 33155 | 3646 Bayfront Hwy Miami Beach FL 33182 | 37 Egret Way Coral Gables FL 33162 | 8077 East Old Mangrove Rd Cutler Bay FL 33155 | 4762 Allamanda Shores Blvd Miami Beach FL 33182 | 4762 Allamanda Shores Blvd Miami Beach FL 33182 | 45 Limestone Terrace Cove Coral Gables FL 33162 | 3644 Bayfront Hwy Miami Beach FL 33182 | 410 Saltbush Reef Trail Coral Gables FL 33162 | 4655 Palmetto Cove Way Miami Beach FL 33182 | 56 Amberjack Key Ln 16B Coral Gables FL 33162
+cus_d17276f322f8401e89addb671ee91f17,,,Palmetto Hospitality,business,14,2026-03-05T15:00:00Z,2026-09-03T14:00:00Z,285 Bayberry Cove St Unit #8B Key Biscayne FL 33182 | 112 Marlin Hollow Dr Unit 610 Key Biscayne FL 33182 | 8620 Rudder Landing Lane Miami Beach FL 33182 | 5184 Grouper Ridge Dr Key Biscayne FL 33182 | 1048 Bayfront Hwy East Unit 101W Miami Beach FL 33182 | 285 Bayberry Cove St 20 B Key Biscayne FL 33182 | 1160 Cowrie Hollow Dr 314A Key Biscayne FL 33182 | 1200 Bayfront Hwy Unit 312B Key Biscayne FL 33182 | 1200 Cowrie Hollow Dr PH #1107B Key Biscayne FL 33182 | 1008 Oleander Cay Rd Miami Beach FL 33182 | 8969 Rudder Cay Drive Miami Beach FL 33182
+cus_edb85f3f4e944d8882c345009c08c14a,,,,homeowner,14,2026-03-06T22:00:00Z,2026-08-19T18:30:00Z,1200 Cowrie Hollow Dr Unit 209B Key Biscayne FL 33182 | 4463 West Old Mangrove Rd Unit 300 (Costa Blanca) Coral Gables FL 33162 | 226 Allamanda Pointe Street Coral Gables FL 33162 | 114 Skimmer Landing Drive Unit 273 Key Biscayne FL 33182 | 1096 Cowrie Hollow Dr Unit 803 Key Biscayne FL 33182 | 1952 Cowrie Hollow Dr Unit EW 404 Key Biscayne FL 33182 | 49 Barnacle Landing Lane Coral Gables FL 33162 | 111 E Plover Shores Dr #B Kendall FL 33155 | 3425 Bayfront Hwy Miami Beach FL 33182 | 97 Lighthouse Key Rd Coral Gables FL 33162 | 291 Cowrie Hollow Dr Unit 204 Key Biscayne FL 33182 | 350 Saltbush Reef Trail #3 Coral Gables FL 33162
+cus_97ccaa1120b64abb8601982e8802fab5,Alexa,Wiley,Whitecap Hospitality,homeowner,14,2026-03-08T18:00:00Z,2026-09-01T20:30:09Z,50 Barnacle Reef St Unit 406 Miami Beach FL 33182 | 12 Firebush Hollow Lane Coral Gables FL 33162 | 156 Egret Way Coral Gables FL 33162 | 293 Sanddollar Cove Trail Coral Gables FL 33162 | 50 Barnacle Reef St Unit 403 Miami Beach FL 33182 | 130 Seahorse Pointe St Coral Gables FL 33162 | 165 Glasswort Landing Ln Coral Gables FL 33162 | 24 Plumeria Isle Ln Unit A Kendall FL 33155
+cus_d1c6c46e09424c1f93c525e02d5daa21,,,Starfish Hospitality,business,14,2026-07-29T22:45:00Z,2026-08-22T15:00:00Z,828 Leeward Hollow Ct Fort Lauderdale FL 33175 | 5577 N Jacaranda Hollow Way Fort Lauderdale FL 33175 | 13555 Keel Hollow Dr Unit 19C (downstairs unit) Fort Lauderdale FL 33175 | 13785 Keel Hollow Dr 53 Fort Lauderdale FL 33175 | 13555 Keel Hollow Drive Unit 21C Fort Lauderdale FL 33175 | 14511 Keel Hollow Dr 707 Fort Lauderdale FL 33175 | 13817 Keel Hollow Dr 504 Fort Lauderdale FL 33175 | 14391 Keel Hollow Dr B Fort Lauderdale FL 33175 | 13555 Keel Hollow Dr 13CD Fort Lauderdale FL 33175
+cus_1f64709ad0a7446eb4fe7321e69b1738,Gail,Clarke,Saltmarsh Hospitality,homeowner,13,2026-06-26T15:00:00Z,2026-08-11T17:00:00Z,44 Cocoplum Reef Aly Palmetto Bay FL 33155 | 29 Spinnaker Terrace Alley Homestead FL 33155 | 68 Skimmer Hollow Aly Palmetto Bay FL 33155 | 286 Skimmer Cove Ln Cutler Bay FL 33155 | 75 Mangrove Cay Alley Homestead FL 33155 | 111 West Barnacle Harbor Street Cutler Bay FL 33162 | 61 Kelp Shores Alley Palmetto Bay FL 33155 | 213 N Nautilus Terrace St Cutler Bay FL 33155 | 70 Sargassum Hollow Dr Coral Gables FL 33162 | 115 Cowrie Terrace Ln Coral Gables FL 33162
+cus_a6463d944eef4f6a84cecb2023f399d2,Harper,Parks,,homeowner,12,2026-05-08T16:00:00Z,2026-08-12T16:00:00Z,74 Sandcastle Hollow Dr Coral Gables FL 33162 | 42 Glasswort Landing Ln Coral Gables FL 33162 | 30 Seafoam Isle Ln Homestead FL 33155 | 54 Glasswort Terrace Rd Pinecrest FL 33155 | 5583 W Old Mangrove Rd Coral Gables FL 33162 | 4100 East Old Mangrove Rd 1403 Coral Gables FL 33162 | 5055 W Old Mangrove Rd Unit 1004 Coral Gables FL 33162 | 73 Plover Key Loop E Cutler Bay FL 33155 | 70 Limestone Key Rd N 3 Palmetto Bay FL 33155
+cus_fc71844a37d844c49faba69c15f5ed87,Lorena,Hopkins,Windward Hospitality,homeowner,11,2026-03-23T20:00:00Z,2026-08-25T19:00:00Z,51 Whitecap Reef Ln Coral Gables FL 33162 | N Leeward Landing Dr Lot 1 FL 33162 | 790 North Coral Ridge Pkwy Coral Gables FL 33162 | 138 Limestone Key Point Palmetto Bay FL 33155 | Flamingo Cove Rd Lot 22 Coral Gables FL 33162
+cus_63721f2ed17f4d09aa06d38ae2cdf48a,Whitecap,Hospitality,,homeowner,11,2026-06-30T17:00:00Z,2026-09-01T18:02:09Z,585 Moonraker Reef Blvd Suite 201 Key Biscayne FL 33182 | 531 Egret Landing Blvd Unit 4 Miami Beach FL 33182 | 215 Moonraker Reef Blvd Suite 201 Key Biscayne FL 33182 | 536 Kelp Landing Dr Miami Beach FL 33182
+cus_189f9843bb73425a933a7bbbf1dab747,Zoe,Rowe,Saltmarsh Hospitality,business,11,2026-03-24T14:00:00Z,2026-09-09T14:00:00Z,520 Sandcastle Shores Dr 115 Miami Beach FL 33182 | 2900 Bayfront Hwy 201 Key Biscayne FL 33182 | 1018 Bayfront Hwy 1430 Miami Beach FL 33182 | 2900 Bayfront Hwy 107 Key Biscayne FL 33182 | 1018 Bayfront Hwy 250 Miami Beach FL 33182 | 4428 Flamingo Bluff Dr Miami Beach FL 33182 | 9500 Seahorse Ridge Blvd 2615 Key Biscayne FL 33182 | 7 Grouper Shores Cir Key Biscayne FL 33182
+cus_5538b01824c246379d20850ad5c00199,Tamara,Ramsey,Longleaf Hospitality,homeowner,10,2026-03-15T20:00:00Z,2026-07-30T14:00:00Z,106 Bowline Cove Way Key Biscayne FL 33182 | 88 Jacaranda Glen Ln Coral Gables FL 33162 | 150 N Bonefish Cay St Coral Gables FL 33162 | 257 Grouper Landing Road Unit 5 Key Biscayne FL 33182 | 775 Sandcastle Shores Dr Unit 2046 Miami Beach FL 33182 | 35 Sea-Lavender Cove Lane Coral Gables FL 33162 | 91 Plover Shores Drive Coral Gables FL 33162
+cus_8b97f94efc2a4c9fa0d9c2b9bb03495a,Whitecap,,,homeowner,9,2026-06-23T14:00:00Z,2026-08-31T14:00:00Z,938 Coquina Terrace Hialeah FL 33154 | 302 Palmetto Key Coral Gables FL 33162 | 10 Palmetto Pointe Rd NE Doral FL 33132 | 400 Osprey Ridge Blvd Miami Beach FL 33182 | 5579 Flamingo Glen Dr Miami FL 33147 | 341 Snapper Isle Blvd Miami FL 33174 | 81 Ixora Pointe Dr Miami Beach FL 33182 | 90 Kelp Cove Dr Coral Gables FL 33162 | 402 Bowline Key Rd Coral Gables FL 33162
+cus_96e7620bddbd4153b91f803fa7c2b549,Diego,,Lighthouse Hospitality,business,9,2026-05-30T23:16:19Z,2026-08-31T17:30:00Z,5133 Grouper Ridge Cir Miami Beach FL 33182 | 5259 Skimmer Isle Dr Key Biscayne FL 33182 | 5403 Orchid Isle Ln N Key Biscayne FL 33182 | 4106 Sandcastle Harbor Dr 4106 Miami Beach FL 33182 | Barnacle Shores Dr 4266 Key Biscayne FL 33182 | 433 Lighthouse Glen Cir Miami Beach FL 33182 | 912 Marlin Cay Ln Key Biscayne FL 33182
+cus_993bbbde0d3c4928a5e0549ce220ca3d,,,,homeowner,8,2026-05-12T15:00:00Z,2026-08-17T23:00:00Z,48 Coquina Landing Ave Coral Gables FL 33162 | 9815 Barnacle Glen 98 40 Key Biscayne FL 33182 | 3395 E Old Mangrove Rd Coral Gables FL 33162 | 5151 Grouper Ridge Cir Miami Beach FL 33182 | 675 Cowrie Hollow Drive Unit 304D Key Biscayne FL 33182 | 550 Cormorant Reef Blvd 401 Key Biscayne FL 33182 | 1952 Cowrie Hollow Dr 202 Key Biscayne FL 33182
+cus_536f048968c64989ba27748240139cbb,,,,business,8,2026-04-06T19:30:00Z,2026-08-25T15:00:00Z,4495 Flamingo Bluff Dr Miami Beach FL 33182 | 5055 W Old Mangrove Rd 1019 Coral Gables FL 33162 | 75 Ixora Cay St Miami Beach FL 33182 | 2988 Bayfront Hwy Miami Beach FL 33182 | 634 Sandcastle Shores Dr Miami Beach FL 33182 | 3469 Bayfront Hwy Miami Beach FL 33182 | 8077 East Old Mangrove Rd Cutler Bay FL 33155
+cus_090be87d6d3746fd8ec81ec9ff4a8e8b,Carmen,McGuire,Leeward Hospitality,business,8,2026-05-05T14:00:00Z,2026-07-28T16:00:00Z,1940 Nautilus Landing Boulevard Unit 4 Hialeah FL 33154 | 1940 Nautilus Landing Blvd Unit 15 Hialeah FL 33154 | 1940 Nautilus Landing Blvd Unit 5 Hialeah FL 33154 | 1940 Nautilus Landing Blvd Unit 21 Hialeah FL 33154 | 1940 Nautilus Landing Boulevard Unit 20 Hialeah FL 33154 | 1940 Nautilus Landing Blvd 17 Hialeah FL 33154 | 1940 Nautilus Landing Blvd Unit 14 Hialeah FL 33154 | 1940 Nautilus Landing Blvd 24 Hialeah FL 33154
+cus_3f188ff02cfb4f31beca2b592bb2a17a,Ruby,Stokes,,homeowner,8,2026-06-25T21:30:00Z,2026-07-24T21:00:00Z,66 Seagrape Glen St Miami Beach FL 33182 | 77 Plumeria Glen Dr Miami Beach FL 33182 | 81 Sea-Lavender Terrace St Miami Beach FL 33182 | 77 Ixora Cay St Miami Beach FL 33182 | 210 Plover St Key Biscayne FL 33182
+cus_ebb9e123690a4435ac2a62f30377a5c5,Caleb,Rhodes,,homeowner,7,2026-03-24T20:00:00Z,2026-08-08T16:00:00Z,1030 Cowrie Hollow dr Unit 7C Key Biscayne FL 33182 | 5000 S Sabal Shores Blvd Unit 6901 Key Biscayne FL 33182 | Barnacle Shores Dr 4628 Key Biscayne FL 33182 | 4762 Ixora Key Dr Key Biscayne FL 33182 | 4268 Firebush Pointe 2 Key Biscayne FL 33182 | 4784 Ixora Key Drive Miami Beach FL 33182
+cus_e9f7ffa6b57f49f59035c39ee5b513be,Sonia,,Palmetto Hospitality,business,7,2026-05-18T21:00:00Z,2026-09-04T16:00:00Z,467 Ixora Isle Drive Coral Gables FL 33162 | 12 Leeward Harbor Pl Coral Gables FL 33162 | 314 Windward Shores Way Palmetto Bay FL 33155 | 9 Sea-Lavender Shores Dr Key Biscayne FL 33182 | 1615 S Coral Ridge Pkwy Coral Gables FL 33162 | 747 Cowrie Hollow Drive Key Biscayne FL 33182
+cus_3724c7956b394df484a1aca578a352c5,Martha,Leblanc,Saltmarsh Hospitality,homeowner,7,2026-04-10T16:00:00Z,2026-08-17T14:00:00Z,1018 Bayfront Hwy Unit 810 Miami Beach FL 33182 | 775 Sandcastle Shores Dr Unit 9224 Miami Beach FL 33182 | 1720 Bayfront Hwy Unit 5 Miami Beach FL 33182 | Marlin Hollow Blvd 510 Key Biscayne FL 33182 | 3184 Bayfront Hwy 311 Miami Beach FL 33182 | 2900 Bayfront Hwy Unit 302 Key Biscayne FL 33182
+cus_ae79d308bfe74c12b7aa4674904bc876,,,Seagrass Hospitality,business,6,2026-04-01T19:00:00Z,2026-06-30T02:00:00Z,22 Saltbush Key Trail Coral Gables FL 33162 | 95 Buttonwood Pointe Blvd Coral Gables FL 33162 | 2046 W Old Mangrove Rd Unit M2 426 Coral Gables FL 33162 | 23 Glasswort Hollow Drive Coral Gables FL 33162 | 45 Bougainvillea Reef Loop 316 Coral Gables FL 33162
+cus_e94514b93ffd40b4afc3317b989db667,Mildred,Valdez,,homeowner,6,2026-04-10T14:00:00Z,2026-08-07T14:30:00Z,122 Marlin Hollow Dr Unit 2404 Key Biscayne FL 33182 | 71 Frangipani Pointe Way Key Biscayne FL 33182 | 412 Amberjack Pointe Ct Miami Beach FL 33182
+cus_01b393c47cf448dfbf0e2bf83cbd81df,Audrey,McLean,,homeowner,6,2026-03-19T19:40:51Z,2026-08-10T19:00:00Z,93 Seashell Landing Rd Coral Gables FL 33162
+cus_a40b5aace01841b39487ff34694c6a9b,Tidewater,Hospitality,,homeowner,6,2026-03-28T22:00:00Z,2026-08-10T20:00:00Z,1002 Barnacle Glen 98 1403 Miami Beach FL 33182 | 3551 Bayfront Hwy Unit 7A and B Miami Beach FL 33182 | 520 Sandcastle Shores Drive 332 Miami Beach FL 33182 | 1010 Bayfront Hwy unit 806 Miami Beach FL 33182
+cus_94b6e58e883140e9a780d8da2430a897,Serena,Clarke,,homeowner,6,2026-05-11T15:00:00Z,2026-08-10T20:00:00Z,1436 Flamingo Harbor Cir E Miami Beach FL 33182
+cus_581316ddbef145b5811b08eae9d9cb1f,Yolanda,Byrd,,homeowner,6,2026-04-28T17:00:00Z,2026-08-26T17:00:00Z,78 Cowrie Ln Palmetto Bay FL 33155
+cus_264f10704a894f7c8182c83a12606a95,Camila,Rollins,Palmetto Hospitality,business,6,2026-03-10T23:00:00Z,2026-05-28T15:00:00Z,259 Plover Shores Dr Unit B Coral Gables FL 33162 | 77 Frangipani Harbor St Key Biscayne FL 33182 | 474 Bougainvillea Isle Way Coral Gables FL 33162 | 452 Banyan Terrace Circle Coral Gables FL 33162
+cus_9977dc3603f64168bf09238825cb4f57,Leslie,Monroe,Leeward Hospitality,homeowner,5,2026-03-25T14:00:00Z,2026-08-26T17:00:00Z,4156 Sabal Cove Dr Miami Beach FL 33182 | 78 Bougainvillea Pointe St Coral Gables FL 33162
+cus_66dba422dc3a4d6d8278cd41f3aa03c7,Malcolm,Ochoa,,homeowner,5,2026-07-20T21:00:00Z,2026-09-02T16:00:00Z,114 Skimmer Landing Dr Unit 151 Key Biscayne FL 33182 | 17 Grouper Shores Cir Miami Beach FL 33182 | 450 S Glasswort Key St Unit 506 Key Biscayne FL 33182 | 42 Buttonwood Bluff Dr Miami Beach FL 33182
+cus_8f15384a787143619a5ad207103ebd68,Palmetto,Hospitality,,homeowner,5,2026-05-22T13:00:00Z,2026-08-19T17:30:00Z,16819 Amberjack Cay Rd TIDEWATER 2613 Homestead FL 33162 | 4122 Sandcastle Harbor Drive 4122 Key Biscayne FL 33182 | 533 Marlin Harbor Pl Key Biscayne FL 33182 | 4351 Barnacle Shores Drive Key Biscayne FL 33182 | 9011 Bayfront Hwy 812 Key Biscayne FL 33182
+cus_b2e3cb44cbe3494b814271ce60f484c1,Ivan,Parrish,,homeowner,5,2026-05-18T15:30:00Z,2026-08-28T15:00:00Z,282 Sabal Shores Blvd W Key Biscayne FL 33182 | 961 Flamingo Terrace Dr W Key Biscayne FL 33182 | 713 Amberjack Bluff Drive Key Biscayne FL 33182 | 961 North Jacaranda Hollow Dr Key Biscayne FL 33182
+cus_6e3e10b6fb2d453698185760a7a50473,Sabrina,Albright,,homeowner,5,2026-03-09T14:00:00Z,2026-09-01T18:00:00Z,32 Snapper Shores Circle Key Biscayne FL 33182
+cus_e0d0f1eaa5c3472792a7125eaeab2676,Stuart,Fraser,,homeowner,5,2026-04-06T16:00:00Z,2026-08-31T17:00:00Z,99 E Sargassum Shores Ave Coral Gables FL 33162 | 50 Sargassum Glen Court Coral Gables FL 33162
+cus_7b9ef7bd10df4f62af44a610dbab8e64,Yvonne,Howe,,homeowner,5,2026-05-07T16:00:00Z,2026-08-17T21:00:00Z,216 Barnacle Pointe Dr | 15 S Bonefish Cay St Coral Gables FL 33162 | 82 Bougainvillea Isle Way Coral Gables FL 33162 | 373 Ixora Isle Drive
+cus_312de4c005ff4bd7aa6df0f531a48e80,Pedro,Fuller,,homeowner,5,2026-04-02T14:00:00Z,2026-07-22T14:00:00Z,545 Buttonwood Key St Coral Gables FL 33162
+cus_7927a84f71c7499785edeef9680f695b,Cassandra,Stokes,,homeowner,5,2026-04-20T18:00:00Z,2026-07-14T15:00:00Z,167 Banyan Rd Coral Gables FL 33162
+cus_066754ad6869492a9bff6dce14b9d869,Darren,Porter,,homeowner,5,2026-04-22T14:00:00Z,2026-08-25T17:00:00Z,27 Wahoo Terrace Wy Palmetto Bay FL 33155 | 105 Firebush Ridge Ln Coral Gables FL 33162 | 141 Kingfisher Cove Ln Coral Gables FL 33162 | 44 Bonefish Hollow Ln Kendall FL 33155 | 4923 E Old Mangrove Rd A Coral Gables FL 33162
+cus_caff6904a4c84640a460536076338c93,Lighthouse,Hospitality,,homeowner,5,2026-06-29T01:00:00Z,2026-08-10T16:00:00Z,84 Seahorse Landing St Miami Beach FL 33182 | 711 Amberjack Bluff Dr Key Biscayne FL 33182 | 956 Cowrie Hollow Drive Key Biscayne FL 33182 | Plumeria Terrace 154 Key Biscayne FL 33182 | 4751 Seashell Shores Miami Beach FL 33182
+cus_5a40030c63c84ba0858c3c083fb90042,Tidewater,,,homeowner,5,2026-05-28T13:30:00Z,2026-07-01T20:00:00Z,1231 Harborlight Cay Rd 283 Coral Gables FL 33162 | 30 Ibis Landing Rd Coral Gables FL 33162 | 371 Kelp Bluff Ave Coral Gables FL 33162
+cus_9d12a8a0a16b4a4ea6089b5bbb9cddca,Shoreline,,Palmetto Hospitality,homeowner,4,2026-04-22T21:00:00Z,2026-07-13T00:00:00Z,1008 Oleander Cay Rd Suite F Miami Beach FL 33182 | 1096 Bayfront Hwy 1508A Key Biscayne FL 33182
+cus_f0ba184390f540af85979f4278b661ab,Sofia,Montgomery,,homeowner,4,2026-04-15T14:00:00Z,2026-04-15T17:00:00Z,775 Sandcastle Shores Dr 1142 Miami Beach FL 33182 | 775 Sandcastle Shores Dr Unit 2142 Miami Beach FL 33182 | 775 Sandcastle Shores Dr 9207 Miami Beach FL 33182 | 775 Sandcastle Shores Dr 1141 Miami Beach FL 33182
+cus_432aa7ae2a2e4afba2e7a7793dcbb947,Osprey,,Osprey Hospitality,business,4,2026-04-02T14:00:00Z,2026-07-28T22:30:00Z,5008 Bayfront Hwy Coral Gables FL 33162
+cus_5292264049924db0a4605cb1e4025ec6,,,Palmetto Hospitality,business,4,2026-04-06T23:00:00Z,2026-08-26T23:00:00Z,103 Leeward Bluff Dr Coral Gables FL 33162 | 54 Glasswort Terrace Rd Cutler Bay FL 33155 | 5203 Grouper Ridge Drive Miami Beach FL 33182
+cus_5c38216184ee47f99cf96cdf04b4ceb4,Darren,Manning,,homeowner,4,2026-09-03T14:00:00Z,2026-09-03T16:00:00Z,101 Permit Pointe Ave Coral Gables FL 33162 | 36 Wahoo Cove St Coral Gables FL 33162
+cus_1268a74cb63e48d49ca770a871e06de2,Tara,Adler,,homeowner,4,2026-06-01T16:00:00Z,2026-09-08T14:00:00Z,112 Lighthouse Harbor Dr Coral Gables FL 33162
+cus_5e7cb270345e48998a2d33d21a286350,Beatriz,Beck,,homeowner,4,2026-03-07T17:00:00Z,2026-08-04T14:00:00Z,4732 Saltgrass Cove Cove Miami Beach FL 33182
+cus_e1a7ee039ffb480db4a98311d6bd7160,Caleb,Townsend,,business,4,2026-05-15T21:00:00Z,2026-08-21T19:00:00Z,2046 W Old Mangrove Rd M2424 Coral Gables FL 33162 | 9500 Seahorse Ridge Blvd 2103 Key Biscayne FL 33182 | 122 Marlin Hollow Dr Unit 1406 Miami Beach FL 33182 | 9100 Coquina Glen Blvd 472 Key Biscayne FL 33182
+cus_0d388614429b4622a87d75e05489ac70,Stuart,Trujillo,Osprey Hospitality,business,4,2026-03-18T01:45:23Z,2026-07-10T15:30:00Z,Lighthouse Bluff Building 11 Unit 102 Cutler Bay FL 33155 | 320 Sandcastle Shores Dr Miami Beach FL 33182 | 510 Moonraker Shores Rd Miami Beach FL 33182
+cus_7c189898caaa4d30a243836dd7055ad6,Fiona,Ames,,homeowner,4,2026-05-08T14:00:00Z,2026-07-10T14:30:00Z,108 Whitecap Hollow Dr Miami Beach FL 33182 | 4 Ibis Cove Ct Key Biscayne FL 33182
+cus_0d4008c0d6164d8d823e7055dd546334,Sara,Beck,,homeowner,4,2026-03-04T20:30:00Z,2026-05-12T19:30:00Z,182 Banyan Pointe Rd Coral Gables FL 33162
+cus_4e5b563a51a3411a804731a22b57601c,Noah,Humphrey,,homeowner,4,2026-06-08T19:00:00Z,2026-08-28T18:00:00Z,605 N Coral Ridge Pkwy Unit 13B Coral Gables FL 33162 | 605 N Coral Ridge Pkwy 13A Coral Gables FL 33162 | 605 N Coral Ridge Pkwy 16A Coral Gables FL 33162
+cus_fe342ed94e0b4e30ab0deb8e8ee99584,Ethan,Sawyer,,homeowner,4,2026-03-12T14:00:00Z,2026-09-15T14:00:00Z,1160 Cowrie Hollow Dr Unit 904A Key Biscayne FL 33182
+cus_8ef5a202ca904cb8a87c0b263e9dcb27,Serena,Weeks,,homeowner,4,2026-05-04T19:12:26Z,2026-08-19T17:30:00Z,277 Snapper Glen Cir Coral Gables FL 33162
+cus_107e29991cc74270a374c1c80baf70db,Lucia,Blackwell,,homeowner,4,2026-06-16T14:00:00Z,2026-08-13T16:00:00Z,5222 Skimmer Isle Dr Unit 5222 Miami Beach FL 33182 | 172 Halyard Reef Ct Coral Gables FL 33162
+cus_7e326ae5cbb04fb3a0f7e9adc105271b,Caroline,Talley,,homeowner,4,2026-06-30T14:00:00Z,2026-09-01T20:00:00Z,775 Sandcastle Shores Dr 1141 Miami Beach FL 33182 | 112 Marlin Hollow Dr Unit 2310 Key Biscayne FL 33182 | 57 N Lighthouse Cay Dr Key Biscayne FL 33182
+cus_ad5efef3f7854b4aaafcc05a09dd450c,Harper,Boyd,,homeowner,4,2026-08-18T13:00:00Z,2026-08-28T15:00:00Z,46 Bougainvillea Glen Rd Coral Gables FL 33162
+cus_bfa376c9a1f94dd8b4bc7f7cad037c74,Omar,Durham,,homeowner,4,2026-03-24T15:00:00Z,2026-09-04T16:00:00Z,3680 E Old Mangrove Rd Unit 3 Coral Gables FL 33162 | 8 Firebush Harbor Lane Coral Gables FL 33162
+cus_6608e0c5106f46c3bf52db942653fedd,Lucia,Hobbs,,homeowner,4,2026-03-16T15:18:51Z,2026-08-27T14:00:00Z,30 Seashell Landing Rd Coral Gables FL 33162
+cus_dcca9b2c078c4c368d349cf7fafbb155,Gail,Baldwin,,homeowner,4,2026-03-12T19:00:00Z,2026-08-05T14:00:00Z,145 S Leeward Glen St Cutler Bay FL 33155
+cus_93de03daac11405980a515166b7b97cf,Josie,McGuire,,homeowner,4,2026-03-19T18:35:29Z,2026-06-30T22:00:00Z,200 Gulfstream Glen Way FL 33162 | 51 Seashell Cay Ln Doral FL 33173 | 95 Plumeria Key Doral FL 33173
+cus_3a0d62159ec247aa8d753b557eb87f44,Isaac,Talley,,homeowner,4,2026-03-12T15:58:18Z,2026-09-11T17:00:00Z,24 Palmetto Ridge Blvd Miami Beach FL 33182
+cus_9b020555d04c41b6876df91f7d8d6b62,Kayla,Parks,,homeowner,4,2026-08-26T14:30:00Z,2026-08-28T17:00:00Z,95 Banyan Ridge Rd Coral Gables FL 33162 | 275 Glasswort Rd Coral Gables FL 33162 | 4155 Sandcastle Harbor Dr Miami Beach FL 33182
+cus_be83fbb335f841f88933374088f18e88,Seagrass,,Leeward Hospitality,business,4,2026-08-21T15:00:00Z,2026-08-31T22:17:31Z,185 Moonraker Reef Blvd Key Biscayne FL 33182 | Tidewater Hwy Suite 201 Key Biscayne FL 33182
+cus_6e770902d53942ff9c6162b4ef7e56aa,Holly,Terrell,,homeowner,4,2026-03-04T20:00:00Z,2026-09-11T14:00:00Z,44 Spinnaker Reef Dr S Key Biscayne FL 33182
+cus_91436408fd4a4e5482ae0af8af53f68b,Sidney,Kirby,,homeowner,4,2026-06-02T14:00:00Z,2026-08-25T16:00:00Z,824 Plumeria Cove Blvd Hialeah FL 33154 | 304 68th St Hialeah FL 33154 | 31 Firebush Way Miami Springs FL 33194
+cus_69ddd7a3c00742e7ac8d2788eac39afa,Joel,Mills,,homeowner,4,2026-08-23T17:00:00Z,2026-08-24T19:00:00Z,10 Sabal Isle St Coral Gables FL 33162 | 392 Sanddollar Cay Dr Coral Gables FL 33162
+cus_b28f89d47eb34e9e90c51fad5d5e06fa,Josie,Rowe,,homeowner,4,2026-06-26T20:00:00Z,2026-08-23T23:00:00Z,1432 Flamingo Harbor Cir E Miami Beach FL 33182 | 1432 Flamingo Harbor Circle East Key Biscayne FL 33182
+cus_b2e706dd738145ceaf747ec7564ab67d,Lighthouse,Hospitality,,homeowner,4,2026-07-24T15:00:00Z,2026-08-12T13:00:00Z,5403 North Orchid Isle Drive Key Biscayne FL 33182 | Firebush Pointe 2 Unit 4362 Key Biscayne FL 33182 | 4835 Ixora Key Dr Miami Beach FL 33182 | 5177 Grouper Ridge Dr Miami Beach FL 33182
+cus_982245cacaf34c45a8b2fa9ece640ced,Edward,McGuire,,homeowner,4,2026-05-28T19:30:00Z,2026-08-10T23:00:00Z,207 Orchid Terrace Ave Coral Gables FL 33162
+cus_a5b946798d624c779095433ebd4d8474,Theo,Fleming,,homeowner,4,2026-06-22T20:00:00Z,2026-08-07T16:00:00Z,36 Skimmer Cay Ct Coral Gables FL 33162
+cus_8040a9d94ccb45b6ad40c6974c54d457,Pedro,Norton,,homeowner,4,2026-07-25T17:00:00Z,2026-08-01T23:00:00Z,186 Mangrove Glen Boulevard Coral Gables FL 33162
+cus_aa613ffecdff4ce18587d21bb3fdacc7,,,Windward Hospitality,business,4,2026-06-25T21:00:00Z,2026-08-01T18:00:00Z,1002 Bayfront Hwy 1015 Miami Beach FL 33182 | 1002 Bayfront Hwy 111 Miami Beach FL 33182 | Sabal Shores Blvd Luau 2: 6828 Key Biscayne FL 33182 | 65 Bowline Ridge Way Key Biscayne FL 33182
+cus_a95d697702ea44f9b9a4c0c0505e64f5,Judith,Beck,,homeowner,4,2026-04-27T14:00:00Z,2026-07-27T22:30:00Z,115 Allamanda Ridge Blvd Coral Gables FL 33162
+cus_105c83a1aed342d298d641755538d2e0,Carmen,Collier,,homeowner,4,2026-07-03T15:00:00Z,2026-07-27T13:00:00Z,176 Amberjack Hollow St Homestead FL 33162
+cus_5def1a2fa8a24fb6aa3afcf9d877f8c5,Cassandra,Slater,Leeward Hospitality,business,4,2026-04-13T14:00:00Z,2026-07-13T14:00:00Z,424 Kingfisher Glen Street Doral FL 33173 | 84 Seashell Cove St Palmetto Bay FL 33155
+cus_0036bea3c7384b679378f9542051cfaf,Felix,Anders,,homeowner,4,2026-03-17T14:00:00Z,2026-06-29T19:30:00Z,1715 Glasswort Road Coral Gables FL 33162 | 55 Firebush Cay Drive Coral Gables FL 33162
+cus_201b931b9394448584cf56fb3646ef16,Leeward,Hospitality,,business,3,2026-06-27T02:00:00Z,2026-08-22T15:00:00Z,92 Orchid Bluff St Miami Beach FL 33182 | 1841 Cowrie Hollow Dr Key Biscayne FL 33182
+cus_b31e222fd5d54943af43163150e40eee,Malcolm,Flynn,,homeowner,3,2026-06-29T22:00:00Z,2026-08-10T14:00:00Z,380 Tern Cove Way Doral FL 33173 | 550 Marlin Harbor Dr Key Biscayne FL 33182
+cus_3aa0b130cff74a9c9f36505b1d96100e,Javier,Horton,,homeowner,3,2026-06-06T21:00:00Z,2026-07-03T15:30:00Z,760 Amberjack Bluff Drive Miami Beach FL 33182 | 771 Amberjack Bluff Dr Key Biscayne FL 33182
+cus_e945079132d54c46b939943f4aa2e379,Marian,Watts,,homeowner,3,2026-04-13T17:00:00Z,2026-08-24T17:00:00Z,1 Barnacle Bluff Dr Unit 906 Key Biscayne FL 33182 | 8968 Rudder Cay Dr Miami Beach FL 33182
+cus_3ddf986eb1fa4d1d981e983d106f9fdc,Victoria,Farrell,,homeowner,3,2026-05-26T16:00:00Z,2026-08-22T17:00:00Z,28 Lighthouse Cay Dr Coral Gables FL 33162 | 149 E Limestone St Coral Gables FL 33162
+cus_0fbc7a30a2bb4c01a9224d11ec92664e,Maya,Donovan,,homeowner,3,2026-05-07T14:00:00Z,2026-05-29T13:30:00Z,66 Ixora Isle Cir Coral Gables FL 33162 | 179 S Coral Ridge Pkwy Unit 324 Building 3 Coral Gables FL 33162
+cus_3db4ea6ccabd433289328ea967473eb1,Javier,Mendez,,homeowner,3,2026-03-27T15:00:00Z,2026-08-22T23:30:00Z,22 Kingfisher Cay Cv Key Biscayne FL 33182
+cus_9634937e446e4d2d90c0d0dee6d97c8d,Karl,Weiss,,homeowner,3,2026-06-13T17:00:00Z,2026-08-21T14:00:00Z,5429 Allamanda Isle Cir Key Biscayne FL 33182 | 57 Ibis Way Coral Gables FL 33162
+cus_486b6c8896474ca69d5b9242538afe6c,Eugene,,,homeowner,3,2026-03-20T14:00:00Z,2026-06-30T14:00:00Z,93 Bowline Cay St Miami Beach FL 33182 | 91 Bowline Harbor St Miami Beach FL 33182
+cus_b0ff39387eb446e8a76d247de05edf0c,Alina,Olsen,Lighthouse Hospitality,homeowner,3,2026-04-28T14:00:00Z,2026-06-19T14:00:00Z,63 Sargassum Isle Ave Coral Gables FL 33162
+cus_638161c5bd7b4b228dea4f1d79e4c692,Sofia,Maddox,,homeowner,3,2026-03-26T16:00:00Z,2026-08-21T14:00:00Z,8962 Rudder Cay Dr Miami Beach FL 33182
+cus_c426624ab24f4aec88c2bd98611d079a,Sara,Cortez,,homeowner,3,2026-03-10T19:11:47Z,2026-07-31T16:30:00Z,10140 E Old Mangrove Rd Unit 24 Palmetto Bay FL 33155
+cus_5eb23fba4dad41e7981983514a7c441e,Wesley,Erickson,Lighthouse Hospitality,homeowner,3,2026-03-13T14:00:00Z,2026-07-22T15:00:00Z,155 Allamanda Ridge Blvd Coral Gables FL 33162 | 403 Seahorse Bluff Rd Doral FL 33173 | 33 Allamanda Ridge Boulevard Coral Gables FL 33162
+cus_8be0c08fe691490f83ef138a9adc4074,Harper,Lynch,,homeowner,3,2026-03-16T20:00:00Z,2026-05-27T14:30:00Z,2830 Cowrie Hollow Dr Unit 304 Key Biscayne FL 33182
+cus_d1288e627cf74f48a260d40091a8f77a,Isaac,Mills,,homeowner,3,2026-03-20T19:25:03Z,2026-04-08T14:00:00Z,171 S Lighthouse Landing 101 Key Biscayne FL 33182
+cus_2a9fb87fe7a14b519246508df0bf617f,Caleb,Maldonado,,homeowner,3,2026-08-26T19:00:00Z,2026-09-01T14:00:00Z,214 East Ibis Bluff Way Coral Gables FL 33162
+cus_ab545ef3c1264839b04b6bdf22a0051b,Noah,Knapp,,homeowner,3,2026-04-03T15:00:00Z,2026-08-10T17:00:00Z,3818 Jacaranda Bluff Trail Miami Beach FL 33182
+cus_9a8bc14d857b4169917569a563a5146b,Ethan,Glover,,homeowner,3,2026-04-21T17:30:00Z,2026-08-04T14:00:00Z,1363 W Old Mangrove Rd Unit 1110 Coral Gables FL 33162
+cus_af4e216eb8514063a612418d87283e69,Terrence,Kane,,homeowner,3,2026-06-27T00:00:00Z,2026-07-09T14:30:00Z,1363 W Old Mangrove Rd Unit 3122 Coral Gables FL 33162
+cus_34dc5be71d2948cdaf66c0d81cb0f88b,Yvonne,Baxter,,homeowner,3,2026-06-29T14:00:00Z,2026-07-03T22:00:00Z,63 Portside Terrace Key Biscayne FL 33182
+cus_bb5d26eef14446348077c2ac4751d223,Vera,Strickland,,homeowner,3,2026-03-09T20:00:00Z,2026-05-26T17:00:00Z,1363 W Old Mangrove Rd 2128 Coral Gables FL 33162
+cus_e441ac0f122741d5b42a4bd24d6fd60e,Sylvia,Prince,,homeowner,3,2026-03-12T18:00:00Z,2026-05-06T14:00:00Z,98 Cocoplum Cay Way Coral Gables FL 33162
+cus_0d644c37058b4072bc7e11f19f228503,Caleb,Herrera,,homeowner,3,2026-05-27T15:00:00Z,2026-09-08T19:00:00Z,8599 Rudder Landing Ln Key Biscayne FL 33182
+cus_99e8ac89ef024b7d9ff8250b684c3d38,Xavier,Weaver,,homeowner,3,2026-04-18T00:00:00Z,2026-08-12T14:30:00Z,550 Cormorant Reef Blvd Unit 906 Key Biscayne FL 33182 | 550 Cormorant Reef Blvd Unit 1503 Key Biscayne FL 33182 | 550 Cormorant Reef Boulevard Unit 905 Key Biscayne FL 33182
+cus_da6cc42936224b07bc1ef81ca65f8f80,Vivian,McCarthy,,homeowner,3,2026-07-28T14:00:00Z,2026-07-30T18:00:00Z,82 S Grouper Hollow Square UNIT 2i Palmetto Bay FL 33155 | 29 Oleander Ridge Ln Kendall FL 33155
+cus_53fab24f857243a2b2bc997f5667b04d,Sylvia,Blackwell,,homeowner,3,2026-03-12T15:00:00Z,2026-07-27T21:30:00Z,3284 Harborlight Hollow Ln Miami Beach FL 33182
+cus_856847fce591469e8fd7796e48ba71c0,Delia,Cardenas,,homeowner,3,2026-06-25T18:00:00Z,2026-07-23T19:00:00Z,1813 Ixora Reef Ct Miami Beach FL 33182
+cus_f9955fbc392d4f37a89454d167fc4713,Mabel,Kane,,homeowner,3,2026-04-16T14:00:00Z,2026-07-18T00:00:00Z,1498 Barnacle Ridge Ln E Key Biscayne FL 33182
+cus_43852b3e4e9d4deba0cc1ac2a59dbc21,Violet,Stanton,,homeowner,3,2026-05-27T15:00:00Z,2026-06-25T20:00:00Z,26 Manatee Ln Coral Gables FL 33162
+cus_08fe8be74a6641b5b13a34c750af18d8,Willa,Avery,,homeowner,3,2026-07-25T16:00:00Z,2026-09-02T13:00:00Z,246 Grouper Reef Drive Miami Beach FL 33182 | 246 Grouper Reef Dr Miami Beach FL 33182
+cus_85ab8f656d7f4e9585f1365808caf9c2,Cecilia,Wiley,,homeowner,3,2026-08-24T14:00:00Z,2026-09-01T17:00:00Z,4000 Limestone Cay Trail Miami Beach FL 33182
+cus_729a5329463b46e890a947e038637126,Ruby,Harrington,,homeowner,3,2026-05-19T20:00:00Z,2026-08-31T20:00:00Z,159 Windward Cay Lane Coral Gables FL 33162 | 40 Seahorse Isle Lane Coral Gables FL 33162
+cus_6e96a3ce09804121aba02a2814a2b4d3,Tanya,Fleming,,homeowner,3,2026-08-26T19:00:00Z,2026-08-26T21:00:00Z,13 Bayberry Terrace Dr Coral Gables FL 33162
+cus_92cfcdc876804eddad69a7b6c48ddecf,,,Longleaf Hospitality,homeowner,3,2026-05-14T15:00:00Z,2026-08-22T14:00:00Z,550 Cormorant Reef Blvd Unit 1211 Key Biscayne FL 33182 | 550 Cormorant Reef Blvd Unit 1304 Key Biscayne FL 33182
+cus_3e73b146402648a8844ae08566dfde10,Selena,Lyons,,homeowner,3,2026-03-03T15:00:00Z,2026-08-20T19:00:00Z,637 Bonefish Harbor Loop Miami Beach FL 33182
+cus_c0a88f56d9ee4fb9a6097f96bdb5ea31,Lighthouse,Hospitality,,homeowner,3,2026-07-26T15:00:00Z,2026-08-21T15:00:00Z,37 Flamingo Key Ave Coral Gables FL 33162
+cus_746aaf97697f4370b038c917764db990,Ethan,Conley,,homeowner,3,2026-07-23T15:00:00Z,2026-08-12T17:30:00Z,3125 Amberjack Dr Key Biscayne FL 33182 | 3125 Amberjack Drive Key Biscayne FL 33182
+cus_f7a464755f394de0bb400eb03011ae50,Sofia,Conley,,homeowner,3,2026-06-28T21:00:00Z,2026-08-08T15:00:00Z,1096 Cowrie Hollow Dr 1202 Key Biscayne FL 33182 | 1096 Cowrie Hollow Drive Unit 1512 Key Biscayne FL 33182
+cus_06932528392241c3a67b58c1eb7e6c16,Christina,McLean,,homeowner,3,2026-07-02T14:00:00Z,2026-08-03T17:30:00Z,248 Snapper Cove Drive Key Biscayne FL 33182
+cus_8ed3dff23c9b40d280db5752ea7c0f1e,Pedro,Rush,,homeowner,3,2026-06-05T21:00:00Z,2026-08-03T21:00:00Z,302 Cowrie Cay Rd Hialeah FL 33154
+cus_13e6eb118ceb4f4cbc4e24ebd5b2f78f,Abby,Reyes,,homeowner,3,2026-06-18T17:00:00Z,2026-07-31T20:00:00Z,3430 Harborlight Hollow Ln Key Biscayne FL 33182
+cus_ec48cdb4778945d3b400273d26422b6a,Edward,Daniels,,homeowner,3,2026-06-26T15:30:00Z,2026-07-25T23:00:00Z,35 Seahorse Harbor Rd Coral Gables FL 33162
+cus_3525c878b68340748655f1bf328b075d,Isabel,Kane,,homeowner,3,2026-06-09T14:00:00Z,2026-07-22T15:00:00Z,4567 Tidewater Bluff Ct Miami Beach FL 33182
+cus_20a1286d6c8b462c8242a765d5760dd0,Tobias,Irwin,,homeowner,3,2026-06-29T15:00:00Z,2026-07-21T14:00:00Z,3324 Marlin Dr Key Biscayne FL 33182
+cus_74cbd9d2598c4e06bc6892428a373d20,Tobias,Parks,,homeowner,3,2026-05-13T16:00:00Z,2026-07-15T16:00:00Z,501 Sargassum Reef Dr Miami Beach FL 33182 | 295 Seafoam Glen Dr Miami Beach FL 33182
+cus_ff6366a78f0342a4a6e66c0adc071fa8,Jonah,Herrera,,homeowner,3,2026-05-31T17:00:00Z,2026-07-10T17:30:00Z,10343 E Old Mangrove Rd b378 Pinecrest FL 33155 | 459 Bougainvillea Glen Rd Coral Gables FL 33162
+cus_16102f26961a4ca5aa39040d8a3a1ca5,Zoe,Moody,,homeowner,3,2026-06-30T01:00:00Z,2026-07-06T17:30:00Z,443 Windward Cove Cir Miami Beach FL 33182
+cus_1c5e6d5823ae4c10ac8481d55a765816,Violet,Ferguson,,homeowner,3,2026-05-26T18:00:00Z,2026-07-02T19:00:00Z,122 Sea-Lavender Pointe Coral Gables FL 33162
+cus_fb6b8d4e45d74d9483bfd4463d5ad074,Josie,Sexton,,homeowner,3,2026-05-14T19:30:00Z,2026-06-10T20:30:00Z,4329 Palmetto Hollow Ln Miami Beach FL 33182
+cus_23a3c27cdcb04dd399a3abc212781b9d,Felix,Lowe,,homeowner,3,2026-05-24T23:00:00Z,2026-06-01T14:00:00Z,367 Ixora Isle Dr Coral Gables FL 33162 | 201 Coquina Hollow Circle Coral Gables FL 33162
+cus_ba60398b56624ab590de5d024586d99f,Omar,Flynn,,homeowner,3,2026-04-13T21:00:00Z,2026-05-23T20:30:00Z,1157 Sargassum Harbor Ct Miami Beach FL 33182
+cus_7c6f5275e2424fd09796754ab106f8cc,Harvey,Ramsey,Tidewater Hospitality,business,2,2026-06-10T21:00:00Z,2026-08-14T14:00:00Z,20 Sabal Landing Ln Coral Gables FL 33162
+cus_3c4e308e4c1347c8bcbd454abeebdc32,Delia,Hobbs,Seagrass Hospitality,homeowner,2,2026-05-08T18:00:00Z,2026-05-24T19:00:00Z,392 Banyan Terrace Cir Coral Gables FL 33162 | 43 Leeward Bluff Dr Coral Gables FL 33162
+cus_6df6635fc7ea4a79a874ba6d9b90bf04,Nadia,Hale,,homeowner,2,2026-03-02T19:30:00Z,2026-07-14T23:00:00Z,69 Plumeria Glen Drive Cottage 20 B Miami Beach FL 33182
+cus_4b83722b0e0b43ef8aff93a24de5db5d,Alexa,Leach,,homeowner,2,2026-03-17T20:00:00Z,2026-08-25T18:00:00Z,126 Allamanda Ridge Blvd Coral Gables FL 33162
+cus_c668c8c2100d41f59903ff09c7427566,Sandra,,Longleaf Hospitality,homeowner,2,2026-04-24T21:30:00Z,2026-05-27T16:00:00Z,8856 Kingfisher Terrace Dr Miami Beach FL 33182
+cus_e7a70e69cb7a42178f53885ffbdbc9bc,Osprey,Hospitality,,homeowner,2,2026-05-15T19:00:00Z,2026-06-22T16:00:00Z,38 Jacaranda Harbor Rd Suite 1 & 2 Coral Gables FL 33162
+cus_bb0d1659f02942609fa6a01683b2a165,Sofia,Harrington,,homeowner,2,2026-04-10T17:00:00Z,2026-05-13T19:00:00Z,251 Oleander Pointe Ln Cutler Bay FL 33155 | 200 Cocoplum Harbor Way Homestead FL 33162
+cus_7a4d54d0c5634d3aba4f8548ba24e44c,Christina,Kirby,,homeowner,2,2026-06-17T17:00:00Z,2026-07-03T14:57:13Z,141 E Coquina Key Ave Coral Gables FL 33162
+cus_2947880c2ca248e4a84190ef6ea28ba8,Yvonne,Beck,,homeowner,2,2026-06-09T18:00:00Z,2026-06-13T16:00:00Z,450 Lighthouse Glen Dr Key Biscayne FL 33182
+cus_076cb6e0a60c45b98e959112e86f637d,Janice,Farrell,,homeowner,2,2026-07-31T17:30:00Z,2026-09-01T20:27:52Z,731 Egret Pointe Dr Coral Gables FL 33162
+cus_700858c7e1744a52a77caaaac6bcdc98,Tamara,Harrington,,homeowner,2,2026-07-20T22:00:00Z,2026-07-21T18:30:00Z,434 E Ixora Bluff St Fort Lauderdale FL 33166
+cus_443ef849bbed484ab22d38ce795f3222,Gwen,Vance,,homeowner,2,2026-06-22T14:00:00Z,2026-06-28T00:00:00Z,243 Sanddollar Cay Drive Coral Gables FL 33162
+cus_6878d9655891442a823492d81b6c44a2,Lorena,Ellison,,homeowner,2,2026-06-18T18:00:00Z,2026-06-18T19:00:00Z,5000 S Sabal Shores Blvd Unit 6703 Key Biscayne FL 33182 | 5000 S Sabal Shores Blvd Unit 6701 Key Biscayne FL 33182
+cus_432bcbc27cf741b2a00bd68cb2fcd8b5,Pamela,Norris,,homeowner,2,2026-04-22T18:00:00Z,2026-06-15T16:00:00Z,321 Seafoam Landing Doral FL 33173
+cus_d83d9d1e5af04b23be5982a11f223917,Brianna,Cannon,,homeowner,2,2026-03-13T17:00:00Z,2026-06-04T15:00:00Z,955 Cowrie Hollow Dr Unit 520 Key Biscayne FL 33182
+cus_a9b7ff29e4654c46850b3c85720170db,Simon,Vaughn,,homeowner,2,2026-05-18T18:00:00Z,2026-06-01T15:00:00Z,81 Keel Ct Key Biscayne FL 33182
+cus_097bc9ca587f48ee800240833c55bbce,Raquel,Strickland,,homeowner,2,2026-04-17T20:00:00Z,2026-09-01T17:00:00Z,43 Frangipani Landing Trail Unit 6 Key Biscayne FL 33182
+cus_69e44414ddca4888a3b81391f47ce78c,Gail,McGuire,,homeowner,2,2026-05-11T14:00:00Z,2026-08-20T14:00:00Z,110 Seashell Hollow Loop Miami Beach FL 33182
+cus_7934dbad396141919b93c83bfe8c0287,Mabel,Gutierrez,,homeowner,2,2026-04-30T14:00:00Z,2026-08-05T02:00:00Z,231 Ixora Terrace Ct Key Biscayne FL 33182
+cus_ccde860772ea432482ed748d6c2f83ab,Esther,Hahn,,homeowner,2,2026-06-08T14:45:00Z,2026-08-03T16:30:00Z,Bowline Glen Dr Lot 12 Palmetto Bay FL 33155
+cus_bbe87bdfbb2748228b9ac6e589ba64d9,Stuart,Harrington,Shoreline Hospitality,homeowner,2,2026-06-11T17:00:00Z,2026-07-05T15:00:00Z,29 Moonraker Isle Ct Miami Beach FL 33182 | 2734 Bayfront Hwy unit 7 Miami Beach FL 33182
+cus_b12679d208174be8bad0ad8049c16ca4,Mildred,McCarthy,,homeowner,2,2026-06-23T20:41:36Z,2026-06-24T14:00:00Z,1469 Flamingo Harbor Ave Miami Beach FL 33182
+cus_f547abc7ee184d6cab07f53dce10b5b8,Eugene,Gaines,,homeowner,2,2026-03-17T14:00:00Z,2026-05-21T19:00:00Z,42 Orchid Bluff St Cutler Bay FL 33155
+cus_4a91d678faca4b8dbb3643cc2a1c4545,Vivian,Spence,,homeowner,2,2026-04-09T17:00:00Z,2026-04-29T17:00:00Z,273 Seahorse Reef Dr Key Biscayne FL 33182
+cus_176b7c509a784f74bb0603bc04ab1608,Brianna,Roach,,homeowner,2,2026-03-16T21:30:00Z,2026-04-23T14:00:00Z,181 Cowrie Shores Wy Coral Gables FL 33162 | 116 W Orchid Shores Dr Coral Gables FL 33162
+cus_9d89f1bd48c547dc8c068095afe665d2,Eugene,Gregory,,homeowner,2,2026-09-08T16:00:00Z,2026-09-08T16:00:00Z,5558 W Old Mangrove Rd Coral Gables FL 33162
+cus_0f36c472c0ea45869ee4f6fdbbad5433,Delia,Rasmussen,,homeowner,2,2026-04-03T14:00:00Z,2026-08-25T20:20:54Z,8969 Rudder Cay Dr Key Biscayne FL 33182
+cus_7e6680ef6ef54139ba7a6f0ea2cf269f,Cecilia,Wyatt,,homeowner,2,2026-08-01T17:00:00Z,2026-08-26T13:30:00Z,43 Frangipani Landing Trail Key Biscayne FL 33182 | 85 Banyan Reef Drive Doral FL 33173
+cus_a2da6c64393c4c9b9fa8c1098cd35778,Norma,Hines,,homeowner,2,2026-07-24T16:00:00Z,2026-07-26T19:00:00Z,1840 Bayfront Hwy Key Biscayne FL 33182
+cus_c6cc489c983541a39c0a9452e76e097a,Martha,Cunningham,,homeowner,2,2026-06-26T16:00:00Z,2026-07-06T16:00:00Z,399 Glasswort Rd Coral Gables FL 33162 | 157 Allamanda Ridge Blvd Coral Gables FL 33162
+cus_e8807d6743494a578f7820adc6201380,Judith,Shepherd,,homeowner,2,2026-04-28T16:00:00Z,2026-07-04T23:00:00Z,778 Cowrie Hollow Dr 107A Key Biscayne FL 33182 | 778 Cowrie Hollow Drive 107A Key Biscayne FL 33182
+cus_14e4a7b649c44e079f60576e710e2499,Lucia,Kerr,,homeowner,2,2026-04-27T12:45:00Z,2026-06-23T16:00:00Z,1363 W Old Mangrove Rd Unit 3125 Coral Gables FL 33162
+cus_5917185a5f7a472abfd344ff57ca429f,Esther,Manning,,homeowner,2,2026-04-04T16:00:00Z,2026-05-13T20:00:00Z,68 Cowrie Landing Road Coral Gables FL 33162
+cus_b5ef660c6d874f4caa9b7dae3b7d0169,Rita,Gregory,,homeowner,2,2026-03-11T14:00:00Z,2026-03-24T18:00:00Z,53 Harborlight Glen Ct Key Biscayne FL 33182
+cus_8682615cb5084c3f97c2721bc6ce71f1,Camila,Velez,,homeowner,2,2026-03-06T15:00:00Z,2026-09-09T14:00:00Z,458 E Bowline Key Rd Coral Gables FL 33162
+cus_0ea26f66553741ec82b375c21f550990,Jasmine,Harrington,,homeowner,2,2026-08-25T19:00:00Z,2026-09-08T14:00:00Z,226 Keel Pointe Cove Miami Beach FL 33182
+cus_cf7d7ec0928b4cdb94f8c2f5041b6191,Darren,Vincent,,homeowner,2,2026-08-24T14:00:00Z,2026-08-27T18:00:00Z,515 Cormorant Reef Blvd Unit 807/807A Coral Gables FL 33162
+cus_a0fcfa0875ce4a6d8bdccf21168801b8,Emily,Leblanc,,homeowner,2,2026-08-03T18:00:00Z,2026-08-18T18:00:00Z,75 Bowline Harbor St Miami Beach FL 33182
+cus_5a23a02eaea44884b563665343724d10,Edward,Carver,,homeowner,2,2026-05-18T23:00:00Z,2026-08-17T19:00:00Z,89 Manatee Ridge Ln Coral Gables FL 33162
+cus_5e98525dc80a4f77880a0d7b1e511710,Ernesto,Richmond,,homeowner,2,2026-07-07T18:30:00Z,2026-08-18T15:30:00Z,5 Snapper Cove Drive Key Biscayne FL 33182
+cus_df150f83cb594e17b254c8d66ec7322b,Victoria,Mills,,homeowner,2,2026-06-19T15:00:00Z,2026-07-17T14:00:00Z,160 Ibis Bluff Way Coral Gables FL 33162 | 132 Orchid Glen Wy Kendall FL 33155
+cus_63dccc97ebac4e239c31730ca89d89f0,Kayla,Monroe,,homeowner,2,2026-07-01T14:00:00Z,2026-07-03T13:30:00Z,10 Sargassum Landing Ct Coral Gables FL 33162
+cus_c53a7ff4bc1e412480de0a98610b9132,Phoebe,Jennings,,homeowner,2,2026-06-27T01:00:00Z,2026-07-01T15:00:00Z,1363 W Old Mangrove Rd Unit 2123 Coral Gables FL 33162
+cus_ac502d6002844f589c9c75a3ec08e4ac,Tanya,Trujillo,,homeowner,2,2026-06-23T00:00:00Z,2026-06-24T16:00:00Z,344 Oleander Hollow Dr Key Biscayne FL 33182
+cus_2667cf1108ba408eb140d0e0c6577c17,Javier,Avery,,homeowner,2,2026-06-03T19:00:00Z,2026-06-12T14:00:00Z,5178 Grouper Ridge Dr Key Biscayne FL 33182
+cus_22632b17974a4f75b6bf2d94c583b266,Ted,Ellison,,homeowner,2,2026-05-04T14:00:00Z,2026-06-04T14:30:00Z,11 Amberjack Landing Road Coral Gables FL 33162 | 19 Amberjack Landing Road Coral Gables FL 33162
+cus_a8437e7751a54168b6a9ceb87b2099a2,Gail,Mann,,homeowner,2,2026-04-08T17:30:00Z,2026-05-29T14:00:00Z,61 Spinnaker Cove Dr Coral Gables FL 33162
+cus_cd5eecd417244c4ba59c7755a2bad947,Leslie,Hanson,,homeowner,2,2026-05-18T14:00:00Z,2026-05-28T21:30:00Z,2606 Cowrie Hollow Dr Unit 2305 Key Biscayne FL 33182
+cus_bd363e45e9d545c490f4612f407e336e,Hazel,Dudley,,homeowner,2,2026-04-22T16:00:00Z,2026-04-27T15:00:00Z,3324 Marlin Dr Miami Beach FL 33182
+cus_bd0b701a3a9a447bb310f51d05465c60,Lighthouse,Hospitality,,homeowner,2,2026-09-01T21:00:00Z,2026-09-02T14:00:00Z,162 Cowrie Bluff Ln 305 Miami Beach FL 33182
+cus_404dcb780a614ccaa96a3b7e2fe5e5c7,Longleaf,,,homeowner,2,2026-08-07T14:00:00Z,2026-09-01T20:18:34Z,14060 Mangrove Isle Pkwy Miami Beach FL 33182
+cus_03b0453a31124208b089d2467e3e832a,Jesse,Weeks,,homeowner,2,2026-08-28T21:00:00Z,2026-09-03T14:00:00Z,205 Seagrape Hollow St Homestead FL 33176
+cus_64511a58560740e78deac4996d66c96b,Whitecap,Hospitality,,homeowner,2,2026-03-23T17:00:00Z,2026-09-14T14:00:00Z,1848 E Old Mangrove Rd Unit 9 Coral Gables FL 33162
+cus_e63341e017ee4596aee05ad0df764f63,Ariel,Navarro,,homeowner,2,2026-09-01T14:00:00Z,2026-09-02T14:00:00Z,8592 Rudder Landing Ln Miami Beach FL 33182
+cus_6f344cddf63645ecaced2f2a68d18601,Cassandra,Maxwell,,homeowner,2,2026-08-30T11:00:00Z,2026-08-30T11:00:00Z,65 Barnacle Isle Lane Coral Gables FL 33162
+cus_010fb9d7affb4927bc4a6e1e7f0493db,Harvey,Calhoun,,homeowner,2,2026-08-28T19:00:00Z,2026-08-28T19:00:00Z,1007 Bougainvillea Terrace Miami FL 33174 | 8184 Spinnaker Glen Pkwy Aventura FL 33133
+cus_18b2c18f64734b928ca391e4033fa5bd,Miles,Farrell,,homeowner,2,2026-03-24T20:00:00Z,2026-08-28T14:15:00Z,220 Glasswort Rd Coral Gables FL 33162 | 172 Orchid Pointe Cir Coral Gables FL 33162
+cus_7e5672d93b5d4b64a2045be221a79cc2,Miranda,Leblanc,,homeowner,2,2026-08-31T14:00:00Z,2026-08-31T14:00:00Z,176 Bonefish Cove Dr Coral Gables FL 33162
+cus_b39ccb43b0a44542827cec7a6be8f40a,Carmen,Logan,,homeowner,2,2026-08-22T19:00:00Z,2026-09-02T13:00:00Z,8577 Bowline Landing Boulevard Unit 101 Aventura FL 33133
+cus_addde17e861244fdbeca645c9624f910,Terrence,Tucker,,homeowner,2,2026-07-17T16:30:00Z,2026-08-26T21:00:00Z,186 Leeward Pointe Miami Beach FL 33182
+cus_46809fa3478a443388d581caf0a98b57,Cassandra,Fuller,,homeowner,2,2026-08-19T17:00:00Z,2026-08-26T17:00:00Z,191 Portside Pointe Way Coral Gables FL 33162
+cus_9ab9d4ee688f465781eb7d992e19bb7e,Terrence,Leach,,homeowner,2,2026-03-30T14:29:11Z,2026-08-23T19:00:00Z,142 Cocoplum Cay Way Coral Gables FL 33162 | 176 West Bonefish Landing Drive Coral Gables FL 33162
+cus_1eecf0d938e74bbea075d05c226782bd,Tara,Vaughn,Lighthouse Hospitality,homeowner,2,2026-06-04T16:00:00Z,2026-08-22T11:00:00Z,5207 Grouper Ridge Dr Key Biscayne FL 33182 | 11 Seagrape Cay Lane Coral Gables FL 33162
+cus_8cd6419ba6b14077a2fcb0ebc0941606,Evelyn,Nolan,,homeowner,2,2026-08-04T17:00:00Z,2026-08-21T20:00:00Z,489 Bayberry Landing Drive Miami FL 33145
+cus_52a295fd718c4e50acacbc58b738fb58,Terrence,Klein,,homeowner,2,2026-07-07T16:00:00Z,2026-08-21T14:00:00Z,49 Nautilus Reef Ln Coral Gables FL 33162
+cus_6c4bac07cc974ef4910b69bb7f32ddba,Jamal,Tillman,,homeowner,2,2026-08-19T19:30:00Z,2026-08-25T14:00:00Z,40 Kingfisher Ridge St Key Biscayne FL 33182
+cus_8290ff89d4bb4ab98ae90b731ae6d3c4,Theo,Suarez,,homeowner,2,2026-08-10T21:00:00Z,2026-08-18T23:00:00Z,3016 Oleander Harbor Drive Key Biscayne FL 33182
+cus_858d4f47d3754829bffc9fd2c550899d,Yvonne,Gregory,,homeowner,2,2026-08-18T15:05:39Z,2026-08-20T15:00:00Z,373 Windward Harbor Unit 33A Key Biscayne FL 33182
+cus_3a4867253ded4ebe84bea1628a36cb41,Vivian,Rivas,,homeowner,2,2026-08-18T16:00:00Z,2026-08-19T13:00:00Z,200 Sabal Shores Ln 807 Key Biscayne FL 33182
+cus_61bbcf393ccd492c9eca1030d4a07309,Eli,Wagner,,homeowner,2,2026-08-18T17:00:00Z,2026-08-18T17:00:00Z,1205 Nautilus Bluff Dr Hialeah FL 33154
+cus_c3eb1047dad9450387cce72c98f945f6,Raquel,Melton,,homeowner,2,2026-07-27T15:00:00Z,2026-08-18T16:00:00Z,350 Plover Cove Dr Coral Gables FL 33162 | 42 Cocoplum Key St Doral FL 33173
+cus_ac1ceb954f794fb587e453a65d83dda7,Tanya,Greer,,homeowner,2,2026-08-14T16:30:00Z,2026-08-15T22:00:00Z,23 Spinnaker Terrace Alley Homestead FL 33155 | 151 N Bonefish Ridge St Palmetto Bay FL 33155
+cus_146989cada934ed8a0407030d5883c06,Terrence,Locke,,homeowner,2,2026-08-14T23:00:00Z,2026-08-15T15:30:00Z,180 Buttonwood Glen Boulevard Key Biscayne FL 33182
+cus_a4a706b130f042a994269af36fe683ba,Vera,Ashford,,homeowner,2,2026-05-18T20:00:00Z,2026-08-14T18:00:00Z,305 Orchid Pointe Cir Coral Gables FL 33162
+cus_5341e341257845db8d5b8afb7609a545,Rita,Daniels,Lighthouse Hospitality,business,2,2026-06-14T16:00:00Z,2026-08-14T14:30:00Z,5191 Grouper Ridge Dr 5191 Miami Beach FL 33182 | 24 Gulfstream Key Dr Miami Beach FL 33182
+cus_dbe43108c7d941adb1e8fb6ed7bcbadb,Alina,Cortez,,homeowner,2,2026-07-29T21:00:00Z,2026-08-18T14:00:00Z,605 N Coral Ridge Pkwy 15A Coral Gables FL 33162
+cus_1a671e1139bd4e5782d5840b24d2597c,Raquel,Fischer,,homeowner,2,2026-07-14T14:00:00Z,2026-08-12T17:00:00Z,104 Marlin Reef Way Cutler Bay FL 33155
+cus_cd70ad4649ae4093959d629052a094b6,Vivian,Montgomery,,homeowner,2,2026-08-06T20:00:00Z,2026-08-18T14:00:00Z,310 Nautilus Cay Dr Coral Gables FL 33162
+cus_1b382c53e3c44a5789373363a534d6db,Kayla,Lawson,,homeowner,2,2026-06-02T15:00:00Z,2026-08-13T14:00:00Z,165 Saltgrass Cay Dr Coral Gables FL 33162
+cus_80cba60c820a40629cb9c727fab4d65c,Erica,Nunez,,homeowner,2,2026-04-30T17:00:00Z,2026-08-11T14:00:00Z,264 Skimmer Pointe Dr Coral Gables FL 33162
+cus_a3d27d114abc4572aca71edd6e4d8a43,Caroline,Tucker,,homeowner,2,2026-06-02T14:00:00Z,2026-08-09T21:00:00Z,110 Ibis Harbor Dr Coral Gables FL 33162 | 110 Ibis Harbor Drive Coral Gables FL 33162
+cus_c54e206784e84c118165fc790bb4277e,Lorena,Steele,,homeowner,2,2026-08-03T14:00:00Z,2026-08-04T19:00:00Z,55 Seashell Glen 2C Coral Gables FL 33162 | 55 Seashell Glen 2C Coral Gables FL 33162
+cus_2a0d484448a14e07a7fb44a7bc1892c8,Holly,Ferguson,,homeowner,2,2026-08-01T13:00:00Z,2026-08-03T13:00:00Z,1158 Leeward Cay Blvd Miami FL 33147
+cus_d2126c4992b64300a6ba7fee325e2302,Gloria,Spence,,homeowner,2,2026-07-31T15:00:00Z,2026-07-31T21:00:00Z,52 Portside Hollow Way Key Biscayne FL 33182
+cus_01d07b5d2c4a4080a8400ed22b5007be,Victoria,Beck,,homeowner,2,2026-07-31T14:00:00Z,2026-08-07T19:00:00Z,790 N Coral Ridge Pkwy 2A/2B Coral Gables FL 33162
+cus_a98fabeadef84db7a26000ff13b9e267,Andre,Baxter,,homeowner,2,2026-07-21T14:30:00Z,2026-07-31T15:30:00Z,37 Keel Ct Miami Beach FL 33182
+cus_78389dbb434042c7908094d3f90355a9,Harper,Jennings,,homeowner,2,2026-07-29T13:00:00Z,2026-08-03T13:00:00Z,459 Saltbush Shores Road Miami FL 33174
+cus_643a8c06b7c343909886270f28122c65,Sidney,Weiss,,homeowner,2,2026-07-27T14:30:00Z,2026-07-28T00:30:00Z,288 Seafoam Cay Rd 114 Key Biscayne FL 33182
+cus_25b2ce7aac2140d190660fb59c73d119,Selena,Reese,,homeowner,2,2026-07-11T16:00:00Z,2026-07-24T17:00:00Z,12889 Bayfront Hwy Suite 107A Miami Beach FL 33182
+cus_93e4d5fd6b93430ca1d8af8a7053473d,Seth,Porter,,homeowner,2,2026-04-10T15:00:00Z,2026-08-20T14:00:00Z,409 Amberjack Isle Lane Homestead FL 33155
+cus_9f6032efbd654a899352a657e0b51b91,Xavier,Russo,,homeowner,2,2026-07-22T17:00:00Z,2026-07-28T14:00:00Z,308 Seafoam Cay Rd Unit 109 Key Biscayne FL 33182
+cus_a888773e577d4acfbfd409b91befff75,Caroline,Sutton,,homeowner,2,2026-04-27T12:45:00Z,2026-07-20T20:00:00Z,1363 W Old Mangrove Rd 1109 Coral Gables FL 33162
+cus_35ba76478ebc476c93413c2a1bf318d7,Selena,Shaffer,,homeowner,2,2026-07-18T22:37:27Z,2026-07-19T14:00:00Z,2934 Bayfront Hwy 305 Miami Beach FL 33182
+cus_1e8a8f7764744ea3a37d48fb4532d5b7,Naomi,Blackwell,,homeowner,2,2026-06-24T19:00:00Z,2026-07-16T14:00:00Z,619 Plumeria Hollow Dr Miami Beach FL 33182
+cus_2bc05492202e44c590b5b5a39f4ac6c5,Miles,Sanford,,homeowner,2,2026-06-01T14:00:00Z,2026-07-15T13:30:00Z,1284 Glasswort Ridge Way Key Biscayne FL 33182
+cus_aec3f1de68da4c43a29ce22901e652e3,Priya,Ochoa,Palmetto Hospitality,business,2,2026-07-08T18:24:36Z,2026-07-09T15:00:00Z,342 S Coral Ridge Pkwy Coral Gables FL 33162
+cus_275f534436054b4ab74dd49a65e875e0,Ernesto,Dorsey,,homeowner,2,2026-06-29T18:30:00Z,2026-07-10T14:00:00Z,43 Frangipani Landing Trail 3 Key Biscayne FL 33182
+cus_98f04c7d37bc47f5a102d83b36667864,Evelyn,Morrow,,homeowner,2,2026-07-06T15:00:00Z,2026-07-08T13:00:00Z,1633 Palmetto Reef Cove Hialeah FL 33154
+cus_e14a755ff23646588c54b666c632a747,Sidney,Klein,,homeowner,2,2026-06-24T18:00:00Z,2026-07-06T21:00:00Z,1551 E Seafoam Terrace Rd Coral Gables FL 33162 | 11 Allamanda Terrace Dr Coral Gables FL 33162
+cus_38b6c239dd634c209b80fb6569151129,Javier,Owens,,homeowner,2,2026-03-05T16:30:00Z,2026-07-04T14:00:00Z,1435 W Kelp Pointe Rd Coral Gables FL 33162 | 90 Amberjack Key Ln 9B Coral Gables FL 33162
+cus_ee9b16226d7b44b4bf861141973fb3e3,Elise,Russo,,homeowner,2,2026-06-23T16:00:00Z,2026-06-24T20:00:00Z,2496 Seashell Ln Miami Beach FL 33182
+cus_31aad41c11fd4d86b0d823486c32b5dd,Josie,Slater,,homeowner,2,2026-06-25T10:15:00Z,2026-06-25T12:00:00Z,1114 Nautilus Harbor Rd Miami FL 33145
+cus_bb8c6f33806d48fa994d375bfc9bb933,Isabel,Boyd,,homeowner,2,2026-05-15T16:00:00Z,2026-06-18T14:00:00Z,277 Seahorse Drive N Unit 344 Key Biscayne FL 33182
+cus_b9b16465946f4f64b0b501f02b4f09e3,Christina,Bennett,,homeowner,2,2026-05-15T14:00:00Z,2026-07-06T15:00:00Z,353 Wahoo Key Way Key Biscayne FL 33182
+cus_86a97e682e6d46248aef0947bcada2d7,Marissa,Sullivan,,homeowner,2,2026-03-18T14:00:00Z,2026-06-06T18:00:00Z,182 Seagrape Glen Run E Homestead FL 33155
+cus_1cfec92c1d6040c0bba0cc1e5449935b,Joel,Vega,,homeowner,2,2026-05-27T21:00:00Z,2026-06-03T22:00:00Z,316 Wahoo Bluff Blvd Doral FL 33173
+cus_38466bcb250c46f7bc87e9102c336f59,Priya,Daniels,,homeowner,2,2026-05-27T14:00:00Z,2026-05-29T18:00:00Z,282 Cormorant Pointe Dr Miami Beach FL 33182
+cus_3899e43f8d6f470b9a90992eeaf1ac05,Josie,Carver,,homeowner,2,2026-05-12T14:00:00Z,2026-05-27T21:30:00Z,208 Saltgrass Harbor Dr Coral Gables FL 33162
+cus_df4b17756dfa4eabbc29a757f602c2a2,Mabel,Rowe,,homeowner,2,2026-05-20T21:00:00Z,2026-06-02T13:30:00Z,47 Hibiscus Isle Blvd Doral FL 33173
+cus_ab9cc513a3c9402888f20592934d4f6a,Damian,Baldwin,,homeowner,2,2026-05-04T16:00:00Z,2026-05-27T14:00:00Z,10861 Bayfront Hwy Key Biscayne FL 33182
+cus_2be1cce3e9a343e3a740edc53c6424d4,Seth,Carver,,homeowner,2,2026-05-14T00:30:00Z,2026-05-24T23:30:00Z,5000 South Sabal Shores Boulevard 6510 Luau Key Biscayne FL 33182
+cus_8ccb0ba29f1f487dbbb3d77b5eacef57,Ariel,Vance,,homeowner,2,2026-05-18T14:05:44Z,2026-05-19T14:00:00Z,4 Halyard Glen Ct Miami Beach FL 33182
+cus_bb476ef28c0c4bb8920e52d23025f1ba,Graham,Boyd,,homeowner,2,2026-05-20T14:00:00Z,2026-05-21T17:00:00Z,77 Cocoplum Shores Ct Kendall FL 33155 | 162 Rudder Key Rd Homestead FL 33162
+cus_9fcfe2d8e5964edea76c3c7244f3bc6a,Miles,Franco,,homeowner,2,2026-04-07T14:00:00Z,2026-05-13T19:00:00Z,9815 Bayfront Hwy Unit 34 Key Biscayne FL 33182
+cus_5c01b43acf85459d9e5d295aa1e907c0,Vera,Weaver,,homeowner,2,2026-03-11T14:00:00Z,2026-04-27T17:00:00Z,20 Leeward Pointe Miami Beach FL 33182
+cus_737504a32d0b4b05982495b03a153f1d,Pedro,Hahn,,homeowner,2,2026-04-04T21:00:00Z,2026-04-24T13:30:00Z,4361 Firebush Pointe 2 Key Biscayne FL 33182
+cus_f6cab301251c4834a2c1b5790d2370bd,Simon,Cunningham,,homeowner,2,2026-04-20T14:00:00Z,2026-04-22T14:00:00Z,1048 Hibiscus Shores Drive Miami Beach FL 33182
+cus_cff9d3c24a98404e920d6aa568f1ee80,Esther,Woods,,homeowner,2,2026-03-30T14:00:00Z,2026-04-06T14:00:00Z,64 Saltbush Harbor Rd 27 Key Biscayne FL 33182
+cus_4942927a96b54d839634c9ecc4c1602d,Seth,Flynn,,homeowner,2,2026-03-09T15:00:00Z,2026-03-11T16:00:00Z,1363 W Old Mangrove Rd Unit 1108 Coral Gables FL 33162
+cus_2fa12e77a0954ca89f4607b25def86b1,Leeward,Hospitality,Leeward Hospitality,business,1,2026-05-28T20:30:00Z,2026-05-28T20:30:00Z,224 Plover Landing Ln Palmetto Bay FL 33155
+cus_88f4f01342fb4ece8e6bae0028d1febc,,,Leeward Hospitality,business,1,2026-03-30T01:00:00Z,2026-03-30T01:00:00Z,940 Barnacle Glen 98 Unit 32 Miami Beach FL 33182
+cus_5cf83cc9ddc349d89c0dcfc0181b4e1c,Miles,Arnold,,homeowner,1,2026-04-30T21:00:00Z,2026-04-30T21:00:00Z,87 Banyan Hollow Lane Coral Gables FL 33162
+cus_351f6ab347a347e18e371a29d91d48ad,Andre,Bates,,homeowner,1,2026-06-23T15:00:00Z,2026-06-23T15:00:00Z,3003 Oleander Harbor Dr Key Biscayne FL 33182
+cus_d1d39d5edf79429dac524ace416c8834,Vincent,,,homeowner,1,2026-07-22T21:00:00Z,2026-07-22T21:00:00Z,38 Jacaranda Harbor Rd Suite 3 Coral Gables FL 33162
+cus_0e80b039a9754807b50e05ef36114a01,Bonnie,Steele,,homeowner,1,2026-07-22T20:00:00Z,2026-07-22T20:00:00Z,114 Skimmer Landing Dr 214 Key Biscayne FL 33182
+cus_bb3a66d921b046c6ac38a46a53562fda,Josie,Dudley,,homeowner,1,2026-05-01T19:00:00Z,2026-05-01T19:00:00Z,89 Portside Cay Avenue Homestead FL 33162
+cus_537d408068f04ad4a7542c79fc3eb21a,Violet,Roach,,homeowner,1,2026-04-15T18:00:00Z,2026-04-15T18:00:00Z,320 Amberjack Harbor St Key Biscayne FL 33182
+cus_2f0da8c612c44507a1b738ff38423800,Nolan,Adler,,homeowner,1,2026-03-26T19:30:00Z,2026-03-26T19:30:00Z,154 Leeward Key Cv Unit 179 Key Biscayne FL 33182
+cus_a2ffe4e2d5c645688e441c98e3f8154a,Celeste,Castillo,,homeowner,1,2026-04-01T14:00:00Z,2026-04-01T14:00:00Z,932 Jacaranda Hollow Dr Key Biscayne FL 33182
+cus_24397a54ebca4090a637064dd0dce452,Teresa,Rush,,homeowner,1,2026-08-18T15:00:00Z,2026-08-18T15:00:00Z,103 Lighthouse Hollow Circle Coral Gables FL 33162
+cus_edffce0849b645b28e44d8a0ec07d355,Kendra,Farrell,,homeowner,1,2026-07-22T14:00:00Z,2026-07-22T14:00:00Z,404 Sanddollar Cay Dr Coral Gables FL 33162
+cus_9a9323979a254f61af26a03dbc0aa30f,Javier,Brennan,,homeowner,1,2026-06-24T15:00:00Z,2026-06-24T15:00:00Z,3292 Harborlight Hollow Ln Key Biscayne FL 33182
+cus_c4e699e42ebb4176ad3c2f785c8a83ed,Serena,Navarro,,homeowner,1,2026-06-19T23:00:00Z,2026-06-19T23:00:00Z,8613 Rudder Landing Ln Key Biscayne FL 33182
+cus_78c56feb4d8541b5abf4abe65d860afa,Isaac,Weaver,,homeowner,1,2026-05-18T17:00:00Z,2026-05-18T17:00:00Z,1632 Gulfstream Cove Boulevard Key Biscayne FL 33182
+cus_6243c4e9c34e461f88e1ea05a079dbdb,Wesley,Lane,,homeowner,1,2026-05-14T20:00:00Z,2026-05-14T20:00:00Z,675 Cowrie Hollow Dr Unit 601A Key Biscayne FL 33182
+cus_cc60879455f9479e8e54abee5cf38009,Hazel,Ferguson,,homeowner,1,2026-03-27T21:00:00Z,2026-03-27T21:00:00Z,9950 Bayfront Hwy Lot A17 Key Biscayne FL 33182
+cus_a0d20949322e4e7eb631b9d68d536ccb,Mildred,Nichols,,homeowner,1,2026-05-19T14:00:00Z,2026-05-19T14:00:00Z,675 Cowrie Hollow Dr Unit 102D Key Biscayne FL 33182
+cus_f6cde4bad74840ec837e58f276d6ea98,Evelyn,Hammond,,homeowner,1,2026-03-26T14:00:00Z,2026-03-26T14:00:00Z,115 Manatee Cove St Coral Gables FL 33162
+cus_fabb03773daa4412a7963bccbcf85259,Judith,Shaffer,,homeowner,1,2026-03-10T16:00:00Z,2026-03-10T16:00:00Z,340 Cowrie Hollow Dr Unit 25 Key Biscayne FL 33182
+cus_dfb7dd8bf64b44fd81519c9621dfa752,Pablo,,Whitecap Hospitality,business,1,2026-08-11T18:31:32Z,2026-08-11T18:31:32Z,3524 Bayfront Hwy Coral Gables FL 33162
+cus_f624ae1b3434438f9e9609ed2c242218,Caleb,Cobb,,homeowner,1,2026-08-01T16:00:00Z,2026-08-01T16:00:00Z,67 W Moonraker Glen Rd Coral Gables FL 33162
+cus_e8832104ffee4e009fb08846cbae0b1a,Seth,Nunez,,homeowner,1,2026-07-28T20:30:00Z,2026-07-28T20:30:00Z,41 Limestone Shores Rd Coral Gables FL 33162
+cus_9e9ed99c9bc94e8f900bf9f65994c61b,Christina,Brady,,homeowner,1,2026-06-24T15:00:00Z,2026-06-24T15:00:00Z,1363 W Old Mangrove Rd Unit 3127 Coral Gables FL 33162
+cus_ff1696124a484ff0b73f9b427a999868,Derek,Delgado,,homeowner,1,2026-05-01T14:00:00Z,2026-05-01T14:00:00Z,1363 W Old Mangrove Rd Unit 2121 Coral Gables FL 33162
+cus_5a60649350194f10bf1f130a5584b516,Vivian,Whitfield,,homeowner,1,2026-04-15T16:00:00Z,2026-04-15T16:00:00Z,1363 W Old Mangrove Rd Unit 1117 Coral Gables FL 33162
+cus_4a8a8c0831c442d7883e3a6fddfe304e,Tara,Pearce,,homeowner,1,2026-05-18T16:00:00Z,2026-05-18T16:00:00Z,2014 Saltgrass Terrace Cir Key Biscayne FL 33182
+cus_e0b4d9f340544abda3470900dbd76c26,Damian,Monroe,,homeowner,1,2026-03-27T17:30:00Z,2026-03-27T17:30:00Z,101 E Barnacle Cay Pkwy Hialeah FL 33154
+cus_e3094f324a824fed86dfd6775278eb30,Xavier,Vincent,Whitecap Hospitality,homeowner,1,2026-04-13T14:00:00Z,2026-04-13T14:00:00Z,508 Allamanda Pointe Place Key Biscayne FL 33182
+cus_c9ba4a24c41f46bd91a8c864b3194e96,Tamara,Howe,,homeowner,1,2026-04-16T14:00:00Z,2026-04-16T14:00:00Z,230 Bonefish Terrace Blvd Miami Beach FL 33182
+cus_c64dbbd398b144e08e8b6665f07b0e50,Emily,Emerson,,homeowner,1,2026-03-17T16:00:00Z,2026-03-17T16:00:00Z,4786 Allamanda Shores Blvd Miami Beach FL 33182
+cus_26b745d0b25646058220e7355c1b203d,Vincent,Brennan,,homeowner,1,2026-03-10T18:00:00Z,2026-03-10T18:00:00Z,143 Saltgrass Harbor Dr Coral Gables FL 33162
+cus_665128e7952f4c039d6a37fb06498d85,Marissa,Kennedy,,homeowner,1,2026-08-11T19:00:00Z,2026-08-11T19:00:00Z,60 Tern Glen Dr Unit E11 Miami Beach FL 33182
+cus_8c83cd433b7344c987fa4934c3b1751d,Marissa,Hartman,,homeowner,1,2026-08-09T20:30:00Z,2026-08-09T20:30:00Z,1096 Cowrie Hollow Dr 1102A Key Biscayne FL 33182
+cus_275b4d43c1df4beea7b61a9ce41d3374,Aiden,Guerrero,,homeowner,1,2026-07-28T15:00:00Z,2026-07-28T15:00:00Z,244 Ixora Landing Loop Coral Gables FL 33162
+cus_f9b1a806fd7645358807b0db2cf622ac,Sidney,Montgomery,,homeowner,1,2026-08-11T14:00:00Z,2026-08-11T14:00:00Z,291 Jacaranda Hollow Dr Key Biscayne FL 33182
+cus_1ad4bbd358504ac28ad43724e1aa0a60,Andre,Cardenas,,homeowner,1,2026-07-22T16:00:00Z,2026-07-22T16:00:00Z,79 N Glasswort Cay Ave Coral Gables FL 33162
+cus_37df00bf293047db9ab19db4319ca40d,Nolan,Bates,,homeowner,1,2026-06-24T18:00:00Z,2026-06-24T18:00:00Z,3016 Oleander Harbor Dr Key Biscayne FL 33182
+cus_97ae44695d7f498c99b8eb44485c6129,Isabel,Hartman,,homeowner,1,2026-06-23T18:30:00Z,2026-06-23T18:30:00Z,235 Flamingo Pointe Way Coral Gables FL 33162
+cus_ab3235c8fd8f461d82ff883c4c1871a5,Martha,Little,,homeowner,1,2026-06-12T15:30:00Z,2026-06-12T15:30:00Z,93 Manatee Terrace Ln Coral Gables FL 33162
+cus_4cfb945aad1e4f568c0dc7ecff52381e,Bonnie,Rosales,Starfish Hospitality,homeowner,1,2026-06-19T14:00:00Z,2026-06-19T14:00:00Z,4495 Tidewater Cove Ln Suite 210 Miami Beach FL 33182
+cus_5bd0c1fd30164ebeb3f2be9fbbb3a53a,Miles,Bates,,homeowner,1,2026-06-09T14:00:00Z,2026-06-09T14:00:00Z,7901 E Old Mangrove Rd Palmetto Bay FL 33162
+cus_39e29733fce54fd296cc5ce692fb7f15,Audrey,Shields,,homeowner,1,2026-06-11T14:00:00Z,2026-06-11T14:00:00Z,8 Cormorant Terrace Ct Coral Gables FL 33162
+cus_eaeb9258a9af41c599587b06679bc33b,Xavier,Whitaker,,homeowner,1,2026-05-16T14:00:00Z,2026-05-16T14:00:00Z,50 Orchid Pointe Cir Coral Gables FL 33162
+cus_661b7ab9192c4ef3901bce857b8e5e84,Seth,Talley,,homeowner,1,2026-05-12T18:00:00Z,2026-05-12T18:00:00Z,661 Banyan Ridge Dr Miami Beach FL 33182
+cus_0948a4bcbaa247dcad488eb8ab63664f,Pedro,Reyes,,homeowner,1,2026-06-10T15:00:00Z,2026-06-10T15:00:00Z,1113 Sanddollar Ridge Place Miami Beach FL 33182
+cus_997413977a124e95a5b20cd6efb20f78,Fiona,Alvarez,,homeowner,1,2026-05-08T17:00:00Z,2026-05-08T17:00:00Z,147 Windward Terrace Dr Homestead FL 33162
+cus_6c5f803f81c34a5b89f7559e76390eb8,Omar,Morton,,homeowner,1,2026-05-12T16:00:00Z,2026-05-12T16:00:00Z,176 Bougainvillea Landing 4D Key Biscayne FL 33182
+cus_e541680d9d77433682b02573cdcacf19,Delia,Calhoun,,homeowner,1,2026-05-06T15:00:00Z,2026-05-06T15:00:00Z,1 Barnacle Bluff Dr Unit 1403 Key Biscayne FL 33182
+cus_9b26aee1ef6646eabc3cf3d31d2044c6,Kendra,Rocha,,homeowner,1,2026-04-28T17:00:00Z,2026-04-28T17:00:00Z,165 Windward Hollow Cir Coral Gables FL 33162
+cus_1a9b8d7b198d403ebb4d4955001f51d6,Gloria,Navarro,,homeowner,1,2026-04-09T15:00:00Z,2026-04-09T15:00:00Z,7 Sanddollar Terrace Coral Gables FL 33162
+cus_19de411c2532400bbbfba534d6e33fc1,Gerald,Kirby,,homeowner,1,2026-04-23T20:00:00Z,2026-04-23T20:00:00Z,1363 W Old Mangrove Rd unit 3116 Coral Gables FL 33162
+cus_5f793260fcbe49dbb8880682ffca04db,Marcus,Wiley,,homeowner,1,2026-04-01T14:00:00Z,2026-04-01T14:00:00Z,27 Wahoo Landing St Unit 27E Cutler Bay FL 33155
+cus_d2d46cbe3d194420a2db314489bc8125,Rita,Guerrero,,homeowner,1,2026-04-10T16:00:00Z,2026-04-10T16:00:00Z,112 Marlin Hollow Blvd Unit 504 Key Biscayne FL 33182
+cus_a9c3d15ad52b4858af5c41091ea53945,Rita,Morrow,,homeowner,1,2026-04-21T17:00:00Z,2026-04-21T17:00:00Z,5133 Grouper Ridge Cir Miami Beach FL 33182
+cus_00152d1feacb49969596dca459411436,Christina,Banks,,homeowner,1,2026-03-19T20:00:00Z,2026-03-19T20:00:00Z,394 Frangipani Hollow Blvd Coral Gables FL 33162
+cus_7652e5d4a4f34528a5d100d4fd78699a,Charlene,Whitaker,Osprey Hospitality,business,1,2026-05-28T19:00:00Z,2026-05-28T19:00:00Z,74 Oleander Key St Kendall FL 33155
+cus_617e24dddf1c40cb87e0c9b896e4a39a,Wyatt,McKinney,,homeowner,1,2026-08-14T21:00:00Z,2026-08-14T21:00:00Z,212 Egret Landing Blvd Unit 206 Miami Beach FL 33182
+cus_afb282d9619847ff902087a9937eadac,Hazel,Hale,,homeowner,1,2026-08-10T19:00:00Z,2026-08-10T19:00:00Z,802 Marlin Cay Drive Key Biscayne FL 33182
+cus_a947d4bf874346b68faf8f0623f6ac84,Pamela,Brennan,,homeowner,1,2026-08-03T14:00:00Z,2026-08-03T14:00:00Z,119 Glasswort Landing Ln Coral Gables FL 33162
+cus_94be287d133a44dbb6a07d026ef283fe,Cassandra,Sexton,,homeowner,1,2026-07-31T15:00:00Z,2026-07-31T15:00:00Z,515 Cormorant Reef Blvd Leeward Cove 709 Coral Gables FL 33162
+cus_3a0cb04cc02a4292981b40cd23ea7192,Cecilia,Romero,,homeowner,1,2026-07-30T20:30:00Z,2026-07-30T20:30:00Z,8551 Spinnaker Ridge Ct Key Biscayne FL 33182
+cus_b7d094f54d774bfeac0ac534a8d3decd,Cassandra,Emerson,,homeowner,1,2026-07-27T18:00:00Z,2026-07-27T18:00:00Z,326 N Lighthouse Landing Unit 91D Key Biscayne FL 33182
+cus_a41d96455b774f6bad67e35fd93038c0,Catherine,Collier,,homeowner,1,2026-07-30T15:00:00Z,2026-07-30T15:00:00Z,13 Nautilus Cove Ln Coral Gables FL 33162
+cus_572a4ada12f448c09b0ab69731662b5c,Miguel,Solis,,homeowner,1,2026-07-23T17:00:00Z,2026-07-23T17:00:00Z,4074 Sandcastle Harbor Dr Miami Beach FL 33182
+cus_8258b6cd3a7744efb5f3b7141b325c35,Beatriz,Hudson,,homeowner,1,2026-07-15T17:00:00Z,2026-07-15T17:00:00Z,4220 Gulfstream Landing Loop Miami Beach FL 33182
+cus_907772f64eff4777ae3de56fb7fc6c16,Yolanda,Mann,,homeowner,1,2026-07-06T20:29:45Z,2026-07-06T20:29:45Z,2640 E Old Mangrove Rd Coral Gables FL 33162
+cus_7e722fbac7f5427b92f88f1d9647df36,Esther,Simmons,,homeowner,1,2026-06-30T14:00:00Z,2026-06-30T14:00:00Z,169 Allamanda Pointe St Coral Gables FL 33162
+cus_d0756ba20c724b96abc50a42c9bed4b3,Fiona,Archer,,homeowner,1,2026-06-25T18:30:00Z,2026-06-25T18:30:00Z,686 Cormorant Rd Coral Gables FL 33162
+cus_2c1bcfe25b174eac8986a99c17201cd8,Lorena,Hubbard,,homeowner,1,2026-06-24T23:00:00Z,2026-06-24T23:00:00Z,606 Banyan Ridge Dr Key Biscayne FL 33182
+cus_d4fbd2112705485f896f28e0fc1b3267,Gwen,Glover,,homeowner,1,2026-06-17T14:00:00Z,2026-06-17T14:00:00Z,42 Seashell Landing Rd Coral Gables FL 33162
+cus_ff7a69c808cd4160a27a19f4a9814c4f,Maya,McDaniel,,homeowner,1,2026-06-17T15:00:00Z,2026-06-17T15:00:00Z,9815 Bayfront Hwy Unit A403 Key Biscayne FL 33182
+cus_0be3c545aff14a2ca26387bcad87562e,Kenneth,Sawyer,,homeowner,1,2026-06-04T21:00:00Z,2026-06-04T21:00:00Z,1370 Seafoam Harbor Run W Key Biscayne FL 33182
+cus_408119b92bd644ba829ef3ad10bcaec7,Miguel,Dudley,,homeowner,1,2026-06-03T21:00:00Z,2026-06-03T21:00:00Z,1363 W Old Mangrove Rd Unit 1116 Coral Gables FL 33162
+cus_58b47463a19d41b3bcf3d40c717024c6,Nolan,Hoffman,,homeowner,1,2026-05-29T20:00:00Z,2026-05-29T20:00:00Z,2725 Bayfront Hwy Miami Beach FL 33182
+cus_9f28222c0f4948a9a85b22a474266931,Graham,Rosales,,homeowner,1,2026-05-28T17:30:00Z,2026-05-28T17:30:00Z,3573 Manatee Harbor Dr Key Biscayne FL 33182
+cus_3e106ce487a5478aa746f8a2da58d8a7,Serena,Osborne,,homeowner,1,2026-05-14T14:00:00Z,2026-05-14T14:00:00Z,114 Skimmer Landing Dr Cottage 24 Key Biscayne FL 33182
+cus_bfa73eefa52044759d3508c1db706329,Xavier,Lowe,,homeowner,1,2026-05-14T14:00:00Z,2026-05-14T14:00:00Z,9001 Cormorant Reef Blvd 603 Beachmanor Key Biscayne FL 33182
+cus_2b5214e9d4d643a797251670a840b899,Alexa,Weeks,,homeowner,1,2026-04-29T16:00:00Z,2026-04-29T16:00:00Z,1952 Cowrie Hollow Dr Unit 202 Key Biscayne FL 33182
+cus_5c293796d2df4d67abd86d2fab168908,Logan,Bates,,homeowner,1,2026-04-09T22:30:00Z,2026-04-09T22:30:00Z,1160 Cowrie Hollow Dr 505A Key Biscayne FL 33182
+cus_ddb6d6fe2db94064a4b85f875890a291,Celeste,Salazar,,homeowner,1,2026-04-24T14:00:00Z,2026-04-24T14:00:00Z,140 Barnacle Reef St Unit 406 Key Biscayne FL 33182
+cus_86042f48060e4828a4056bc833662745,Wanda,Dorsey,,homeowner,1,2026-04-17T14:00:00Z,2026-04-17T14:00:00Z,4342 Firebush Pointe 2 Miami Beach FL 33182
+cus_5aa39d19473f44afbffea4fdb736b56c,Maya,Potter,,homeowner,1,2026-04-03T15:30:00Z,2026-04-03T15:30:00Z,778 Cowrie Hollow Dr B320 Key Biscayne FL 33182
+cus_923a99a43cfc4540ae44557f1e31a4c3,Kenneth,Levine,,homeowner,1,2026-03-30T16:00:00Z,2026-03-30T16:00:00Z,122 Leeward Key Cv Unit 276 Key Biscayne FL 33182
+cus_3989607b152e4e07a572efe747084660,Diego,Sexton,,homeowner,1,2026-04-21T14:00:00Z,2026-04-21T14:00:00Z,675 Cowrie Hollow Dr Unit 103D Key Biscayne FL 33182
+cus_d7db68cd412149babdfd59942655e721,Ruby,Parks,,homeowner,1,2026-03-27T19:57:36Z,2026-03-27T19:57:36Z,391 Wahoo Key Way Key Biscayne FL 33182
+cus_d316820ed9a740069b3513d3f0e9ad69,Holly,Blair,,homeowner,1,2026-03-27T18:24:55Z,2026-03-27T18:24:55Z,27 Glasswort Landing Ln Coral Gables FL 33162
+cus_b34aa4ab0d234444931674d339715ef8,Naomi,Lynch,,homeowner,1,2026-04-07T19:00:00Z,2026-04-07T19:00:00Z,21 Grouper Landing Ct Coral Gables FL 33162
+cus_d1c81ab4c826485dbdd652b7b72c1f78,Wanda,Fields,,homeowner,1,2026-03-14T18:00:00Z,2026-03-14T18:00:00Z,1096 Cowrie Hollow Dr Unit G14 Key Biscayne FL 33182
+cus_7b9a04dc77804f50a66d152a0426b5e5,Judith,Franco,,homeowner,1,2026-03-11T15:00:00Z,2026-03-11T15:00:00Z,226 Hibiscus Harbor Key Biscayne FL 33182
+cus_dc4ffdc212914fea9883c1e0e0e1e882,Caroline,Nunez,,homeowner,1,2026-08-31T16:02:27Z,2026-08-31T16:02:27Z,5254 Skimmer Isle Dr Key Biscayne FL 33182
+cus_1abe4bb4a17843f8983cf33f1acd318e,Theo,Levine,,homeowner,1,2026-08-31T14:00:00Z,2026-08-31T14:00:00Z,115 Moonraker Dr Miami Beach FL 33182
+cus_e47c9db3c9d3404cb92b02eb79ba3320,Kayla,Calhoun,,homeowner,1,2026-08-25T19:00:00Z,2026-08-25T19:00:00Z,4738 Allamanda Shores Boulevard Miami Beach FL 33182
+cus_8f8430bbbc434ef7acea4caf1626c4f0,Benjamin,Pena,,homeowner,1,2026-08-24T16:00:00Z,2026-08-24T16:00:00Z,515 Cormorant Reef Blvd Unit 707 Coral Gables FL 33162
+cus_c92b229301534eff917e319f990d8594,Mildred,Woodard,,homeowner,1,2026-08-24T17:00:00Z,2026-08-24T17:00:00Z,163 Osprey Terrace Rd Coral Gables FL 33162
+cus_9d68c953939e4d54af4c701b95c4c155,Cassandra,Farrell,,homeowner,1,2026-08-19T18:30:00Z,2026-08-19T18:30:00Z,79 Jacaranda Hollow Dr Key Biscayne FL 33182
+cus_91545768dba343ecb3390664b9c41136,Sofia,Hudson,,homeowner,1,2026-08-17T19:00:00Z,2026-08-17T19:00:00Z,30 Saltgrass Ridge Dr Coral Gables FL 33162
+cus_55cfbfa5dee7424db8bccc286133ad6d,Mildred,Calhoun,,homeowner,1,2026-08-15T23:00:00Z,2026-08-15T23:00:00Z,76 Hibiscus Terrace Road Key Biscayne FL 33182
+cus_1d057fc6ee0c47709aeb137620557e74,Sonia,Pena,,homeowner,1,2026-08-07T16:30:00Z,2026-08-07T16:30:00Z,84 Saltbush Hollow Ln Coral Gables FL 33162
+cus_2fbd77598ef74c869f26f2ec7170780b,Charlene,Rivas,,homeowner,1,2026-08-02T13:00:00Z,2026-08-02T13:00:00Z,20 Leeward Pointe Key Biscayne FL 33182
+cus_70b09132884042f590f44fc8e1f65e2f,Ethan,Hartman,,homeowner,1,2026-08-17T17:00:00Z,2026-08-17T17:00:00Z,121 Allamanda Ridge Blvd Coral Gables FL 33162
+cus_047c6b2acd3f4dd7a2b4def8a9a51561,Jasmine,Graves,,homeowner,1,2026-07-29T14:00:00Z,2026-07-29T14:00:00Z,166 Spinnaker Cay Lane Coral Gables FL 33162
+cus_86c8f8f733544a7aad33849ea0aa5c63,Karl,Merritt,,homeowner,1,2026-07-28T23:00:00Z,2026-07-28T23:00:00Z,43 Frangipani Landing Trail Unit 1 Key Biscayne FL 33182
+cus_567bcd7f7cda49068e5741a1530fc9ec,Simon,Cain,,business,1,2026-07-28T22:30:00Z,2026-07-28T22:30:00Z,125 Ibis Harbor Dr Coral Gables FL 33162
+cus_f14012b7f3ea44f09c7810e67e8b1aa2,Theo,Arnold,,homeowner,1,2026-08-06T14:00:00Z,2026-08-06T14:00:00Z,2951 Hibiscus Key Dr Key Biscayne FL 33182
+cus_36c0cfb5ce66499faf689feecf2cede2,Kendra,Pratt,,homeowner,1,2026-07-29T15:00:00Z,2026-07-29T15:00:00Z,46 Cormorant Shores Ct Coral Gables FL 33162
+cus_11388cc4eaaf48a99d82b9162a773294,Jonah,Jarvis,,homeowner,1,2026-07-17T19:00:00Z,2026-07-17T19:00:00Z,126 S Jacaranda Hollow Dr Unit 12 Key Biscayne FL 33182
+cus_18a2d3e6ba7340c0906d83aaaef70b0d,Priya,Ames,,homeowner,1,2026-07-13T21:00:00Z,2026-07-13T21:00:00Z,78 Bougainvillea Pointe St Coral Gables FL 33162
+cus_5a0562de19ba489e915ed8cf4937baba,Audrey,Forbes,,homeowner,1,2026-07-10T13:30:00Z,2026-07-10T13:30:00Z,206 Kingfisher Dr Key Biscayne FL 33182
+cus_94197eade2c24e458c930f132c3909ce,Gail,Hobbs,,homeowner,1,2026-07-09T16:00:00Z,2026-07-09T16:00:00Z,118 Amberjack Key Ln Unit 2B Coral Gables FL 33162
+cus_1be668f03b4c497393d2f235af648f39,Terrence,Sloan,,homeowner,1,2026-07-09T13:30:00Z,2026-07-09T13:30:00Z,141 Grouper Terrace Dr Coral Gables FL 33162
+cus_ebaaf266d1e34adcb57ca24a6771707a,Ernesto,Singleton,,homeowner,1,2026-07-07T15:30:00Z,2026-07-07T15:30:00Z,5174 Grouper Ridge Dr Miami Beach FL 33182
+cus_3e8da2c498604ab78254dec2edbf189e,Louis,Jennings,,homeowner,1,2026-07-05T18:00:00Z,2026-07-05T18:00:00Z,109 Windward Glen Circle Miami Beach FL 33182
+cus_33649e9b02b5411a9515ff45e6c65c46,Jesse,Wilkinson,,homeowner,1,2026-07-02T20:00:00Z,2026-07-02T20:00:00Z,43 Ixora Isle Dr Coral Gables FL 33162
+cus_6c763e566c3e44eba53d20485039f3e9,Catherine,Hobbs,,homeowner,1,2026-07-01T19:30:00Z,2026-07-01T19:30:00Z,130 Wahoo Hwy Suite 1 Key Biscayne FL 33182
+cus_e796a54d18394867a5504e3e726d9645,Teresa,Sutton,,homeowner,1,2026-06-24T20:22:37Z,2026-06-24T20:22:37Z,37 Windward Bluff Ct Cutler Bay FL 33162
+cus_a20dddd5d2fa40fe95d9581eb684674e,Lillian,Vaughn,,homeowner,1,2026-06-20T15:00:00Z,2026-06-20T15:00:00Z,596 Gulfstream Terrace Ct Key Biscayne FL 33182
+cus_b67fc38759f44cc5b561194b8cf42037,Nadia,Mills,,homeowner,1,2026-06-19T16:00:00Z,2026-06-19T16:00:00Z,413 Skimmer Blvd Miami Beach FL 33182
+cus_26449c6438e94a669622f1fd786734a9,Derek,Logan,,homeowner,1,2026-06-05T23:00:00Z,2026-06-05T23:00:00Z,76 Sanddollar Shores Ct Key Biscayne FL 33182
+cus_346395523c734bc7a2c111e6db7c5bd9,Carmen,McLean,Saltmarsh Hospitality,business,1,2026-06-04T13:30:00Z,2026-06-04T13:30:00Z,320 Bowline Glen Dr Homestead FL 33162
+cus_10231371974b4b55a021eae15e135283,Derek,Lawson,,homeowner,1,2026-06-03T18:00:00Z,2026-06-03T18:00:00Z,44 E Buttonwood Cay St Lot 14 Key Biscayne FL 33182
+cus_35b08c01191844f29d119d08f283b3e1,Stuart,Nolan,,homeowner,1,2026-06-01T21:00:00Z,2026-06-01T21:00:00Z,9950 Bayfront Hwy Lot A9 Miami Beach FL 33182
+cus_b48ee8bb5825452eacec1162f079916c,Janice,Hess,,homeowner,1,2026-07-13T15:00:00Z,2026-07-13T15:00:00Z,2606 Cowrie Hollow Dr 1407 Key Biscayne FL 33182
+cus_94fb4ff353ba4787b1c9be326a74bebb,Brianna,Daniels,,homeowner,1,2026-05-04T17:00:00Z,2026-05-04T17:00:00Z,585 Coquina Cove Rd Key Biscayne FL 33162
+cus_3209840a93a648b4915db84c595b5e09,Kayla,Mendez,,homeowner,1,2026-05-01T16:00:00Z,2026-05-01T16:00:00Z,1363 W Old Mangrove Rd Unit 3106 Coral Gables FL 33162
+cus_eba6fe433c5f460097dd9332db1f94bd,Hazel,McKay,,homeowner,1,2026-04-29T14:00:00Z,2026-04-29T14:00:00Z,934 Cowrie Hollow Dr Townhouse B Key Biscayne FL 33182
+cus_3e3afb825f0947d3bdc328233eb6df37,Yvonne,McCarthy,,homeowner,1,2026-04-16T21:00:00Z,2026-04-16T21:00:00Z,423 Wahoo Key Way Miami Beach FL 33182
+cus_9fb108f03379408d92b9dbd788ef825c,Yvonne,Cunningham,,homeowner,1,2026-04-14T16:00:00Z,2026-04-14T16:00:00Z,37 Kingfisher Ridge St Key Biscayne FL 33182
+cus_ff3354d54cef46da97bbc5886034fa4a,Sonia,Gutierrez,,homeowner,1,2026-04-01T20:00:00Z,2026-04-01T20:00:00Z,318 Cowrie Cay Rd Hialeah FL 33154
+cus_56abbfd5ba0e4cfbb3148616ac4a9461,Graham,Sawyer,,homeowner,1,2026-04-06T14:00:00Z,2026-04-06T14:00:00Z,38 Saltgrass Cay Dr Coral Gables FL 33162
+cus_26fc9cf196e145c3820c35ef0320195f,Charlene,Delaney,,homeowner,1,2026-03-30T21:00:00Z,2026-03-30T21:00:00Z,85 S Banyan Key Ln Cutler Bay FL 33155
+cus_332e0664a276446184428bd33846058a,Edward,Wilkinson,,homeowner,1,2026-03-16T20:00:00Z,2026-03-16T20:00:00Z,122 Marlin Hollow Dr Aerial Dunes 2 Unit 410 Miami Beach FL 33182
+cus_e4214fd64a174b4aa2524e843fc614e8,Yolanda,Maddox,,homeowner,1,2026-03-13T18:00:00Z,2026-03-13T18:00:00Z,1363 West Old Mangrove Rd 1113 Coral Gables FL 33162
+cus_ba67bd6ae1d64dba874dad63830f2e25,Nolan,Finley,,homeowner,1,2026-03-11T21:00:00Z,2026-03-11T21:00:00Z,811 Egret Reef Blvd Doral FL 33173
+cus_8c74626c152946e8bfb89f06a3a33981,Eugene,Maddox,,homeowner,1,2026-03-09T16:00:00Z,2026-03-09T16:00:00Z,3279 Harborlight Hollow Ln Miami Beach FL 33182
+cus_3438956b681f4db0853cac8e057d4a58,Wyatt,Alvarez,,homeowner,1,2026-03-06T17:00:00Z,2026-03-06T17:00:00Z,30 N Nautilus Terrace St Homestead FL 33155
+cus_0d4ca9ec706b4df787b6b10591b657c8,,,,homeowner,1,2026-03-06T17:30:00Z,2026-03-06T17:30:00Z,6626 E Old Mangrove Rd Unit GH3 Homestead FL 33162
+cus_2c7517c792794b5a9d8b514757f4bbba,Yolanda,Lawson,,homeowner,1,2026-09-02T15:00:00Z,2026-09-02T15:00:00Z,1096 Cowrie Hollow Dr 1101 Key Biscayne FL 33182
+cus_181d11101dbf40ef847999d87ef09c89,Nadia,Blackwell,,homeowner,1,2026-09-01T21:00:00Z,2026-09-01T21:00:00Z,122 Marlin Hollow Dr 1210 Miami Beach FL 33182
+cus_0938aea4d5af4c1cbd81cd27e4c4847c,,,,business,1,2026-09-01T19:00:00Z,2026-09-01T19:00:00Z,649 Marlin Shores Boulevard Coral Gables FL 33162
+cus_db1d8ce2f6d442b49f1eec734f475a66,Javier,Munoz,,homeowner,1,2026-09-03T14:00:00Z,2026-09-03T14:00:00Z,71 Bayberry Shores Cv Coral Gables FL 33162
+cus_fc4d50ecfc934bf6baa062675e8f9ffb,Marian,Strickland,,homeowner,1,2026-08-31T18:00:00Z,2026-08-31T18:00:00Z,8577 Bowline Landing Blvd 1301 Aventura FL 33133
+cus_df3d35cb33804e2f9a338cbbb04650c1,Cecilia,Baxter,,homeowner,1,2026-08-28T21:00:00Z,2026-08-28T21:00:00Z,164 W Kelp Pointe Rd Coral Gables FL 33162
+cus_e870f9e0644f470dbed0c9c70eca9f93,Kenneth,Hobbs,,homeowner,1,2026-08-28T20:00:00Z,2026-08-28T20:00:00Z,78 Permit Key Cir Coral Gables FL 33162
+cus_3b9276b209b1487aa82c35f0f5ac8ebb,Pedro,Melton,,homeowner,1,2026-08-28T19:00:00Z,2026-08-28T19:00:00Z,43 Plover Glen Ln Coral Gables FL 33162
+cus_25285b897bab494abd12cf300b267d94,Sandra,McKinney,,homeowner,1,2026-08-28T21:00:00Z,2026-08-28T21:00:00Z,190 Windward Cay Lane Coral Gables FL 33162
+cus_cd0c6d44af214d2ca47d17f0a9ab542f,Theo,Hammond,,homeowner,1,2026-08-28T16:00:00Z,2026-08-28T16:00:00Z,395 Sanddollar Cay Drive Coral Gables FL 33162
+cus_7c313f774fa644c89e1f16dd5de52f2b,Emily,Shaffer,,homeowner,1,2026-08-27T23:00:00Z,2026-08-27T23:00:00Z,1217 Rudder Pointe Blvd Miami Beach FL 33182
+cus_915fcd07a2134662b83b6d09c996905f,Yvonne,Rush,,homeowner,1,2026-08-28T16:30:00Z,2026-08-28T16:30:00Z,205 Bougainvillea Glen Rd Coral Gables FL 33162
+cus_81e2f74558254cdaa74f2bea5cc33973,Zoe,Rollins,,homeowner,1,2026-08-27T21:00:00Z,2026-08-27T21:00:00Z,145 Cocoplum Hollow Key Biscayne FL 33182
+cus_db839516ac214a06922fb960951731b0,Emilia,Owens,,homeowner,1,2026-08-27T19:00:00Z,2026-08-27T19:00:00Z,145 Cocoplum Hollow Key Biscayne FL 33182
+cus_14f230b3814346ecb2f8bceedd5079ef,Edith,Aguilar,,homeowner,1,2026-08-28T21:00:00Z,2026-08-28T21:00:00Z,550 Cormorant Reef Blvd 1003 Key Biscayne FL 33182
+cus_9e205a9b44b142e28ca802dffcb48c29,Joel,Reyes,,homeowner,1,2026-08-27T15:00:00Z,2026-08-27T15:00:00Z,35 Flamingo Isle Lane Coral Gables FL 33162
+cus_4b31e1b8e6a74a30a08e8de050b30097,Renee,Cardenas,,homeowner,1,2026-08-28T14:00:00Z,2026-08-28T14:00:00Z,286 Saltgrass Glen Loop Coral Gables FL 33162
+cus_8aac9679bbe9491dbec8059dc60ba576,Doris,Wiley,,homeowner,1,2026-08-27T19:00:00Z,2026-08-27T19:00:00Z,3004 Bonefish Glen Loop Homestead FL 33147
+cus_bc18db161cef4428a77bbbb05b26e120,Marian,Hendrix,,homeowner,1,2026-08-26T19:00:00Z,2026-08-26T19:00:00Z,43 Osprey Isle court Key Biscayne FL 33182
+cus_6c932d62a4b640829c29a98a2d4c188b,Lillian,Horton,,homeowner,1,2026-08-26T13:30:00Z,2026-08-26T13:30:00Z,93 Manatee Terrace Ln Coral Gables FL 33162
+cus_bd12af9bb6bb4e16a46b971a3952dee8,Ivan,Anders,,business,1,2026-08-26T16:00:00Z,2026-08-26T16:00:00Z,34 Gulfstream Glen Way Coral Gables FL 33162
+cus_f09481f1aceb428b881725fafd38c1c8,Javier,Benton,,homeowner,1,2026-08-26T16:30:00Z,2026-08-26T16:30:00Z,932 Jacaranda Hollow Dr Miami Beach FL 33182
+cus_fa988b93e8cc45ec9fdc7ae73ada2a9c,Noah,Wilkinson,,homeowner,1,2026-08-25T14:30:00Z,2026-08-25T14:30:00Z,262 Tern Cay Road Coral Gables FL 33162
+cus_01da56e256e44553af607b9211f24074,Josie,Jimenez,,homeowner,1,2026-08-28T15:00:00Z,2026-08-28T15:00:00Z,354 Seahorse Glen Ln Key Biscayne FL 33182
+cus_fcf6f5340b5547919e2c92cd22fbbc1a,Emilia,Jarvis,,homeowner,1,2026-08-24T21:00:00Z,2026-08-24T21:00:00Z,41 Leeward Cove drive Coral Gables FL 33162
+cus_785ceef81c2141eba2f1fcf895571256,,,,homeowner,1,2026-08-24T15:00:00Z,2026-08-24T15:00:00Z,536 Kelp Landing Dr Miami Beach FL 33182
+cus_cb20df6e75c74934b8794b39f77aa09c,Priya,Hooper,,homeowner,1,2026-08-24T20:00:00Z,2026-08-24T20:00:00Z,35 Spinnaker Harbor Drive Coral Gables FL 33162
+cus_d8cc0a3de0fa4d848ea16eb24bc98df1,Beatriz,Hurley,,homeowner,1,2026-08-24T18:00:00Z,2026-08-24T18:00:00Z,125 Coquina Pointe Drive Coral Gables FL 33162
+cus_4128a07c7e624062a6da795884cc5908,Nadia,Hanson,,homeowner,1,2026-08-24T15:00:00Z,2026-08-24T15:00:00Z,210 Plover Street Key Biscayne FL 33182
+cus_8ec571369dbb4e3eb2ec5d8981fb5a14,Alexa,Logan,,homeowner,1,2026-08-23T15:00:00Z,2026-08-23T15:00:00Z,407 Seagrape Hollow Street Homestead FL 33176
+cus_cf7fe68fccc7468e90f61e48d8de10e6,Isaac,Hess,,homeowner,1,2026-08-22T20:00:00Z,2026-08-22T20:00:00Z,11 Firebush Pointe Drive Unit 223 Coral Gables FL 33162
+cus_3818189e81094b968bfcb31ae1df7c70,Emily,Gaines,,homeowner,1,2026-08-22T19:00:00Z,2026-08-22T19:00:00Z,29 Gulfstream Key Drive Miami Beach FL 33182
+cus_7a12fe2347414ae2b111086143e705c9,Raquel,Hartman,,homeowner,1,2026-08-22T15:15:00Z,2026-08-22T15:15:00Z,1839 Keel Terrace Place Key Biscayne FL 33182
+cus_8ca5919713814a5d99cc60e8776121e7,Malcolm,,,homeowner,1,2026-08-22T00:30:00Z,2026-08-22T00:30:00Z,1615 South Coral Ridge Pkwy Coral Gables FL 33162
+cus_c2478d3335d744628d17fc898ad011c1,Ethan,Holloway,,homeowner,1,2026-08-26T14:00:00Z,2026-08-26T14:00:00Z,144 Plover Cay Ct Coral Gables FL 33162
+cus_ce0fc869351f4effb70dcf174cbd1adf,Longleaf,Hospitality,,homeowner,1,2026-08-22T18:00:00Z,2026-08-22T18:00:00Z,8577 Bowline Landing Blvd 302 Aventura FL 33133
+cus_5ae935a3bcde452fbbfc921205e1996a,Saltmarsh,Hospitality,,homeowner,1,2026-08-21T14:24:45Z,2026-08-21T14:24:45Z,409 Amberjack Isle Lane Homestead FL 33155
+cus_30eb8ef7a56e404db25b2313a3d3ba65,Ernesto,Petersen,,homeowner,1,2026-08-21T14:18:52Z,2026-08-21T14:18:52Z,262 Jacaranda Ridge Rd Coral Gables FL 33162
+cus_bddd59d6a23c492b87bd19b5b84cebbd,Graham,Farley,,homeowner,1,2026-08-20T14:00:00Z,2026-08-20T14:00:00Z,5438 Bayberry Harbor St Kendall West FL 33175
+cus_4ebdfdad8a5d41c0b2af0c3575266193,Theo,Salazar,,homeowner,1,2026-08-19T21:00:00Z,2026-08-19T21:00:00Z,3871 47th Ave Florida City FL 33177
+cus_64485f3a48d44718b5f68c1e76c099dd,Rita,Hayes,,homeowner,1,2026-08-19T20:30:00Z,2026-08-19T20:30:00Z,9100 Coquina Glen Blvd Unit 370 Key Biscayne FL 33182
+cus_6ea79c330290475195761c3660a4b27c,Rita,Mann,,homeowner,1,2026-08-21T14:00:00Z,2026-08-21T14:00:00Z,520 North Grouper Glen Boulevard 409 Homestead FL 33176
+cus_69ee7e8b1c354e56b2b0a81c1b371119,Vivian,Ramsey,,homeowner,1,2026-08-19T17:30:00Z,2026-08-19T17:30:00Z,1125 Sanddollar Ridge Place Key Biscayne FL 33182
+cus_0f3fa3b9561f48c6a1e335fdbf62b5dd,Tanya,Sexton,Palmetto Hospitality,homeowner,1,2026-08-19T14:00:00Z,2026-08-19T14:00:00Z,95 Portside Harbor Rd Suite A Coral Gables FL 33162
+cus_3ab828269e0643e2afd8796a60e7a3be,Tanya,Boyd,,homeowner,1,2026-08-19T15:30:00Z,2026-08-19T15:30:00Z,11807 Amberjack Cay Road Homestead FL 33176
+cus_bfc76508488d47ec8e90e1ddfc2ea6d5,Sara,Suarez,,homeowner,1,2026-08-19T15:00:00Z,2026-08-19T15:00:00Z,1363 West Old Mangrove Rd Coral Gables FL 33162
+cus_f9166a8c7d5341b2a7a1640d10ff15e8,Alina,Townsend,,homeowner,1,2026-08-21T18:00:00Z,2026-08-21T18:00:00Z,161 Portside Bluff Coral Gables FL 33162
+cus_1a38aa2b55b4414ebb3a40166405e50b,Delia,,,homeowner,1,2026-08-19T15:00:00Z,2026-08-19T15:00:00Z,26 Oleander Key St 100 Kendall FL 33155
+cus_58b73fd2680949c785590364e04d4c10,Serena,Brady,,homeowner,1,2026-08-19T14:00:00Z,2026-08-19T14:00:00Z,352 Cowrie Isle Drive Key Biscayne FL 33182
+cus_b99c92cdaa984c2c90ce9d9e34a9c389,Karl,Ashford,,homeowner,1,2026-08-18T16:00:00Z,2026-08-18T16:00:00Z,114 Jacaranda Isle Way Coral Gables FL 33162
+cus_e47b751d82d4447480fd7e046419f1aa,Naomi,Vega,,homeowner,1,2026-08-26T14:00:00Z,2026-08-26T14:00:00Z,3023 Marlin Dr Key Biscayne FL 33182
+cus_817c48a014134ce0b5776ef659e1b23e,Karl,Keller,,homeowner,1,2026-08-18T15:00:00Z,2026-08-18T15:00:00Z,42 Cocoplum Key St Doral FL 33173
+cus_1871ea9756ad4cb796c1f549b75f8da7,Selena,Nixon,Saltmarsh Hospitality,homeowner,1,2026-08-18T15:00:00Z,2026-08-18T15:00:00Z,60 Bonefish Reef Cir Homestead FL 33155
+cus_73f54ec7a4ce4e888b2663efbd50e5bc,Xavier,Fields,,homeowner,1,2026-08-18T20:00:00Z,2026-08-18T20:00:00Z,54 Gulfstream Shores Cir Coral Gables FL 33162
+cus_e73e56c73cb74297994537105540f225,Sabrina,Simmons,,homeowner,1,2026-08-17T20:00:00Z,2026-08-17T20:00:00Z,5085 Marlin Rd Miami FL 33161
+cus_cea0bb185e774b67993c40eb60e52fa3,Jasmine,Summers,,homeowner,1,2026-08-17T21:00:00Z,2026-08-17T21:00:00Z,4134 Buttonwood Ridge Dr B102 Miami Beach FL 33182
+cus_57f6de07dd784a8983c395bbdc3ed313,Pedro,Sharp,,homeowner,1,2026-08-17T20:00:00Z,2026-08-17T20:00:00Z,450 S Glasswort Key St 502 Key Biscayne FL 33182
+cus_594196e58f6a454da5fb1431848249f2,Maya,Vance,,homeowner,1,2026-08-17T13:00:00Z,2026-08-17T13:00:00Z,54 Cocoplum Pointe Dr Miami FL 33145
+cus_27ddf5413c31408386012e3acf3ecce4,Jerome,Vincent,,homeowner,1,2026-08-16T23:00:00Z,2026-08-16T23:00:00Z,51 Cowrie Terrace Lane Coral Gables FL 33162
+cus_300a0b7765a64d62aa04beca3b56ed69,Leslie,Holloway,,homeowner,1,2026-08-17T14:00:00Z,2026-08-17T14:00:00Z,220 Cowrie Cay Road Hialeah FL 33154
+cus_1de4f5b8cba74cfebde33ec386cd6288,Andre,Jennings,,homeowner,1,2026-08-15T21:00:00Z,2026-08-15T21:00:00Z,515 Cormorant Reef Boulevard Unit 903 Key Biscayne FL 33182
+cus_ad6de6e2bfef4cae923578f6408f638c,Cassandra,Montgomery,,homeowner,1,2026-08-15T13:30:00Z,2026-08-15T13:30:00Z,94 Egret Cove Cir Coral Gables FL 33162
+cus_ec9909da9bf84e85bc4785a506f24410,Erica,Pena,,homeowner,1,2026-08-15T13:30:00Z,2026-08-15T13:30:00Z,94 Egret Cove Circle Coral Gables FL 33162
+cus_94efe4bf1b164d52a8d361904a3369b7,Theo,Sanford,,homeowner,1,2026-08-15T01:00:00Z,2026-08-15T01:00:00Z,25 Permit Terrace Court Coral Gables FL 33162
+cus_88b5bebcdbfb481993b6b779883b2739,Lucia,Hahn,,homeowner,1,2026-08-15T17:00:00Z,2026-08-15T17:00:00Z,1008 Oleander Cay Road Miami Beach FL 33182
+cus_ed3398eb7ea849eead9e167fa0be30b7,Serena,Hoffman,,homeowner,1,2026-08-18T14:00:00Z,2026-08-18T14:00:00Z,152 Sea-Lavender Key Cir Coral Gables FL 33162
+cus_41279b66f8984bdd911eddb75827d916,Martha,Hayden,,homeowner,1,2026-08-14T15:30:00Z,2026-08-14T15:30:00Z,2606 Cowrie Hollow Dr 4110 Key Biscayne FL 33182
+cus_17341ceffc4947b581ffe964027a9692,Renee,Munoz,,homeowner,1,2026-08-13T21:00:00Z,2026-08-13T21:00:00Z,1164 Glasswort Rd Coral Gables FL 33162
+cus_324c1ec5b5ce4d1987b4737a754742f3,Kenneth,Avery,Seagrass Hospitality,homeowner,1,2026-08-13T14:00:00Z,2026-08-13T14:00:00Z,7591 Bayfront Hwy Fort Lauderdale FL 33174
+cus_a0d16db2f9c940a5948b2254858d2d32,Tanya,Dawson,,homeowner,1,2026-08-13T18:00:00Z,2026-08-13T18:00:00Z,849 Frangipani Rd Coral Gables FL 33162
+cus_4a580f735d1d4c6caa350170e0b13a6c,Pablo,Velez,,homeowner,1,2026-08-12T20:00:00Z,2026-08-12T20:00:00Z,316 N Lighthouse Landing Unit 45D Key Biscayne FL 33182
+cus_4341b7526f72458e8da7826d7f397cef,Terrence,Weeks,,homeowner,1,2026-08-13T19:30:00Z,2026-08-13T19:30:00Z,2417 Halyard Expy E Doral FL 33173
+cus_953d9c6f146b49b0889a10eb842ac49a,Shoreline,Hospitality,,homeowner,1,2026-08-12T14:00:00Z,2026-08-12T14:00:00Z,81 Cormorant Bluff Ave Coral Gables FL 33162
+cus_305d6e55ead94601b420759ecba86c39,Harvey,Dawson,,homeowner,1,2026-08-14T15:00:00Z,2026-08-14T15:00:00Z,2126 Halyard Harbor Cove Miami Beach FL 33182
+cus_33e830f64d534eff97762216dec39d21,Erica,Gallagher,,homeowner,1,2026-08-11T14:00:00Z,2026-08-11T14:00:00Z,183 N 51st St Coral Gables FL 33162
+cus_5a549a8cab8242a598f9cd02310b8269,Fiona,Swanson,,homeowner,1,2026-08-12T15:00:00Z,2026-08-12T15:00:00Z,466 Windward Shores Way Homestead FL 33155
+cus_664a2b4b90754340adcab262fae3a0db,Hazel,Baxter,Shoreline Hospitality,homeowner,1,2026-08-10T18:00:00Z,2026-08-10T18:00:00Z,4495 Tidewater Cove Ln Unit 170 Miami Beach FL 33182
+cus_6da6cfc3a642413989079bed49acfff7,Nolan,Weaver,,homeowner,1,2026-08-09T21:00:00Z,2026-08-09T21:00:00Z,4231 Barnacle Shores Drive Key Biscayne FL 33182
+cus_8e39292701c54deebe323c978872eb90,Esther,Jennings,,homeowner,1,2026-08-09T16:00:00Z,2026-08-09T16:00:00Z,480 Sandcastle Shores Drive Unit 506 Miami Beach FL 33182
+cus_5a5674add5d44a92a7255e3c4d5cc161,Vincent,Watts,,homeowner,1,2026-08-08T23:00:00Z,2026-08-08T23:00:00Z,391 Spinnaker Drive Key Biscayne FL 33182
+cus_774058bf197149a7b848d4b61b967350,Emily,McCarthy,,homeowner,1,2026-08-08T14:30:00Z,2026-08-08T14:30:00Z,3795 Bayfront Hwy Miami Beach FL 33182
+cus_39090bcc56674ead919e5fed12f1a4fa,Tamara,Fitzgerald,,homeowner,1,2026-08-10T14:00:00Z,2026-08-10T14:00:00Z,805 Marlin Cay Dr Miami Beach FL 33182
+cus_e347a5b0f7284b17af8b220e3e84ac2b,Delia,Stafford,,homeowner,1,2026-08-07T15:30:00Z,2026-08-07T15:30:00Z,200 Sabal Shores Ln 1303 Key Biscayne FL 33182
+cus_8904c5e577f049479213925bef61eb94,Sonia,Stafford,,homeowner,1,2026-08-07T13:30:00Z,2026-08-07T13:30:00Z,1 Barnacle Bluff Dr Unit 1603 Key Biscayne FL 33182
+cus_9b5dd2ee6610430c95eb9d4b9b72f4d2,Emilia,Locke,,homeowner,1,2026-08-07T16:00:00Z,2026-08-07T16:00:00Z,327 Palmetto Key Coral Gables FL 33162
+cus_fd39e8ad1ff3465fa0577b0901ecf0a7,Abby,Jimenez,,homeowner,1,2026-09-02T19:00:00Z,2026-09-02T19:00:00Z,421 Gulfstream St Miami FL 33185
+cus_1d202a08f82547a186db6329cfd679d6,Isaac,Whitaker,,homeowner,1,2026-08-06T01:00:00Z,2026-08-06T01:00:00Z,214 Bayberry Shores Cove Coral Gables FL 33162
+cus_4466d9a39ba245bdab0f00b3f0491b9c,Kenneth,McDaniel,,homeowner,1,2026-08-08T14:00:00Z,2026-08-08T14:00:00Z,25 Rudder Isle Wy Unit 9 Palmetto Bay FL 33155
+cus_3ef1c3d5b5864922beee8fca50776bfc,Isabel,Rocha,,homeowner,1,2026-08-05T14:00:00Z,2026-08-05T14:00:00Z,970 Tidewater Cay Road Miami FL 33167
+cus_fb966655a55c41919e56f0c380927e81,Vincent,Glover,,homeowner,1,2026-08-05T16:00:00Z,2026-08-05T16:00:00Z,4498 Flamingo Bluff Drive Miami Beach FL 33182
+cus_6f524cd966d442518032e130eb601cf6,Kayla,Ames,,homeowner,1,2026-08-05T15:00:00Z,2026-08-05T15:00:00Z,76 E Orchid Shores Dr Coral Gables FL 33162
+cus_8e2713870e3442bf8479f46ec6328a4e,Damian,Logan,,homeowner,1,2026-08-04T17:00:00Z,2026-08-04T17:00:00Z,148 Frangipani Ridge St Coral Gables FL 33162
+cus_057c0c675bdb44d7afa3b62f193afb53,Lorena,Forbes,,homeowner,1,2026-08-03T15:00:00Z,2026-08-03T15:00:00Z,39 Bonefish Shores Blvd Coral Gables FL 33162
+cus_a3a0b61c05b3410eaf9f03d7fcefd2be,Nolan,Stokes,,homeowner,1,2026-08-02T20:00:00Z,2026-08-02T20:00:00Z,754 Amberjack Bluff Dr Key Biscayne FL 33182
+cus_5abe58e22d594feaad8647a51b742e75,Sabrina,Abbott,,homeowner,1,2026-08-02T17:00:00Z,2026-08-02T17:00:00Z,8613 Rudder Landing Lane Key Biscayne FL 33182
+cus_b39a7ca739394e4fb93d083d79fdda30,Tamara,Stokes,,homeowner,1,2026-08-01T17:15:00Z,2026-08-01T17:15:00Z,104 Osprey Cove Ave Doral FL 33132
+cus_d3e2674aeb8d4f4489ec94ed06a79761,Brianna,Levine,,homeowner,1,2026-08-01T11:00:00Z,2026-08-01T11:00:00Z,278 Sabal Shores Boulevard West Key Biscayne FL 33182
+cus_3aec2f8285ed430ea1e1951008172de6,Tobias,Davenport,,homeowner,1,2026-08-01T14:00:00Z,2026-08-01T14:00:00Z,2441 West Old Mangrove Rd Coral Gables FL 33162
+cus_cef5ff2a220d4c1eaac4bc2becc5883a,Benjamin,Herrera,,homeowner,1,2026-07-31T23:00:00Z,2026-07-31T23:00:00Z,67 Buttonwood Landing Drive Key Biscayne FL 33182
+cus_b0042adfecf2499c9ddd7db1217dc641,Gwen,Hayes,,homeowner,1,2026-07-31T14:00:00Z,2026-07-31T14:00:00Z,45 Plover Cove Dr Coral Gables FL 33162
+cus_155787ded8804bd985971a4282e75692,Miguel,Moody,,homeowner,1,2026-07-30T19:00:00Z,2026-07-30T19:00:00Z,3650 Bayfront Hwy Unit 5 Miami Beach FL 33182
+cus_0e39988b775d4ea7b82aa293d8ced048,Caroline,Keller,,homeowner,1,2026-07-30T18:00:00Z,2026-07-30T18:00:00Z,100 Sandcastle Shores Dr Unit 307 Miami Beach FL 33182
+cus_72c1ce76643b4b29afd5f8efa3606732,Marissa,Forbes,,homeowner,1,2026-07-29T23:45:00Z,2026-07-29T23:45:00Z,21811 Moonraker Terrace Ave Homestead FL 33162
+cus_8b8376873c3e4e68bd313192ab1b0356,Sidney,Byrd,,homeowner,1,2026-07-29T22:00:00Z,2026-07-29T22:00:00Z,198 Portside Key Rd 143 Coral Gables FL 33162
+cus_9d3dec55035748a6b992db6641723d49,Cassandra,Weeks,,homeowner,1,2026-07-29T18:00:00Z,2026-07-29T18:00:00Z,765 Egret Pointe Dr Coral Gables FL 33162
+cus_86e4ed26e3d042579c84cd0268d2f596,Charlene,Erickson,,homeowner,1,2026-07-28T20:30:00Z,2026-07-28T20:30:00Z,11 Sea-Lavender Ridge Pl Kendall FL 33155
+cus_5b57293cd80445a0ac7650ba0c80a7eb,Serena,Aguilar,,homeowner,1,2026-07-28T14:00:00Z,2026-07-28T14:00:00Z,114 Kingfisher Landing Drive Key Biscayne FL 33182
+cus_4656b014da7a414c8692398e932954b6,Rita,Rowe,Tidewater Hospitality,homeowner,1,2026-07-28T14:00:00Z,2026-07-28T14:00:00Z,1394 Osprey Hwy South Building 6 Coral Gables FL 33162
+cus_52e4ac34eee544a2ac2846f1e1bdf9c6,Yvonne,Hopkins,,homeowner,1,2026-07-27T13:30:00Z,2026-07-27T13:30:00Z,186 Cormorant Glen Rd Coral Gables FL 33162
+cus_8724130a1ff040b4899d3f0512ae22e9,Edith,Alvarez,,homeowner,1,2026-07-26T17:00:00Z,2026-07-26T17:00:00Z,50 Sanddollar Landing Street Key Biscayne FL 33182
+cus_f40266d12b7b4594a74ba7a014f4fd33,Jesse,Calhoun,,homeowner,1,2026-07-26T18:00:00Z,2026-07-26T18:00:00Z,179 Moonraker Cay Drive Coral Gables FL 33162
+cus_ffa6804cd40e454cbc225a31590a1132,Emilia,Wolfe,,homeowner,1,2026-07-26T16:00:00Z,2026-07-26T16:00:00Z,930 Sandcastle Shores Drive 24 Miami Beach FL 33182
+cus_64bfd2f063874c8ca8aa94860b2d496b,Vincent,Russo,,business,1,2026-07-25T19:00:00Z,2026-07-25T19:00:00Z,4311 Banyan Ridge Boulevard 47 Fort Lauderdale FL 33176
+cus_98df5d7af2d4434ba20963a56a85be8f,Joel,Graves,,homeowner,1,2026-07-25T14:00:00Z,2026-07-25T14:00:00Z,186 Mangrove Glen Boulevard Coral Gables FL 33162
+cus_b6fed1a05cbd4326999a185840b91a4d,Nolan,Rosales,,homeowner,1,2026-07-24T23:00:00Z,2026-07-24T23:00:00Z,220 North Lighthouse Landing Key Biscayne FL 33182
+cus_88e70ced15684160a61dd0e0e73ef3cb,Kayla,Spence,,homeowner,1,2026-07-24T23:00:00Z,2026-07-24T23:00:00Z,2830 Cowrie Hollow Dr Unit 307 Key Biscayne FL 33182
+cus_855c4ab99d444fa1b72e7e40bcedcf33,,,,business,1,2026-07-24T21:00:00Z,2026-07-24T21:00:00Z,101 Plumeria Ridge St Coral Gables FL 33162
+cus_01c02fdb8a184b51850ab2e84781d75c,Wanda,Hartman,,homeowner,1,2026-07-24T18:00:00Z,2026-07-24T18:00:00Z,6001 Limestone Cove Rd Fort Lauderdale FL 33128
+cus_0ce1bbe4704f4fde8a4dacbcc66520c4,Tobias,Fields,,homeowner,1,2026-08-25T14:00:00Z,2026-08-25T14:00:00Z,9300 Coquina Glen Blvd 418 Key Biscayne FL 33182
+cus_0495f2b70a894897801acb27a67ae1aa,Sylvia,Conley,,homeowner,1,2026-07-24T14:00:00Z,2026-07-24T14:00:00Z,185 Frangipani Ridge St Coral Gables FL 33162
+cus_1fe072c04e70463590f211dcdb0f5a31,Bonnie,Rush,,homeowner,1,2026-07-24T14:00:00Z,2026-07-24T14:00:00Z,480 Grouper Isle Lane Cutler Bay FL 33155
+cus_c25191a5564948cdae451a21ebb76ed7,Whitecap,Hospitality,,homeowner,1,2026-07-24T15:00:00Z,2026-07-24T15:00:00Z,73 Plover Key Loop East Cutler Bay FL 33155
+cus_8b2a4e5b49324afbbbaea9e6899384f3,Renee,Mills,,homeowner,1,2026-07-24T18:00:00Z,2026-07-24T18:00:00Z,40 Jacaranda Shores Pl Doral FL 33173
+cus_6b756208d936478e82fa61db7a71e10c,Sandra,Humphrey,,homeowner,1,2026-07-23T20:00:00Z,2026-07-23T20:00:00Z,155 Bonefish Harbor Loop Miami Beach FL 33182
+cus_858f96e126444c7b90e6327be8dcde74,Cecilia,Reese,,homeowner,1,2026-07-23T18:00:00Z,2026-07-23T18:00:00Z,157 Jacaranda Cove Dr Key Biscayne FL 33182
+cus_08c58ecba84749ee95717b62a9096420,Ernesto,Solis,,homeowner,1,2026-07-23T14:00:00Z,2026-07-23T14:00:00Z,1030 Cowrie Hollow Drive Key Biscayne FL 33182
+cus_73c83c40b2584dfba29b21ab640a37cc,Josie,Kirby,,homeowner,1,2026-07-23T16:00:00Z,2026-07-23T16:00:00Z,74 Sandcastle Hollow Drive Coral Gables FL 33162
+cus_fc40467fc4b0483da9cc173df82f2343,Yolanda,Cannon,,homeowner,1,2026-07-22T22:00:00Z,2026-07-22T22:00:00Z,37 Palmetto St Doral FL 33173
+cus_c880b3026971434d84b8944da0ff4204,Abby,Albright,,homeowner,1,2026-07-22T22:00:00Z,2026-07-22T22:00:00Z,1317 Saltbush Isle St Fort Lauderdale FL 33187
+cus_f017c384678f42d29f5fb10233c70b94,Darren,Locke,,homeowner,1,2026-07-22T21:00:00Z,2026-07-22T21:00:00Z,172 Kelp Cove Dr Coral Gables FL 33162
+cus_f9b93a4d64d94e7e898e74cfe9078eaf,Jasmine,Nixon,,homeowner,1,2026-07-22T19:00:00Z,2026-07-22T19:00:00Z,1417 W Kelp Pointe Rd Coral Gables FL 33162
+cus_768037514643404c886b300e01f901c8,Marcus,Mendez,,homeowner,1,2026-07-21T19:30:00Z,2026-07-21T19:30:00Z,106 Saltgrass Glen Loop Coral Gables FL 33162
+cus_4aa38fbe63e24f69a49d947da1f1d14f,Abby,Fleming,,homeowner,1,2026-07-21T20:00:00Z,2026-07-21T20:00:00Z,7401 Halyard Hollow St Aventura FL 33133
+cus_804d0d9e651e4840906f66068c0dda14,Violet,Jennings,,homeowner,1,2026-07-20T22:00:00Z,2026-07-20T22:00:00Z,178 Bayberry Shores Cv Coral Gables FL 33162
+cus_43998c32e26841cb86da7d3d5bc44872,Hazel,Anders,,homeowner,1,2026-07-20T21:00:00Z,2026-07-20T21:00:00Z,38 Jacaranda Harbor Road Coral Gables FL 33162
+cus_a70bb79d46de47489f3c09ad4dfc0ae3,Andre,Brennan,,homeowner,1,2026-07-20T18:00:00Z,2026-07-20T18:00:00Z,45 N Seashell Reef Ln Coral Gables FL 33162
+cus_53007899fda7488f96273e8c3c3cd101,Elliot,Rollins,,homeowner,1,2026-07-19T14:00:00Z,2026-07-19T14:00:00Z,6345 Marlin Harbor Cove Miami Beach FL 33182
+cus_82a9dccfd80949548afcce777a098105,Aiden,Aguilar,,homeowner,1,2026-07-18T19:00:00Z,2026-07-18T19:00:00Z,1875 South Coral Ridge Pkwy Coral Gables FL 33162
+cus_ba200a6ed015443792cc8434fc435ded,Vincent,Strickland,,homeowner,1,2026-07-18T17:00:00Z,2026-07-18T17:00:00Z,29 Saltbush Key Biscayne FL 33182
+cus_3374b4910a144a4d88fc3a3cb2ee001b,Vivian,Lynch,,homeowner,1,2026-07-18T01:00:00Z,2026-07-18T01:00:00Z,4466 Wahoo Cay Cove Key Biscayne FL 33182
+cus_ff9433d71c7a4d26a5a07f50db8cdfe2,Serena,Horton,,homeowner,1,2026-07-17T18:00:00Z,2026-07-17T18:00:00Z,5 Wahoo Isle Rd Miami Beach FL 33182
+cus_fa274837a09c4ba1a7e2bca1a72443d8,Tobias,Fischer,,homeowner,1,2026-07-17T00:00:00Z,2026-07-17T00:00:00Z,455 North Lagoon Pkwy Coral Gables FL 33162
+cus_ec3e6ec30f5848b5ba54a27542c0f1f6,Tobias,Conley,,homeowner,1,2026-07-17T00:30:00Z,2026-07-17T00:30:00Z,13 Rudder Harbor St Doral FL 33173
+cus_e20ace88ca0e4bd8ad089fb5c27d54f6,Vivian,Alvarez,Whitecap Hospitality,business,1,2026-07-21T15:00:00Z,2026-07-21T15:00:00Z,9823 Limestone Ridge Dr Fort Lauderdale FL 33166
+cus_1ee0b8f1aa434655aad7833f4e8ca857,Jesse,Shields,Seagrass Hospitality,business,1,2026-07-16T20:00:00Z,2026-07-16T20:00:00Z,214 Wahoo Ridge Dr S Hialeah FL 33154
+cus_a62cd0ea03b84463a5d00a090baeed60,Audrey,Boyd,,homeowner,1,2026-07-16T16:00:00Z,2026-07-16T16:00:00Z,330 Bonefish Shores Blvd Coral Gables FL 33162
+cus_c6e0674808014c87815126728e89015c,Emily,Whitfield,,homeowner,1,2026-07-15T00:30:00Z,2026-07-15T00:30:00Z,158 W Tidewater Terrace Way Coral Gables FL 33162
+cus_80174e7fadd1481a8926698eccd8b4c5,Pedro,Leach,,homeowner,1,2026-07-14T22:00:00Z,2026-07-14T22:00:00Z,34 Nautilus Reef Ln Coral Gables FL 33162
+cus_5919ee2b2f33469cab81b68d9f42bfe1,Caroline,Gregory,,homeowner,1,2026-07-17T14:00:00Z,2026-07-17T14:00:00Z,200 Sabal Shores Ln Unit 1411 Key Biscayne FL 33182
+cus_735bbcb463e8414882dc3a39275ab83a,Jonah,Bryant,Starfish Hospitality,homeowner,1,2026-07-14T18:00:00Z,2026-07-14T18:00:00Z,101 Osprey Ridge Blvd Suite A Miami Beach FL 33182
+cus_1d68b2d9b9ba4ad3bf5004153e6fc964,Xavier,Hess,,homeowner,1,2026-07-14T14:00:00Z,2026-07-14T14:00:00Z,77 Whitecap Hollow Dr Miami Beach FL 33182
+cus_d300b6e6d38044c29bb1ec7b6b133d42,Abby,Powers,,homeowner,1,2026-07-14T00:00:00Z,2026-07-14T00:00:00Z,15 Saltbush Ridge Drive Coral Gables FL 33162
+cus_6cebf964af1647c29c7b585b78c88104,Caroline,Archer,,homeowner,1,2026-07-13T17:00:00Z,2026-07-13T17:00:00Z,12273 Bayfront Hwy Unit 116 Key Biscayne FL 33182
+cus_b7364d811f094538babe9cc442caee39,Mildred,Vance,,homeowner,1,2026-06-22T15:45:00Z,2026-06-22T15:45:00Z,5008 Bayfront Hwy Suite 8 Coral Gables FL 33162
+cus_d0ee44db25e946fabda4e27d2f81503b,Renee,Vargas,,homeowner,1,2026-07-13T16:00:00Z,2026-07-13T16:00:00Z,2800 Cowrie Hollow Dr Unit 2 Key Biscayne FL 33182
+cus_e8cf9009add34dd3b03d00d3857e016b,Teresa,Banks,,homeowner,1,2026-07-13T14:00:00Z,2026-07-13T14:00:00Z,5355 Keel Isle Ln Key Biscayne FL 33182
+cus_cd994130db9d44c1a0bf3236f315b6ff,Elliot,Blair,,homeowner,1,2026-07-13T13:30:00Z,2026-07-13T13:30:00Z,220 Saltgrass Harbor Dr Coral Gables FL 33162
+cus_0cd443839b0a42b7a14fd0342433694e,Mabel,Hubbard,,homeowner,1,2026-07-13T18:00:00Z,2026-07-13T18:00:00Z,935 Rudder Bluff Rd Coral Gables FL 33162
+cus_fd15992bbc8a4c1d8a97c6fa15cf123e,Darren,Leach,,homeowner,1,2026-07-12T15:00:00Z,2026-07-12T15:00:00Z,175 Keel Landing Ave Coral Gables FL 33162
+cus_230d6b9e79a443e4a47d534d3941875d,Fiona,Weaver,,homeowner,1,2026-07-11T17:00:00Z,2026-07-11T17:00:00Z,200 Sabal Shores Ln unit 903 Key Biscayne FL 33182
+cus_edf839430005452e907bb7571e049171,Damian,Ballard,,homeowner,1,2026-07-10T15:30:00Z,2026-07-10T15:30:00Z,1000 Oleander Cay Rd Unit 122 Miami Beach FL 33182
+cus_e2440a723916476997dbd55c8103d582,Jamal,Munoz,,homeowner,1,2026-07-10T14:30:00Z,2026-07-10T14:30:00Z,47 Glasswort Glen St Doral FL 33173
+cus_61a63e17bccd4bf2b0c7886338155bec,Elise,Delaney,,homeowner,1,2026-07-10T01:00:00Z,2026-07-10T01:00:00Z,917 Sandcastle Landing Drive Coral Gables FL 33162
+cus_e2a1ab29196c4932a9927d04c57799d9,Ivan,Franco,,homeowner,1,2026-07-09T20:00:00Z,2026-07-09T20:00:00Z,15 Cocoplum Bluff Rd Miami FL 33174
+cus_79338d14932641bf8ac3dd0f571634d6,Marcus,McKay,,homeowner,1,2026-07-09T16:00:00Z,2026-07-09T16:00:00Z,103 Cocoplum Cay Way Coral Gables FL 33162
+cus_c6e3785c6e0d4cd382d49fb8a1c24478,Sofia,Gutierrez,,homeowner,1,2026-07-08T21:00:00Z,2026-07-08T21:00:00Z,73 Limestone Pointe Dr Coral Gables FL 33162
+cus_797077c6200848e89af775671cef682d,Simon,Santos,,homeowner,1,2026-07-08T19:00:00Z,2026-07-08T19:00:00Z,96 S Mangrove Key Dr Cutler Bay FL 33155
+cus_04e81e98e88d4a939959236ca54b0753,Caleb,Talley,,homeowner,1,2026-07-10T16:30:00Z,2026-07-10T16:30:00Z,40 Marlin Bluff Cove Miami Beach FL 33182
+cus_85cc1c94234746c587270b242ae15520,Theo,Russo,,homeowner,1,2026-07-14T17:00:00Z,2026-07-14T17:00:00Z,223 Nautilus Isle St Coral Gables FL 33162
+cus_dcd5bbb1d4db46ba9b891036cc737bcf,Audrey,Horton,,homeowner,1,2026-07-08T16:00:00Z,2026-07-08T16:00:00Z,80 Rudder Ridge Dr E Key Biscayne FL 33182
+cus_cb0263c20ac74002bc6b1ae1cd88bb9c,Teresa,Vincent,,homeowner,1,2026-07-08T16:00:00Z,2026-07-08T16:00:00Z,645 Coquina Bluff Street Cutler Bay FL 33155
+cus_f5a02efc8acf44599898e2761a9402bc,Vivian,McKay,,homeowner,1,2026-07-07T18:00:00Z,2026-07-07T18:00:00Z,123 Sea-Lavender Hollow Rd NW Doral FL 33132
+cus_572713da304e434a9891dbbd0061a881,Caleb,Banks,,homeowner,1,2026-07-07T20:00:00Z,2026-07-07T20:00:00Z,995 Oleander Cay Rd Unit 8 Miami Beach FL 33182
+cus_f92a40975d1b4d37bfe42d3407ddecc6,Diego,Monroe,,homeowner,1,2026-07-07T16:30:00Z,2026-07-07T16:30:00Z,67 Skimmer Glen Dr E Miami Beach FL 33182
+cus_0e15c7eccf184e26ab757d9bcade010e,Renee,Hutchinson,,homeowner,1,2026-07-07T14:30:00Z,2026-07-07T14:30:00Z,142 Portside Pointe Way Coral Gables FL 33162
+cus_3766b1c1f3274e7dbc8c4043c707a4f9,,,,homeowner,1,2026-07-07T14:30:00Z,2026-07-07T14:30:00Z,1625 Bayfront Hwy Miami Beach FL 33182
+cus_f597fd32952048b5bc8bfd3a5b6ad59f,Elise,Vega,,homeowner,1,2026-07-07T15:00:00Z,2026-07-07T15:00:00Z,83 Spinnaker Pointe Cir Coral Gables FL 33162
+cus_7c7482d998db4f9e981339c8af933f8e,Elise,Gregory,,homeowner,1,2026-07-07T13:30:00Z,2026-07-07T13:30:00Z,224 Saltgrass Cay Cir Coral Gables FL 33162
+cus_bbd9e236a59f4cd9bcc10a158319b6e0,Doris,Maddox,,homeowner,1,2026-07-06T20:00:00Z,2026-07-06T20:00:00Z,116 N Osprey Pointe Rd Key Biscayne FL 33182
+cus_b3b2ff12ce8c4c529d898ac3bb379e5c,Malcolm,McLean,,homeowner,1,2026-07-09T17:00:00Z,2026-07-09T17:00:00Z,8586 Rudder Landing Lane Miami Beach FL 33182
+cus_5011edee2e774be9a3dbb6780b99bead,Pamela,Kerr,,homeowner,1,2026-07-06T08:06:33Z,2026-07-06T08:06:33Z,8351 Bayberry Key St Aventura FL 33133
+cus_9d5efff8d46e4479b5e49e4dedaa0a27,Andre,Osborne,,homeowner,1,2026-07-06T14:00:00Z,2026-07-06T14:00:00Z,2228 Coquina Cove Rd Coral Gables FL 33162
+cus_0e50f4f888f4402d81092bba7a772d15,Edward,Horton,,homeowner,1,2026-07-05T21:00:00Z,2026-07-05T21:00:00Z,131 Whitecap Pointe Ln Homestead FL 33155
+cus_ef5ab67b6ad14ed5a9015e28d5fcae31,Benjamin,Flores,,homeowner,1,2026-07-05T17:00:00Z,2026-07-05T17:00:00Z,
+cus_c520b1cff49446fca38d0340dae5cd63,Stuart,Ashford,,homeowner,1,2026-07-04T15:00:00Z,2026-07-04T15:00:00Z,120 Plover St Key Biscayne FL 33182
+cus_427fe1f3c2e044c5b38dada407d71fca,Catherine,,Longleaf Hospitality,business,1,2026-07-06T19:00:00Z,2026-07-06T19:00:00Z,225 Sabal Cay Blvd NW Doral FL 33132
+cus_d3689780280142e582f05f95de8fbada,Jamal,Pruitt,,homeowner,1,2026-07-07T15:00:00Z,2026-07-07T15:00:00Z,5016 Cormorant Key Dr Fort Lauderdale FL 33175
+cus_243b0a3aa7ba49feac79dce3a133eb6a,Maya,Sharp,,homeowner,1,2026-07-03T18:30:00Z,2026-07-03T18:30:00Z,14377 Frangipani Cove Ln Fort Lauderdale FL 33175
+cus_8a925e5d51494c54a7cd6f99093dcff3,Emily,Montgomery,,homeowner,1,2026-07-03T16:30:00Z,2026-07-03T16:30:00Z,50 Manatee Shores Ln Key Biscayne FL 33182
+cus_8ff9eb64b6d3467fa3f53d07443a1877,Caleb,Ramsey,,homeowner,1,2026-07-03T15:30:00Z,2026-07-03T15:30:00Z,23 Bayberry Bluff Rd Coral Gables FL 33162
+cus_a9f9099778c1470aaeac84c9e261096e,Ethan,Padilla,,homeowner,1,2026-07-02T20:00:00Z,2026-07-02T20:00:00Z,291 Ixora Harbor Ave Miami Beach FL 33182
+cus_fc70b3e444f64aafab29b85a5a4ac5b7,Tamara,Nixon,,homeowner,1,2026-07-02T22:00:00Z,2026-07-02T22:00:00Z,450 S Glasswort Key St Unit 303 Key Biscayne FL 33182
+cus_c217d499293042d88b85085b676f5bbe,Javier,Albright,,homeowner,1,2026-07-02T21:00:00Z,2026-07-02T21:00:00Z,5678 Harborlight Cay Rd 30A Coral Gables FL 33162
+cus_cade1610ec794faa82edab0b9ce0753c,Wanda,Kirby,,homeowner,1,2026-07-07T16:30:00Z,2026-07-07T16:30:00Z,2044 Sabal Key Dr Miami Beach FL 33182
+cus_50eaf2921cf5481b88915f7ac1f9d5cf,Felix,Cardenas,,homeowner,1,2026-07-02T20:00:00Z,2026-07-02T20:00:00Z,9950 Bayfront Hwy Lot 15 Key Biscayne FL 33182
+cus_d5ebbb3ac02345149ca794f0a3b2cfdd,,,,homeowner,1,2026-07-02T17:26:17Z,2026-07-02T17:26:17Z,2052 Cowrie Hollow Dr Key Biscayne FL 33182
+cus_6fd9b1b69e2f4957b330e0c198c7669c,Nadia,,,homeowner,1,2026-07-02T21:00:00Z,2026-07-02T21:00:00Z,23 Tidewater Pointe Wy Key Biscayne FL 33182
+cus_1385536bf4c046c3b71b3df97c09565c,Gwen,Winters,,homeowner,1,2026-07-02T15:00:00Z,2026-07-02T15:00:00Z,1946 Sea-Lavender Bluff St Aventura FL 33133
+cus_33f092760ae64574aeb06565aeb98095,Andre,Adler,,homeowner,1,2026-07-02T15:00:00Z,2026-07-02T15:00:00Z,225 Flamingo Pointe Wy Coral Gables FL 33162
+cus_22be1e449896410e8370193e6466c24c,Sonia,Blair,,homeowner,1,2026-07-02T14:00:00Z,2026-07-02T14:00:00Z,284 Permit Ridge Ct Miami Beach FL 33182
+cus_18994ee2b85443028ea5cffb948b44ab,Priya,Sellers,,homeowner,1,2026-07-02T00:00:00Z,2026-07-02T00:00:00Z,55 Firebush Bluff Way Doral FL 33173
+cus_56973178c1d34ab5a0fc6ac339734a60,Emily,Sawyer,,homeowner,1,2026-07-01T14:30:00Z,2026-07-01T14:30:00Z,7839 Whitecap Key Dr Fort Lauderdale FL 33175
+cus_3380220fa51e4cf7ac0dbef33693a4c0,Cecilia,Hudson,,homeowner,1,2026-07-17T14:00:00Z,2026-07-17T14:00:00Z,277 Leeward Pointe Key Biscayne FL 33182
+cus_b0005d931c8f44668a615cc04fc8983a,Sidney,Jennings,,homeowner,1,2026-07-01T17:00:00Z,2026-07-01T17:00:00Z,20 Tern Ridge Dr Coral Gables FL 33162
+cus_be84442e87874a959601e431702ebb30,Lighthouse,,,homeowner,1,2026-06-30T21:30:00Z,2026-06-30T21:30:00Z,213 Skimmer Cove Ln Cutler Bay FL 33155
+cus_42b65272d24c4fc9802e9eb646b8ff47,Edith,Irwin,,homeowner,1,2026-06-30T18:00:00Z,2026-06-30T18:00:00Z,136 Kelp Hollow Ln Coral Gables FL 33162
+cus_dc5f1b19323142158e83f0c83747f59e,Janice,Bryant,,homeowner,1,2026-06-30T17:00:00Z,2026-06-30T17:00:00Z,51 Seashell Cay Ln Doral FL 33173
+cus_f8d80ab2c26d4f869fe7a029c4ae2832,Andre,Cortez,,homeowner,1,2026-06-29T21:30:00Z,2026-06-29T21:30:00Z,92 Frangipani Glen Ct Key Biscayne FL 33182
+cus_c03b14d5eede4b18b71c2b3cac4c7ab9,Yolanda,Ellison,,homeowner,1,2026-06-30T16:00:00Z,2026-06-30T16:00:00Z,8557 Spinnaker Ridge Ct Key Biscayne FL 33182
+cus_f3e8a1e3f7a046d38835eb2df9ba7746,Mia,Ramsey,,homeowner,1,2026-06-30T15:00:00Z,2026-06-30T15:00:00Z,609 Cowrie Ridge Dr Miami Beach FL 33182
+cus_d6099fb10c5b4a059ea4e4f55a269a10,Eli,Emerson,,homeowner,1,2026-06-29T17:26:55Z,2026-06-29T17:26:55Z,12255 Skimmer Harbor dr Fort Lauderdale FL 33174
+cus_bd82611f3c4c47b6a834f5a89c2e9cb3,Wanda,Fischer,,homeowner,1,2026-06-29T15:00:00Z,2026-06-29T15:00:00Z,3821 Glasswort Shores Hwy Fort Lauderdale FL 33128
+cus_45da893a2fec4300943393f7ccc4ae4c,Teresa,Sloan,,homeowner,1,2026-06-29T18:00:00Z,2026-06-29T18:00:00Z,22 Saltbush Key Trail Coral Gables FL 33162
+cus_19866de3cdb34ebab057769177e9e564,Darren,Hale,,homeowner,1,2026-06-29T20:00:00Z,2026-06-29T20:00:00Z,2916 Hibiscus Key Dr Key Biscayne FL 33182
+cus_826bbdeb2ba04d54b41ce653d437fb8b,Miranda,Maldonado,,homeowner,1,2026-06-30T21:00:00Z,2026-06-30T21:00:00Z,51 Banyan Cove St Doral FL 33173
+cus_4c1917ef5e1245b5b041ecc4771fe676,Omar,Robbins,,homeowner,1,2026-06-29T13:30:00Z,2026-06-29T13:30:00Z,171 Ibis Ridge Rd Coral Gables FL 33162
+cus_99c449a59b1a4323ac3ac08d88db2175,Gwen,Pratt,,homeowner,1,2026-06-26T22:00:00Z,2026-06-26T22:00:00Z,3605 E Old Mangrove Rd 207 Coral Gables FL 33162
+cus_5c0dfb276fb64b1382701284db24f750,Kendra,Avery,,homeowner,1,2026-06-26T18:00:00Z,2026-06-26T18:00:00Z,516 Sandcastle Landing Dr Coral Gables FL 33162
+cus_68bc9e8f7a1b4433a7a5e98d2024e85b,Wanda,Nichols,,homeowner,1,2026-06-26T14:30:00Z,2026-06-26T14:30:00Z,86 Permit Key Cir Coral Gables FL 33162
+cus_8aadb022d6534d7bb3ea18c0f8315b87,Omar,Davenport,,homeowner,1,2026-06-26T19:00:00Z,2026-06-26T19:00:00Z,80 Buttonwood Hollow Ln Coral Gables FL 33162
+cus_409ad58cb51d4fbfb410a2525c974cd4,Simon,Summers,,homeowner,1,2026-06-25T21:30:00Z,2026-06-25T21:30:00Z,10861 Bayfront Hwy Key Biscayne FL 33182
+cus_928bdb3c6c504003bcdde40a36ecd491,Vincent,Maxwell,,homeowner,1,2026-06-26T15:00:00Z,2026-06-26T15:00:00Z,344 Kelp Dr NW Doral FL 33132
+cus_62d253e15fb8439e94b4a6d2eb326132,Willa,Lane,,homeowner,1,2026-06-25T20:00:00Z,2026-06-25T20:00:00Z,60 Cowrie Isle Dr Miami Beach FL 33182
+cus_06a00494564c4564b752c2edefb3dbbd,Damian,Hart,,homeowner,1,2026-06-25T19:00:00Z,2026-06-25T19:00:00Z,1295 Glasswort Ridge Way Key Biscayne FL 33162
+cus_b8b9f14b26714afb9022a10c086fc497,Elliot,Guerrero,,homeowner,1,2026-06-25T14:00:00Z,2026-06-25T14:00:00Z,700 Seagrape Isle Cir Homestead FL 33162
+cus_92f68582f5504d44a4a6c65811336598,Eugene,Archer,,homeowner,1,2026-06-25T16:00:00Z,2026-06-25T16:00:00Z,200 Sabal Shores Ln 810 Key Biscayne FL 33182
+cus_55eb958231a849319792ff44252f1fd8,Graham,Moody,,homeowner,1,2026-06-24T22:00:00Z,2026-06-24T22:00:00Z,215 North Whitecap Harbor Way Coral Gables FL 33162
+cus_9e77b8591dfd4577bdacf2adab7dfa8f,Zoe,Gallagher,,homeowner,1,2026-06-24T19:00:00Z,2026-06-24T19:00:00Z,86 Windward Pointe Rd Coral Gables FL 33162
+cus_f75f22bfeb494ed6942e4bd9aa101a25,Marissa,Baxter,,homeowner,1,2026-06-24T17:15:00Z,2026-06-24T17:15:00Z,316 Manatee Reef St Coral Gables FL 33162
+cus_9651e02ec7b84b2ea51bd89dee556b5b,Jasmine,Trujillo,,homeowner,1,2026-06-24T18:30:00Z,2026-06-24T18:30:00Z,253 Allamanda Pointe St Coral Gables FL 33162
+cus_66e267404d45417e83c93942527adbb3,Aiden,Patton,,homeowner,1,2026-06-24T21:00:00Z,2026-06-24T21:00:00Z,226 Seashell Ridge Cove Miami Beach FL 33182
+cus_78dec66dcbf34d16a954189081535f9d,Emily,Noble,,homeowner,1,2026-06-29T14:00:00Z,2026-06-29T14:00:00Z,24 Snapper Shores Cir Key Biscayne FL 33182
+cus_7a117a3262cf4d1e964f59487aa18841,Sabrina,Navarro,,homeowner,1,2026-06-25T14:00:00Z,2026-06-25T14:00:00Z,200 Plumeria Harbor Dr Homestead FL 33155
+cus_9428258244f74e4dbeb2ae357de64579,Judith,Velez,,homeowner,1,2026-06-23T01:00:00Z,2026-06-23T01:00:00Z,56 West Halyard Cove Drive Coral Gables FL 33162
+cus_b0d73204c59b4a1288efc64a2a943a0a,Harper,Weiss,,homeowner,1,2026-06-22T17:00:00Z,2026-06-22T17:00:00Z,3680 E Old Mangrove Rd Unit 5 Coral Gables FL 33162
+cus_7cbec0cc93da44eea76e52347bfc90ce,Fiona,Vance,,homeowner,1,2026-06-22T18:00:00Z,2026-06-22T18:00:00Z,76 Grouper Trail Coral Gables FL 33162
+cus_e802f2fed8ca47f0b6e3417ecae09c37,Caleb,Avery,,homeowner,1,2026-06-22T15:00:00Z,2026-06-22T15:00:00Z,45 Marlin Landing Ln Coral Gables FL 33162
+cus_3604cf2e9d42451985fd6f11f875bed2,Teresa,Dorsey,,homeowner,1,2026-06-22T17:00:00Z,2026-06-22T17:00:00Z,55 Glasswort Isle Ct Coral Gables FL 33162
+cus_74dab2c34fc74944bf9fb815ab94bc76,Charlene,Alvarez,,homeowner,1,2026-06-20T22:00:00Z,2026-06-20T22:00:00Z,220 Saltgrass Harbor Drive Coral Gables FL 33162
+cus_ddbd27fc461849b9bf6ef37029a2792f,Naomi,Velez,,homeowner,1,2026-06-19T22:00:00Z,2026-06-19T22:00:00Z,515 Sargassum Reef Dr Miami Beach FL 33182
+cus_862ba358d9a2483e841c2ab8e2aa8f93,Stuart,Albright,,business,1,2026-06-19T17:00:00Z,2026-06-19T17:00:00Z,200 Cormorant Isle Dr Unit B Key Biscayne FL 33182
+cus_74a32779a0b34e92b2b2d533ea4741da,Ted,Whitfield,,homeowner,1,2026-06-19T16:00:00Z,2026-06-19T16:00:00Z,213 N Moonraker Hollow Dr Coral Gables FL 33162
+cus_a51a1e66905440d0bcb9a190a1df7985,Lucia,Hayes,,homeowner,1,2026-06-29T14:00:00Z,2026-06-29T14:00:00Z,2331 Seafoam Hollow Ln Key Biscayne FL 33182
+cus_c8fde9500b014b29b832f7759fde1f5a,Naomi,Shepherd,,homeowner,1,2026-06-19T00:30:00Z,2026-06-19T00:30:00Z,213 Skimmer Cove Ln Cutler Bay FL 33155
+cus_fbdbf731e87f47078ed6c03e3ead0471,Pamela,Greer,,homeowner,1,2026-06-18T16:00:00Z,2026-06-18T16:00:00Z,196 N Lighthouse Landing 38C Key Biscayne FL 33182
+cus_c5ddf35ab5bf4f3896b3b272793e76db,Malcolm,Chavez,,homeowner,1,2026-06-18T19:00:00Z,2026-06-18T19:00:00Z,87 Seagrape Reef Ave Coral Gables FL 33162
+cus_b4faef10626c4a209b109748606a7579,Ivan,Norton,,homeowner,1,2026-06-18T14:00:00Z,2026-06-18T14:00:00Z,161 S Whitecap Harbor Way Coral Gables FL 33162
+cus_65ad3caa4f27469fa243b76a9390a581,Martha,Cardenas,,homeowner,1,2026-06-18T14:00:00Z,2026-06-18T14:00:00Z,981 Bayfront Hwy Suite 8 Miami Beach FL 33182
+cus_589d47eb96cd4ef9a12fb21151598584,Malcolm,McDaniel,,homeowner,1,2026-06-18T14:00:00Z,2026-06-18T14:00:00Z,14 Keel Harbor Dr Coral Gables FL 33162
+cus_2c658c84c0644a19b278b620234c2bbc,Emilia,Jimenez,,homeowner,1,2026-06-15T21:00:00Z,2026-06-15T21:00:00Z,28 Limestone Hollow Ct Coral Gables FL 33162
+cus_4b89051a25e04bd29719833df6d89448,Janice,Hudson,,homeowner,1,2026-06-15T19:00:00Z,2026-06-15T19:00:00Z,90 Skimmer Glen Dr W Miami Beach FL 33182
+cus_29372539c24b40c3b307d75f195e2961,Harvey,Ayala,,homeowner,1,2026-06-16T15:00:00Z,2026-06-16T15:00:00Z,98 Hibiscus Landing Ln Coral Gables FL 33162
+cus_dfd61b33183349a8959af038424e1e5f,Jesse,Cunningham,,homeowner,1,2026-06-15T18:00:00Z,2026-06-15T18:00:00Z,9950 Bayfront Hwy Lot J7 Key Biscayne FL 33182
+cus_c9457ddc78b64d6f8398e51552d4228a,,,,homeowner,1,2026-06-14T18:00:00Z,2026-06-14T18:00:00Z,10562 Mangrove Isle Parkway West Key Biscayne FL 33182
+cus_bf49e201a019463eb64dc6f4de3eb855,Tobias,Miles,,homeowner,1,2026-06-13T15:00:00Z,2026-06-13T15:00:00Z,78 Kelp Glen St Coral Gables FL 33162
+cus_08ba6342702d45d99ef7121b3005ee49,Sonia,Keller,,homeowner,1,2026-06-11T22:00:00Z,2026-06-11T22:00:00Z,9950 Bayfront Hwy Unit G2 Key Biscayne FL 33182
+cus_6bc64b1abdf54cf99161c79d3e93373a,Marian,Ramsey,,homeowner,1,2026-06-17T16:00:00Z,2026-06-17T16:00:00Z,114 Skimmer Landing Dr 424 Key Biscayne FL 33182
+cus_54697618edd145c39eeaadc2e98fcdc0,Longleaf,Hospitality,,homeowner,1,2026-06-12T15:00:00Z,2026-06-12T15:00:00Z,130 Cowrie Hollow Drive Suite 4B Key Biscayne FL 33182
+cus_4c776d817c9f4afda1f5ef57081be68f,Holly,Cardenas,,homeowner,1,2026-06-11T18:00:00Z,2026-06-11T18:00:00Z,40 Jacaranda Reef Cir Key Biscayne FL 33182
+cus_be96c8c68f43452c8e5aa1299359802a,Damian,Glover,Lighthouse Hospitality,business,1,2026-06-11T13:30:00Z,2026-06-11T13:30:00Z,11 Grouper Landing Rd 8 Key Biscayne FL 33182
+cus_848c67489106458bb79e31242ce5ba72,Wanda,Cruz,,homeowner,1,2026-06-09T17:00:00Z,2026-06-09T17:00:00Z,659 Banyan Ridge Dr Miami Beach FL 33182
+cus_a469f7895284472b967eb12134a71117,Ariel,Pearce,,homeowner,1,2026-06-08T16:00:00Z,2026-06-08T16:00:00Z,1479 Bowline Hollow Rd Doral FL 33173
+cus_392a7a0f7ff447ab833e4d649a2c233d,Brianna,Bryant,,homeowner,1,2026-06-05T20:00:00Z,2026-06-05T20:00:00Z,423 Wahoo Key Way Miami Beach FL 33182
+cus_e03eefa1b6374fa28a76427142a58e13,Sabrina,Mendez,,homeowner,1,2026-06-02T13:52:37Z,2026-06-02T13:52:37Z,51 Seashell Cay Ln Doral FL 33173
+cus_99697101f5d24c188e7a1ab8bbb19d17,,,Saltmarsh Hospitality,homeowner,1,2026-06-01T22:45:00Z,2026-06-01T22:45:00Z,113 Tidewater Harbor Rd Coral Gables FL 33162
+cus_2ef99018bc5f4f37b225e2e959386825,Serena,Conley,,homeowner,1,2026-06-01T22:00:00Z,2026-06-01T22:00:00Z,234 Windward Landing Rd Coral Gables FL 33162
+cus_68a548fcacde409fb868902dad93a5f0,Caleb,Simmons,,homeowner,1,2026-05-31T21:00:00Z,2026-05-31T21:00:00Z,4520 Harborlight Pointe Court 102 Miami Beach FL 33182
+cus_3bfeb4ad0e8c4e48a7e5cc45502d99cd,Noah,Santos,,homeowner,1,2026-05-28T16:30:00Z,2026-05-28T16:30:00Z,98 Windward Harbor Unit 19A Key Biscayne FL 33182
+cus_a22f4f899bd64675a92d1b3ea6a32517,Vera,Gregory,,homeowner,1,2026-05-27T15:00:00Z,2026-05-27T15:00:00Z,192 Cowrie Isle Dr Miami Beach FL 33182
+cus_0fd896d1e7f346e59c21b55252165ddb,Andre,Stokes,Saltmarsh Hospitality,business,1,2026-05-26T16:00:00Z,2026-05-26T16:00:00Z,1363 W Old Mangrove Rd 3116 Coral Gables FL 33162
+cus_474c3c12f9f349c9bf73bb14d872b5c2,Tamara,Maddox,,homeowner,1,2026-05-26T14:00:00Z,2026-05-26T14:00:00Z,773 Amberjack Bluff Dr Miami Beach FL 33182
+cus_0c403e0e982e49e98921071514fd0dff,Harper,Santos,,homeowner,1,2026-05-28T15:30:00Z,2026-05-28T15:30:00Z,2900 Palmetto Trace Rd Unit 101 Miami Beach FL 33182
+cus_e696b06832994ec3aa26597850051bbf,Audrey,Hudson,,homeowner,1,2026-05-21T23:00:00Z,2026-05-21T23:00:00Z,93 Rudder Ridge Dr N Key Biscayne FL 33182
+cus_c7a0e5cc70b14a8da959c1d9596f7a89,Pedro,McGuire,,homeowner,1,2026-05-21T16:00:00Z,2026-05-21T16:00:00Z,2384 Wahoo Hwy Unit 209 Key Biscayne FL 33182
+cus_2ebb4ec3cb3642cbaec33574d60a9933,Miranda,Moss,,homeowner,1,2026-05-26T13:30:00Z,2026-05-26T13:30:00Z,38 North 51st St Coral Gables FL 33162
+cus_c6b2e623bf7f492e97a1e51746a7f1c9,Alexa,Wyatt,,homeowner,1,2026-05-20T18:30:00Z,2026-05-20T18:30:00Z,85 S Banyan Key Ln Palmetto Bay FL 33155
+cus_f620e3d2d8da4808b9eb45e389e939b0,Ernesto,Potter,,homeowner,1,2026-05-20T19:30:00Z,2026-05-20T19:30:00Z,97 Saltbush Harbor Rd Unit 28 Miami Beach FL 33182
+cus_92a6a5b90e0f484c9ae2d512266b5722,Isabel,Vargas,,homeowner,1,2026-05-19T22:00:00Z,2026-05-19T22:00:00Z,26 Kingfisher Isle Street Key Biscayne FL 33182
+cus_660ceef747c24b10aab17e3e35a3c5b5,Graham,Ortega,,homeowner,1,2026-05-19T16:00:00Z,2026-05-19T16:00:00Z,47 Seagrape Pointe Ln Coral Gables FL 33162
+cus_3879006b58074f9d9429923d38bcb75d,Aiden,Harrington,Leeward Hospitality,homeowner,1,2026-05-18T01:42:10Z,2026-05-18T01:42:10Z,19 Glasswort Bluff Wy 103 Kendall FL 33155
+cus_13d41ea9a5734fa0adfe30e8299ecd98,Ted,Graves,,homeowner,1,2026-05-17T18:30:00Z,2026-05-17T18:30:00Z,90 Bowline Cay Street Miami Beach FL 33182
+cus_575721bb618e4671881a1404a9d40a82,Seagrass,Hospitality,Palmetto Hospitality,homeowner,1,2026-05-16T20:30:00Z,2026-05-16T20:30:00Z,422 Bougainvillea Glen Rd Coral Gables FL 33162
+cus_5c724f24f32444eda11eeb195f076571,,,,business,1,2026-05-15T17:00:00Z,2026-05-15T17:00:00Z,
+cus_bee71727286345fe9e2106c2f55925f8,Tara,Townsend,,homeowner,1,2026-05-15T20:00:00Z,2026-05-15T20:00:00Z,279 Seahorse Reef Dr Key Biscayne FL 33182
+cus_0bab8d1f8c8f463388f1b9017e5ede2c,Jesse,Keller,,homeowner,1,2026-05-14T15:00:00Z,2026-05-14T15:00:00Z,43 Whitecap Shores Ln Cutler Bay FL 33155
+cus_298b98148b2b459d95f160d65af7a169,Jamal,Strickland,,homeowner,1,2026-05-12T20:30:00Z,2026-05-12T20:30:00Z,400 Osprey Ridge Boulevard 67 Miami Beach FL 33182
+cus_56f0f663ddca4d4a992efe605d4d3103,Pedro,Singleton,,homeowner,1,2026-05-13T17:00:00Z,2026-05-13T17:00:00Z,4365 Firebush Pointe 2 Key Biscayne FL 33182
+cus_c0c760276e08478fa958b38eb69b1b2d,Graham,Salazar,,homeowner,1,2026-05-11T19:00:00Z,2026-05-11T19:00:00Z,96 Ixora Cove Way Coral Gables FL 33162
+cus_3547de8656ac40db8cff40cc62a70661,Kayla,Daniels,,homeowner,1,2026-05-11T13:30:00Z,2026-05-11T13:30:00Z,269 Cowrie Isle Dr Key Biscayne FL 33182
+cus_f11dfcb1309d461fa4a39033b0de0e4a,Ruby,Pace,,homeowner,1,2026-05-15T14:00:00Z,2026-05-15T14:00:00Z,50 Lighthouse Shores Dr Miami Beach FL 33182
+cus_7a727aa67992401784fc34c7af6cc94c,Gwen,Ballard,,homeowner,1,2026-04-28T19:30:00Z,2026-04-28T19:30:00Z,204 Sea-Lavender Harbor Wy Unit 3204 Miami Beach FL 33182
+cus_258289ba63c64373b807cac4424f2c4f,Yvonne,Humphrey,,homeowner,1,2026-05-01T17:00:00Z,2026-05-01T17:00:00Z,58 Lighthouse Ridge Rd Kendall FL 33155
+cus_6be8b0bf4b6b45cf99727cecddc13b27,Lighthouse,Hospitality,,homeowner,1,2026-04-27T00:30:00Z,2026-04-27T00:30:00Z,196 Lighthouse Hollow Circle Coral Gables FL 33162
+cus_b15a6d78e6ea47348f03f32d72959431,Tobias,,,homeowner,1,2026-04-24T15:00:00Z,2026-04-24T15:00:00Z,36086 Mangrove Isle Pkwy Miami Beach FL 33182
+cus_57130dddb5834847a01156e3c6ebc5c9,Sabrina,Kane,,homeowner,1,2026-04-27T14:00:00Z,2026-04-27T14:00:00Z,34 Manatee Cay Dr Key Biscayne FL 33182
+cus_1bd8a6aef0684f29932ae32841eb8bed,Wyatt,Houston,,homeowner,1,2026-04-21T16:00:00Z,2026-04-21T16:00:00Z,305 Orchid Pointe Cir Coral Gables FL 33162
+cus_5deac601900d47da85170691a419f2fa,Beatriz,Munoz,,homeowner,1,2026-04-20T17:00:00Z,2026-04-20T17:00:00Z,1096 Cowrie Hollow Dr Unit L2 Key Biscayne FL 33182
+cus_2fc0ff6c30a44881b9720494f0cba670,Vivian,Cunningham,Palmetto Hospitality,business,1,2026-04-19T13:30:00Z,2026-04-19T13:30:00Z,502 Sandcastle Shores Dr 416 Miami Beach FL 33182
+cus_802762f02c8949df972b83c386120fd7,Seth,Ellison,,homeowner,1,2026-04-18T20:00:00Z,2026-04-18T20:00:00Z,4426 Sandcastle Glen Dr Miami Beach FL 33182
+cus_9cf0fd47430f4e89a0393823ff60189a,Serena,Ellison,,homeowner,1,2026-04-15T20:00:00Z,2026-04-15T20:00:00Z,609 Cowrie Ridge Dr Miami Beach FL 33182
+cus_ec06b1fbece8402ea66a8ad445893cf7,Tamara,Archer,,homeowner,1,2026-04-17T14:00:00Z,2026-04-17T14:00:00Z,3880 E Old Mangrove Rd 505 Coral Gables FL 33162
+cus_4878302b47274c4fbf7d0898e4e787ee,Miranda,Fraser,,homeowner,1,2026-05-04T14:00:00Z,2026-05-04T14:00:00Z,1363 W Old Mangrove Rd 2104
+cus_11f9ef48eb754b53a0adabb78cb21155,Esther,Dorsey,,homeowner,1,2026-05-06T14:00:00Z,2026-05-06T14:00:00Z,1363 W Old Mangrove Rd 3126 Coral Gables FL 33162
+cus_50142aa0363c488c8e0f3ea01fe357e8,Victoria,Moody,,homeowner,1,2026-05-04T14:00:00Z,2026-05-04T14:00:00Z,1363 W Old Mangrove Rd 2119 Coral Gables FL 33162
+cus_fa7b972d57aa48ef8cd5efbd8b7836cf,Gail,Lyons,,homeowner,1,2026-04-27T16:00:00Z,2026-04-27T16:00:00Z,8986 Rudder Cay Dr Key Biscayne FL 33182
+cus_33c1c36d139240ec856b6ac730a8a317,,,,business,1,2026-04-06T19:00:00Z,2026-04-06T19:00:00Z,8550 Spinnaker Ridge Ct Key Biscayne FL 33182
+cus_a871b7623df445b9b33f747ee6be4b29,Rita,Mendez,,homeowner,1,2026-04-06T15:00:00Z,2026-04-06T15:00:00Z,241 Seafoam Cay Rd 19 Key Biscayne FL 33182
+cus_1ab9655b1f8e44849508882b775fe573,Holly,Campos,,homeowner,1,2026-04-01T16:30:00Z,2026-04-01T16:30:00Z,107 Bougainvillea Key Ave Key Biscayne FL 33182
+cus_14dfbf05a0984060b87a351b20547627,Karl,Dawson,,homeowner,1,2026-03-30T23:30:00Z,2026-03-30T23:30:00Z,778 Cowrie Hollow Dr 102A Key Biscayne FL 33182
+cus_35e89c9d7bde4a5f8b1bcb9f61c01c89,Felix,Singleton,,homeowner,1,2026-03-30T22:00:00Z,2026-03-30T22:00:00Z,515 Cormorant Reef Blvd 709 Coral Gables FL 33162
+cus_ff7babd079c8459bb5e2df51c473b3e3,Delia,Watts,,homeowner,1,2026-03-28T17:00:00Z,2026-03-28T17:00:00Z,4663 Harborlight Circle Miami Beach FL 33182
+cus_b99bd35e472e47609acec901f2cae10d,,,,business,1,2026-03-27T20:00:00Z,2026-03-27T20:00:00Z,1002 Bayfront Hwy 1918 Miami Beach FL 33182
+cus_0f3a3ddb38304213848bb7254351afd2,Selena,Fleming,,homeowner,1,2026-03-27T16:00:00Z,2026-03-27T16:00:00Z,64 Seashell Glen Coral Gables FL 33162
+cus_f6dddd06bd074e3e93e6c0eb048d7227,Ruby,Campos,,homeowner,1,2026-03-26T15:00:00Z,2026-03-26T15:00:00Z,1200 Cowrie Hollow Dr 1008B Key Biscayne FL 33182
+cus_7da411fa153846c980ae29b0f8e9cf98,Tobias,Hayden,,homeowner,1,2026-03-25T18:00:00Z,2026-03-25T18:00:00Z,86 S Lighthouse Landing Key Biscayne FL 33182
+cus_c1d7be03751a4156b3e41556dc4c1951,Tamara,Pena,,homeowner,1,2026-03-25T16:00:00Z,2026-03-25T16:00:00Z,1676 Gulfstream Pointe Rd Coral Gables FL 33162
+cus_5c8169f6471544cca00ac4b506699350,Teresa,Ochoa,,homeowner,1,2026-03-25T15:00:00Z,2026-03-25T15:00:00Z,1 Windward Isle Rd Building I Miami Beach FL 33182
+cus_0d13c011f1514e7790452a296ccd7553,Jesse,Herrera,,homeowner,1,2026-03-24T17:00:00Z,2026-03-24T17:00:00Z,406 Limestone Harbor St Miami Beach FL 33182
+cus_6e80ca7ea7ce4d0e8c9d2e5e6aad4eef,Lillian,Rowe,Longleaf Hospitality,homeowner,1,2026-03-19T19:00:00Z,2026-03-19T19:00:00Z,4209 Firebush Pointe 2 4209 Miami Beach FL 33182
+cus_7a4e6695d2da4585873275f2330c0abc,Saltmarsh,,Saltmarsh Hospitality,business,1,2026-03-19T18:13:57Z,2026-03-19T18:13:57Z,1008 Oleander Cay Rd Ste B Miami Beach FL 33182
+cus_e89cf0fe9f484afcb426dc51c081d5b4,Doris,Hammond,,homeowner,1,2026-03-18T22:00:00Z,2026-03-18T22:00:00Z,1298 Glasswort Ridge Way Key Biscayne FL 33182
+cus_3f31c46791c949669766e7b87075d091,Delia,Powers,,homeowner,1,2026-03-16T15:00:00Z,2026-03-16T15:00:00Z,420 Jacaranda Hollow Dr Miami Beach FL 33182
+cus_b8f8b5f769394af58ec760bf7a3f3e78,Sabrina,Kennedy,,homeowner,1,2026-03-12T20:00:00Z,2026-03-12T20:00:00Z,212 S Osprey Pointe Rd Miami Beach FL 33182
+cus_307ffee67c4743618bc18bc42862542f,Naomi,Santos,,homeowner,1,2026-03-12T20:00:00Z,2026-03-12T20:00:00Z,2330 N Coral Ridge Pkwy Coral Gables FL 33162
+cus_63c54be6a25d44909687b27668a4f102,Yolanda,Hale,,homeowner,1,2026-03-11T19:00:00Z,2026-03-11T19:00:00Z,103 Lighthouse Ct Miami Beach FL 33182
+cus_83f6b59f6ae541fdbe2d99b817f2aadd,Hazel,Noble,,homeowner,1,2026-03-12T14:00:00Z,2026-03-12T14:00:00Z,4714 Plover Hollow Miami Beach FL 33182
+cus_1f6a01e5266c41b0854ed1017bbb76eb,Pamela,Blair,,homeowner,1,2026-03-11T00:00:00Z,2026-03-11T00:00:00Z,2480 Seashell Lane Miami Beach FL 33182
+cus_6e5a711284a248248d7d2bef4ffd401c,Aiden,Cannon,,homeowner,1,2026-03-10T14:00:00Z,2026-03-10T14:00:00Z,9800 Seahorse Ridge Blvd Unit 5622 Key Biscayne FL 33182
+cus_59d2bdb6d3dc408dbf4f83ab67d161be,Tanya,Baldwin,,homeowner,1,2026-03-12T14:00:00Z,2026-03-12T14:00:00Z,550 Cormorant Reef Blvd Unit 702 Key Biscayne FL 33182
+cus_8452b457df8a4964bf99318380ee584e,Mia,Mejia,,homeowner,1,2026-03-08T17:00:00Z,2026-03-08T17:00:00Z,599 Cowrie Hollow Dr Unit 103 Key Biscayne FL 33182
+cus_f7aedcd851a84287af4ad4c986aa399e,Harvey,Leach,,homeowner,1,2026-03-06T16:00:00Z,2026-03-06T16:00:00Z,2830 Cowrie Hollow Dr Unit 210 Key Biscayne FL 33182
+cus_b4a5832aa532460298e6fd734c643ef1,Kenneth,Erickson,,homeowner,1,2026-03-04T15:00:00Z,2026-03-04T15:00:00Z,114 Skimmer Landing Drive Cottage 40 Key Biscayne FL 33182
+cus_2e54c4fc6e4c4411b38b76a41df4f662,Beatriz,Maldonado,,homeowner,1,2026-03-03T15:00:00Z,2026-03-03T15:00:00Z,189 Moonraker Cove Cir Coral Gables FL 33162
+cus_2d679bd3d219463cbdd276382ea1ed31,Carmen,Howe,,homeowner,1,2026-03-05T15:00:00Z,2026-03-05T15:00:00Z,330 Wahoo Bluff Blvd Doral FL 33173
+cus_5ec211620ef649d5aa6b57754ea47d81,Seth,Ferguson,,homeowner,1,2026-04-21T14:00:00Z,2026-04-21T14:00:00Z,970 Bayfront Hwy Unit 1505 Miami Beach FL 33182
