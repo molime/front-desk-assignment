@@ -179,12 +179,19 @@ calls.finalizeCall(call.id, { status: runError ? 'error' : 'completed' });
 // --- assertions -----------------------------------------------------------------------
 
 const finalReply = [...conversation].reverse().find((m) => m.role === 'agent')?.text ?? '';
+// Scripted callers often end with a pleasantry ("Thanks!"), so the FINAL agent
+// message is usually "You're welcome" — content assertions must look at every
+// agent message, not just the last one.
+const agentMessages = conversation.filter((m) => m.role === 'agent').map((m) => m.text);
+const agentText = agentMessages.join('\n');
 const ctx = {
   db,
   callId: call.id,
   toolCalls,
   conversation,
   finalReply,
+  agentMessages,
+  agentText,
   data,
   check,
   toolCalled: (name) => toolCalls.some((t) => t.name === name && !t.result?.error),

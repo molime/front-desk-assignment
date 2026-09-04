@@ -35,10 +35,13 @@ function sha256(file) {
   return createHash('sha256').update(readFileSync(file)).digest('hex');
 }
 
-/** Snapshot of the source DB (main file + WAL sidecars) to prove we never touch it. */
+/** Snapshot of the source DB to prove we never touch it.
+ *  WAL mode: mere READS can rewrite the -shm shared-memory sidecar (copying the
+ *  DB at scenario start does this), so -shm is excluded — only the main .db
+ *  (sha256 + mtime + size) and the -wal are integrity-checked. */
 function snapshotSourceDb() {
   const snap = {};
-  for (const suffix of ['', '-wal', '-shm']) {
+  for (const suffix of ['', '-wal']) {
     const f = SRC_DB + suffix;
     if (existsSync(f)) {
       const st = statSync(f);
@@ -146,7 +149,7 @@ const newFiles = Object.keys(after).filter((f) => !before[f]);
 const dbUntouched = touched.length === 0 && newFiles.length === 0;
 console.log(
   dbUntouched
-    ? '✓ source DB untouched (sha256 + mtime verified on gulfbreeze.db and WAL sidecars)'
+    ? '✓ source DB untouched (sha256 + mtime verified on gulfbreeze.db and -wal; -shm excluded — reads can rewrite it)'
     : `✗ SOURCE DB MODIFIED: ${[...touched, ...newFiles].join(', ')}`
 );
 

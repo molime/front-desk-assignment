@@ -146,12 +146,22 @@ CREATE INDEX IF NOT EXISTS idx_agent_actions_call ON agent_actions(call_id);
 
 CREATE TABLE IF NOT EXISTS tasks (
   id          TEXT PRIMARY KEY,
-  kind        TEXT NOT NULL CHECK (kind IN ('handoff', 'followup')),
+  kind        TEXT NOT NULL CHECK (kind IN ('handoff', 'followup', 'message')),
   title       TEXT,
   detail      TEXT,
   call_id     TEXT,
   job_id      TEXT,
   customer_id TEXT,
+  assigned_employee_id TEXT,           -- crew-line messages: NULL = the office
   status      TEXT NOT NULL DEFAULT 'open' CHECK (status IN ('open', 'done')),
   created_at  TEXT
+);
+
+-- Crew-line PINs (DESIGN: crew line). employee_id deliberately has NO foreign
+-- key to employees: the importer DROPs and recreates the imported tables, and
+-- a hard FK would make those drops fail (or cascade) — this table must survive
+-- reseeds. Seeded lazily by employeeService.ensureEmployeePins().
+CREATE TABLE IF NOT EXISTS employee_auth (
+  employee_id TEXT PRIMARY KEY,
+  pin         TEXT NOT NULL            -- 4 digits
 );

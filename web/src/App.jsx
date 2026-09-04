@@ -8,6 +8,8 @@ import Customers from './pages/Customers.jsx';
 import CustomerDetail from './pages/CustomerDetail.jsx';
 import JobDetail from './pages/JobDetail.jsx';
 import Tasks from './pages/Tasks.jsx';
+import Employees from './pages/Employees.jsx';
+import EmployeeDetail from './pages/EmployeeDetail.jsx';
 
 export default function App() {
   return (
@@ -20,6 +22,8 @@ export default function App() {
         <Route path="customers" element={<Customers />} />
         <Route path="customers/:id" element={<CustomerDetail />} />
         <Route path="jobs/:id" element={<JobDetail />} />
+        <Route path="employees" element={<Employees />} />
+        <Route path="employees/:id" element={<EmployeeDetail />} />
         <Route path="tasks" element={<Tasks />} />
         <Route path="*" element={<div className="py-20 text-center text-slate-500">Page not found.</div>} />
       </Route>

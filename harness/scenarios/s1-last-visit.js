@@ -41,12 +41,12 @@ export default {
     const last = hist?.result?.visits?.[0];
     ctx.check('visit history returned at least one visit', !!last);
     if (last) {
-      const mentionedDate = mentionsDate(ctx.finalReply, last.date);
-      const mentionedWork = keywordsOf(last.description).some((w) => ctx.finalReply.toLowerCase().includes(w));
+      const mentionedDate = mentionsDate(ctx.agentText, last.date);
+      const mentionedWork = keywordsOf(last.description).some((w) => ctx.agentText.toLowerCase().includes(w));
       ctx.check(
         'reply references the actual last visit (date or work performed)',
         mentionedDate || mentionedWork,
-        `last visit ${last.date} "${last.description}" not reflected in: "${ctx.finalReply.slice(0, 160)}"`
+        `last visit ${last.date} "${last.description}" not reflected in agent messages`
       );
     }
   },

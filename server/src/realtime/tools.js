@@ -7,12 +7,29 @@ import * as jobs from '../services/jobService.js';
 import * as schedule from '../services/scheduleService.js';
 import * as warranty from '../services/warrantyService.js';
 import * as calls from '../services/callService.js';
+import * as employees from '../services/employeeService.js';
 import { getWeather, webSearch } from './webtools.js';
-import { utcToEtDate } from '../lib/time.js';
+import { utcToEtDate, todayEt } from '../lib/time.js';
 
 // --- compact, voice-friendly mappers ------------------------------------------
 
 const fmtDate = (iso) => (iso ? utcToEtDate(iso) : null);
+
+// Human date with weekday ("Wednesday, September 9, 2026") — the model must
+// never compute weekdays itself; tool results carry them (real call bug).
+const dtfLongEt = new Intl.DateTimeFormat('en-US', {
+  timeZone: 'America/New_York', weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+});
+const dtfLongUtc = new Intl.DateTimeFormat('en-US', {
+  timeZone: 'UTC', weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+});
+const fmtDateLong = (isoOrDate) => {
+  if (!isoOrDate) return null;
+  // Date-only strings are calendar days: anchor at UTC noon so no timezone
+  // shift can move the weekday. Full timestamps format in ET.
+  if (/^\d{4}-\d{2}-\d{2}$/.test(isoOrDate)) return dtfLongUtc.format(new Date(`${isoOrDate}T12:00:00Z`));
+  return dtfLongEt.format(new Date(isoOrDate));
+};
 
 const oneLine = (a) =>
   a ? [a.street, a.street_line_2, a.city, a.state, a.zip].filter(Boolean).join(', ') : null;
@@ -31,6 +48,7 @@ function customerSummary(c) {
 function visitSummary(j) {
   return {
     job_id: j.id,
+    invoice_number: j.invoice_number ?? null, // the short number staff use — shareable with the caller
     date: fmtDate(j.scheduled_start),
     completed: fmtDate(j.completed_at),
     status: j.work_status,
@@ -46,6 +64,7 @@ function bookingConfirmation(detail) {
     job_id: detail.id,
     status: detail.work_status,
     date: fmtDate(detail.scheduled_start),
+    date_long: fmtDateLong(detail.scheduled_start), // e.g. "Wednesday, September 9, 2026"
     scheduled_start: detail.scheduled_start,
     scheduled_end: detail.scheduled_end,
     customer: detail.customer
@@ -63,6 +82,18 @@ const handlers = {
   find_customer({ query }) {
     const results = customers.search(query, 5).map(customerSummary);
     return results.length ? { matches: results } : { matches: [], note: `no customers matching "${query}"` };
+  },
+
+  create_customer({ first_name, last_name, company, kind, address }) {
+    const created = customers.createCustomer({ first_name, last_name, company, kind, address });
+    return {
+      created: true,
+      customer_id: created.customer_id,
+      address_id: created.address_id,
+      name: [first_name, last_name].filter(Boolean).join(' ') || company || null,
+      address: oneLine(address),
+      note: 'new customer registered — proceed with booking using these ids',
+    };
   },
 
   get_customer_profile({ customer_id }) {
@@ -121,13 +152,14 @@ const handlers = {
 
   check_availability({ date, window }) {
     const avail = schedule.getAvailability(date, window ?? null);
-    if (avail.closed) return { date: avail.date, closed: true, reason: avail.reason, open_windows: [] };
+    const date_long = fmtDateLong(avail.date); // weekday included — quote this to callers
+    if (avail.closed) return { date: avail.date, date_long, closed: true, reason: avail.reason, open_windows: [] };
     const open = avail.windows
       .filter((w) => w.open)
       .map((w) => ({ window: w.label, slots_free: w.slots }));
     return open.length
-      ? { date: avail.date, closed: false, open_windows: open }
-      : { date: avail.date, closed: false, open_windows: [], note: 'fully booked that day — suggest another day or a handoff' };
+      ? { date: avail.date, date_long, closed: false, open_windows: open }
+      : { date: avail.date, date_long, closed: false, open_windows: [], note: 'fully booked that day — suggest another day or a handoff' };
   },
 
   book_appointment(args) {
@@ -156,6 +188,76 @@ const handlers = {
 
   async web_search(args) {
     return webSearch(args);
+  },
+
+  // --- crew line (employees calling in) ----------------------------------------
+
+  identify_employee({ name, pin }, ctx) {
+    employees.ensureEmployeePins(); // lazy seed: first PIN need, survives reseeds
+    const matches = employees.matchEmployee(name);
+    if (matches.length === 0) return { error: `no employee matching "${name}" — if this is a customer call, use find_customer` };
+    const exact = matches.filter((m) => employees.fullName(m).toLowerCase() === String(name).trim().toLowerCase());
+    const emp = exact[0] ?? (matches.length === 1 ? matches[0] : null);
+    if (!emp) {
+      return { error: `multiple employees match "${name}"`, matches: matches.map((m) => employees.fullName(m)) };
+    }
+    if (!ctx?.callId) return { error: 'no call context' };
+    const empName = employees.fullName(emp);
+    if (pin == null || String(pin).trim() === '') {
+      employees.setCallAuth(ctx.callId, { employeeId: emp.id, scope: 'read' });
+      return { employee_id: emp.id, name: empName, role: emp.role, scope: 'read', note: 'read-only access — ask for their 4-digit PIN to make changes' };
+    }
+    if (!employees.verifyPin(emp.id, pin)) return { error: 'PIN does not match' };
+    employees.setCallAuth(ctx.callId, { employeeId: emp.id, scope: 'full' });
+    return { employee_id: emp.id, name: empName, role: emp.role, scope: 'full' };
+  },
+
+  get_my_schedule({ date }, ctx) {
+    const auth = employees.getCallAuth(ctx?.callId);
+    if (!auth) return { error: 'identify yourself first with identify_employee (your name is enough for read-only info)' };
+    const dateEt = date ?? todayEt();
+    const emp = employees.getEmployee(auth.employeeId);
+    const dayJobs = employees.scheduleFor(auth.employeeId, dateEt);
+    return {
+      employee: employees.fullName(emp),
+      date: dateEt,
+      jobs: dayJobs,
+      note: dayJobs.length ? null : 'no jobs scheduled that day',
+    };
+  },
+
+  complete_job({ job_id }, ctx) {
+    const auth = employees.getCallAuth(ctx?.callId);
+    if (!auth) return { error: 'identify yourself first with identify_employee' };
+    if (auth.scope !== 'full') {
+      return { error: 'marking a job complete changes records — ask for their 4-digit PIN and call identify_employee again with it' };
+    }
+    return employees.completeJobAs(job_id, auth.employeeId);
+  },
+
+  leave_message({ to, message }, ctx) {
+    const auth = employees.getCallAuth(ctx?.callId);
+    if (!auth) return { error: 'identify yourself first with identify_employee so the office knows who left the message' };
+    const from = employees.getEmployee(auth.employeeId);
+    let assignee = null;
+    if (String(to).trim().toLowerCase() !== 'office') {
+      const matches = employees.matchEmployee(to);
+      const exact = matches.filter((m) => employees.fullName(m).toLowerCase() === String(to).trim().toLowerCase());
+      assignee = exact[0] ?? (matches.length === 1 ? matches[0] : null);
+      if (!assignee) {
+        return matches.length === 0
+          ? { error: `no employee matching "${to}" — say "office" to leave it with the office` }
+          : { error: `multiple employees match "${to}"`, matches: matches.map((m) => employees.fullName(m)) };
+      }
+    }
+    const task = calls.createTask({
+      kind: 'message',
+      title: `Message from ${employees.fullName(from)}`,
+      detail: String(message ?? '').trim(),
+      call_id: ctx?.callId ?? null,
+      assigned_employee_id: assignee?.id ?? null,
+    });
+    return { message_left: true, task_id: task.id, to: assignee ? employees.fullName(assignee) : 'the office' };
   },
 
   request_handoff({ reason, customer_id }, ctx) {
@@ -198,6 +300,8 @@ export function summarizeAction(name, args, result) {
   switch (name) {
     case 'find_customer':
       return `Searched customer "${args.query}" → ${result.matches?.length ?? 0} match(es)`;
+    case 'create_customer':
+      return `Created customer ${result.name ?? ''} (${result.customer_id})`.trim();
     case 'get_customer_profile':
       return `Pulled profile for ${result.name ?? result.company ?? args.customer_id}`;
     case 'get_visit_history':
@@ -220,6 +324,14 @@ export function summarizeAction(name, args, result) {
       return `Checked weather for ${result.location ?? args.city_or_zip}`;
     case 'web_search':
       return `Web search: "${args.query}"`;
+    case 'identify_employee':
+      return `Identified ${result.name ?? args.name} (${result.scope} access)`;
+    case 'get_my_schedule':
+      return `Read ${result.employee ?? 'crew member'}'s schedule for ${result.date} (${result.jobs?.length ?? 0} job(s))`;
+    case 'complete_job':
+      return `Marked ${result.job_id} complete`;
+    case 'leave_message':
+      return `Message left for ${result.to}`;
     case 'request_handoff':
       return `Handoff requested: ${args.reason}`;
     default:

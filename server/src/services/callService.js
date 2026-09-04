@@ -72,13 +72,13 @@ export function addAgentAction(callId, tool, args, result) {
 
 // --- tasks ---------------------------------------------------------------------
 
-/** Create a handoff/follow-up task and broadcast task.created. */
-export function createTask({ kind, title, detail = null, call_id = null, job_id = null, customer_id = null }) {
-  const row = { id: `tsk_${randomUUID()}`, kind, title, detail, call_id, job_id, customer_id, status: 'open', created_at: now() };
+/** Create a handoff/followup/message task and broadcast task.created. */
+export function createTask({ kind, title, detail = null, call_id = null, job_id = null, customer_id = null, assigned_employee_id = null }) {
+  const row = { id: `tsk_${randomUUID()}`, kind, title, detail, call_id, job_id, customer_id, assigned_employee_id, status: 'open', created_at: now() };
   db.prepare(
-    `INSERT INTO tasks (id, kind, title, detail, call_id, job_id, customer_id, status, created_at)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`
-  ).run(row.id, row.kind, row.title, row.detail, row.call_id, row.job_id, row.customer_id, row.status, row.created_at);
+    `INSERT INTO tasks (id, kind, title, detail, call_id, job_id, customer_id, assigned_employee_id, status, created_at)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
+  ).run(row.id, row.kind, row.title, row.detail, row.call_id, row.job_id, row.customer_id, row.assigned_employee_id, row.status, row.created_at);
   broadcast('task.created', { task: row });
   return row;
 }
@@ -105,10 +105,12 @@ export function getCallDetail(id) {
 }
 
 export function listTasks(status = null) {
+  const base = `SELECT t.*, e.first_name AS assignee_first, e.last_name AS assignee_last
+                FROM tasks t LEFT JOIN employees e ON e.id = t.assigned_employee_id`;
   if (status) {
-    return db.prepare(`SELECT * FROM tasks WHERE status = ? ORDER BY created_at DESC`).all(status);
+    return db.prepare(`${base} WHERE t.status = ? ORDER BY t.created_at DESC`).all(status);
   }
-  return db.prepare(`SELECT * FROM tasks ORDER BY created_at DESC`).all();
+  return db.prepare(`${base} ORDER BY t.created_at DESC`).all();
 }
 
 export function updateTaskStatus(id, status) {

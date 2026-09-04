@@ -107,7 +107,7 @@ check('session.type is "realtime" (GA)', sessionUpdate?.type === 'realtime');
 check('input format audio/pcmu (g711_ulaw)', sessionUpdate?.audio?.input?.format?.type === 'audio/pcmu');
 check('output format audio/pcmu', sessionUpdate?.audio?.output?.format?.type === 'audio/pcmu');
 check('server_vad turn detection', sessionUpdate?.audio?.input?.turn_detection?.type === 'server_vad');
-check('13 tools + tool_choice auto', sessionUpdate?.tools?.length === 13 && sessionUpdate?.tool_choice === 'auto');
+check('18 tools + tool_choice auto', sessionUpdate?.tools?.length === 18 && sessionUpdate?.tool_choice === 'auto');
 check('instructions mention Marina + Gulf Breeze', /Marina/.test(sessionUpdate?.instructions ?? '') && /Gulf Breeze Air/.test(sessionUpdate?.instructions ?? ''));
 check('input transcription enabled', !!sessionUpdate?.audio?.input?.transcription?.model);
 check('caller audio appended (input_audio_buffer.append)', oaiReceived.includes('input_audio_buffer.append'));
@@ -141,5 +141,11 @@ check('call.ended broadcast', ev('call.ended').some((e) => e.payload.call.id ===
 
 unsub();
 fakeOai.close();
+
+// Leave the dev DB clean: remove this run's call row too (setup only deletes
+// rows from PREVIOUS runs).
+db.prepare(`DELETE FROM call_transcripts WHERE call_id = ?`).run(call.id);
+db.prepare(`DELETE FROM agent_actions WHERE call_id = ?`).run(call.id);
+db.prepare(`DELETE FROM calls WHERE id = ?`).run(call.id);
 console.log(`\n${passed} passed, ${failed} failed`);
 process.exit(failed ? 1 : 0);

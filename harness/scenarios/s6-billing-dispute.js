@@ -39,8 +39,8 @@ export default {
 
     ctx.check(
       'reply tells the caller a human will call back',
-      /call back|callback|human|someone from the office|office will/i.test(ctx.finalReply),
-      `reply was: "${ctx.finalReply.slice(0, 160)}"`
+      /call\s?(you\s)?back|callback|human|someone from (our|the) office|office will (call|reach|follow)/i.test(ctx.agentText),
+      'agent messages never promised a human callback'
     );
   },
 };

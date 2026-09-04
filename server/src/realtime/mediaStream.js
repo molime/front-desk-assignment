@@ -17,6 +17,7 @@ import { buildSessionConfig } from './agent.js';
 import { executeTool, summarizeAction } from './tools.js';
 import { summarizeCall } from './summary.js';
 import * as calls from '../services/callService.js';
+import { clearCallAuth } from '../services/employeeService.js';
 import { broadcast } from '../lib/events.js';
 
 const OPENAI_URL = () =>
@@ -64,6 +65,7 @@ export function handleMediaStream(twilioWs, req) {
   async function finalizeOnce(status = 'completed') {
     if (ended || !call) return;
     ended = true;
+    clearCallAuth(call.id);
     const fresh = calls.getCall(call.id);
     if (!fresh?.ended_at) {
       const updated = calls.finalizeCall(call.id, { status });

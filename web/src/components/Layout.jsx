@@ -7,6 +7,7 @@ const NAV = [
   { to: '/schedule', label: 'Schedule' },
   { to: '/calls', label: 'Calls' },
   { to: '/customers', label: 'Customers' },
+  { to: '/employees', label: 'Crew' },
   { to: '/tasks', label: 'Tasks' },
 ];
 

@@ -33,6 +33,10 @@ export const api = {
   // tasks
   getTasks: (status = 'open') => request(`/api/tasks?status=${status}`),
   completeTask: (id) => request(`/api/tasks/${id}`, { method: 'PATCH', body: JSON.stringify({ status: 'done' }) }),
+  // employees (crew)
+  getEmployees: () => request('/api/employees'),
+  getEmployeeSchedule: (id, date) => request(`/api/employees/${id}/schedule${date ? `?date=${date}` : ''}`),
+  getEmployeeMessages: (id) => request(`/api/employees/${id}/messages`),
   // web call
-  realtimeToken: () => request('/api/realtime-token', { method: 'POST' }),
+  realtimeToken: () => request('/api/realtime-token', { method: 'POST', body: '{}' }),
 };

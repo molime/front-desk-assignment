@@ -1,11 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
 import { api } from '../lib/api.js';
 import { fmtElapsed } from '../lib/format.js';
+import { handleRealtimeEvent, endWebCall, greetingMessage } from '../lib/realtimeEvents.js';
 
 // Browser WebRTC call to the OpenAI Realtime API (DESIGN.md §3 web-call
 // fallback). Ephemeral key comes from POST /api/realtime-token; the SDP offer
 // is posted to the Realtime WebRTC endpoint with that key as Bearer.
-const REALTIME_URL = 'https://api.openai.com/v1/realtime?model=gpt-realtime';
+// GA endpoint (model is bound to the ephemeral key at mint time). The beta
+// URL (/v1/realtime?model=...) was disabled by OpenAI in May 2026.
+const REALTIME_URL = 'https://api.openai.com/v1/realtime/calls';
 
 export default function CallMarinaButton() {
   const [state, setState] = useState('idle'); // idle | connecting | live | error
@@ -13,9 +16,13 @@ export default function CallMarinaButton() {
   const [toast, setToast] = useState(null);
   const [startedAt, setStartedAt] = useState(null);
   const [now, setNow] = useState(Date.now());
+  const [lastLine, setLastLine] = useState(null); // {speaker, text} latest transcript line
+  const [checking, setChecking] = useState(null); // tool name while a tool call is in flight
   const pcRef = useRef(null);
   const streamRef = useRef(null);
   const audioRef = useRef(null);
+  const dcRef = useRef(null);
+  const callIdRef = useRef(null);
 
   useEffect(() => {
     if (state !== 'live') return undefined;
@@ -30,6 +37,9 @@ export default function CallMarinaButton() {
   }, [toast]);
 
   const hangUp = () => {
+    endWebCall(callIdRef.current); // finalize + summarize server-side (fire-and-forget)
+    callIdRef.current = null;
+    dcRef.current = null;
     pcRef.current?.close();
     pcRef.current = null;
     streamRef.current?.getTracks().forEach((t) => t.stop());
@@ -37,6 +47,8 @@ export default function CallMarinaButton() {
     setState('idle');
     setMuted(false);
     setStartedAt(null);
+    setLastLine(null);
+    setChecking(null);
   };
 
   const start = async () => {
@@ -75,8 +87,28 @@ export default function CallMarinaButton() {
       streamRef.current = stream;
       pc.addTrack(stream.getAudioTracks()[0]);
 
-      // Data channel kept open for future tool/event wiring.
-      pc.createDataChannel('oai-events');
+      // Data channel: Realtime server events arrive here — function calls are
+      // relayed to /api/webcall/:callId/event, transcripts are persisted, and
+      // results go back over the channel so Marina can answer.
+      callIdRef.current = token.call_id ?? null;
+      const dc = pc.createDataChannel('oai-events');
+      dcRef.current = dc;
+      dc.onopen = () => {
+        // Kick off the greeting so Marina speaks first (the Twilio bridge does
+        // the same over its WS on session open).
+        dc.send(JSON.stringify(greetingMessage()));
+      };
+      dc.onmessage = (e) => {
+        let evt;
+        try { evt = JSON.parse(e.data); } catch { return; }
+        handleRealtimeEvent(evt, {
+          callId: callIdRef.current,
+          send: (obj) => { if (dc.readyState === 'open') dc.send(JSON.stringify(obj)); },
+          onTranscript: (line) => setLastLine(line),
+          onToolStart: (name) => setChecking(name),
+          onToolEnd: () => setChecking(null),
+        }).catch(() => { /* never break the call over a bad event */ });
+      };
 
       const offer = await pc.createOffer();
       await pc.setLocalDescription(offer);
@@ -124,23 +156,32 @@ export default function CallMarinaButton() {
         </span>
       )}
       {state === 'live' && (
-        <span className="flex items-center gap-2">
-          <span className="inline-flex items-center gap-1.5 rounded-lg bg-emerald-50 px-3 py-1.5 text-[13px] font-medium text-emerald-800 ring-1 ring-inset ring-emerald-200">
-            <span className="h-2 w-2 rounded-full bg-emerald-500" />
-            On call · {fmtElapsed(startedAt, now)}
+        <span className="flex flex-col items-end gap-0.5">
+          <span className="flex items-center gap-2">
+            <span className="inline-flex items-center gap-1.5 rounded-lg bg-emerald-50 px-3 py-1.5 text-[13px] font-medium text-emerald-800 ring-1 ring-inset ring-emerald-200">
+              <span className="h-2 w-2 rounded-full bg-emerald-500" />
+              On call · {fmtElapsed(startedAt, now)}
+            </span>
+            <button
+              onClick={toggleMute}
+              className="rounded-lg border border-slate-200 bg-white px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:bg-slate-50"
+            >
+              {muted ? 'Unmute' : 'Mute'}
+            </button>
+            <button
+              onClick={hangUp}
+              className="rounded-lg bg-rose-600 px-2.5 py-1.5 text-[13px] font-medium text-white hover:bg-rose-700"
+            >
+              Hang up
+            </button>
           </span>
-          <button
-            onClick={toggleMute}
-            className="rounded-lg border border-slate-200 bg-white px-2.5 py-1.5 text-[13px] font-medium text-slate-700 hover:bg-slate-50"
-          >
-            {muted ? 'Unmute' : 'Mute'}
-          </button>
-          <button
-            onClick={hangUp}
-            className="rounded-lg bg-rose-600 px-2.5 py-1.5 text-[13px] font-medium text-white hover:bg-rose-700"
-          >
-            Hang up
-          </button>
+          <span className="max-w-md truncate text-[11px] text-slate-400">
+            {checking
+              ? `Marina is checking (${checking.replaceAll('_', ' ')})…`
+              : lastLine
+                ? `${lastLine.speaker === 'agent' ? 'Marina' : 'You'}: ${lastLine.text}`
+                : 'Marina will greet you…'}
+          </span>
         </span>
       )}
       {toast && (

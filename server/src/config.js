@@ -1,5 +1,14 @@
 // Central env config (DESIGN.md §6). Everything optional — the server must boot
 // with zero env vars set (dev mode); features degrade gracefully instead.
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+// Load server/.env if present (local dev). In Docker/Railway the file doesn't
+// exist and env vars come from the platform — that's fine, keep booting.
+try {
+  process.loadEnvFile(path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../.env'));
+} catch { /* no .env file — env comes from the shell/platform */ }
+
 const env = process.env;
 
 export const config = {

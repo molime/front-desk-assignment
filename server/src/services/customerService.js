@@ -1,4 +1,5 @@
 // Customer search + 360 profile + history (DESIGN.md §3 find_customer / get_customer_profile / get_visit_history).
+import { randomUUID } from 'node:crypto';
 import db from '../db/index.js';
 
 const esc = (s) => s.replace(/[%_\\]/g, (c) => `\\${c}`);
@@ -27,6 +28,24 @@ export function search(query, limit = 10) {
 
 export function getById(id) {
   return parseCustomer(db.prepare(`SELECT * FROM customers WHERE id = ?`).get(id));
+}
+
+/** Register a NEW customer + their address (agent-created). Returns both ids. */
+export function createCustomer({ first_name = null, last_name = null, company = null, kind = 'homeowner', address = {} } = {}) {
+  const customerId = `cus_agent_${randomUUID()}`;
+  const addressId = `adr_agent_${randomUUID()}`;
+  const tx = db.transaction(() => {
+    db.prepare(
+      `INSERT INTO customers (id, first_name, last_name, company, kind, tags, job_count, first_job, last_job)
+       VALUES (?, ?, ?, ?, ?, '[]', 0, NULL, NULL)`
+    ).run(customerId, first_name, last_name, company, kind === 'business' ? 'business' : 'homeowner');
+    db.prepare(
+      `INSERT INTO customer_addresses (id, customer_id, street, street_line_2, city, state, zip, lat, lng)
+       VALUES (?, ?, ?, ?, ?, ?, ?, NULL, NULL)`
+    ).run(addressId, customerId, address.street ?? null, address.street_line_2 ?? null, address.city ?? null, address.state ?? null, address.zip ?? null);
+  });
+  tx();
+  return { customer_id: customerId, address_id: addressId };
 }
 
 /** Customer 360: identity, kind, tags, addresses, job counts, open balance. */

@@ -57,6 +57,49 @@ function businessDay(todayEt, addDays, etDayOfWeek, minAhead) {
 
 const findMatch = (prior, pred) => prior.find((t) => t.name === 'find_customer')?.result?.matches?.find(pred);
 
+// --- s10 crew fixture ------------------------------------------------------------
+// Same deterministic selection as scenarios/s10-crew-line.js (that file builds
+// its caller turns from the DB; the fake must mirror it). fakeLlm is only
+// imported by run-one.js inside the per-scenario child process, where
+// GBA_DB_PATH points at the throwaway copy.
+const { default: fdb } = await import('../server/src/db/index.js');
+const fEmp = await import('../server/src/services/employeeService.js');
+const { todayEt: fTodayEt, addDays: fAddDays, etToUtc: fEtToUtc } = await import('../server/src/lib/time.js');
+
+let crewCache = null;
+function crewFixture() {
+  if (crewCache) return crewCache;
+  fEmp.ensureEmployeePins();
+  // Same nearest-day-with-jobs selection as scenarios/s10-crew-line.js.
+  let picked = null;
+  for (let i = 0; i < 7 && !picked; i++) {
+    const date = fAddDays(fTodayEt(), i);
+    const tech = fdb
+      .prepare(
+        `SELECT e.id, e.first_name, e.last_name, COUNT(*) AS n
+         FROM employees e
+         JOIN job_assignments ja ON ja.employee_id = e.id
+         JOIN jobs j ON j.id = ja.job_id
+         WHERE e.role = 'field tech' AND j.work_status IN ('scheduled','in progress')
+           AND j.scheduled_start >= ? AND j.scheduled_start < ?
+         GROUP BY e.id ORDER BY n DESC, e.last_name LIMIT 1`
+      )
+      .get(fEtToUtc(date, 0), fEtToUtc(fAddDays(date, 1), 0));
+    if (tech) picked = { date, tech };
+  }
+  const { date, tech } = picked;
+  const coworker = fdb
+    .prepare(`SELECT id, first_name, last_name FROM employees WHERE id != ? AND first_name != 'Team' ORDER BY last_name LIMIT 1`)
+    .get(tech.id);
+  crewCache = {
+    techName: `${tech.first_name} ${tech.last_name}`,
+    pin: fEmp.getPin(tech.id),
+    coworkerName: `${coworker.first_name} ${coworker.last_name}`,
+    date,
+  };
+  return crewCache;
+}
+
 export function makeFakeLlm(scenarioName, { todayEt, addDays, etDayOfWeek }) {
   const scripts = {
     's1-last-visit': (prior) => {
@@ -127,7 +170,7 @@ export function makeFakeLlm(scenarioName, { todayEt, addDays, etDayOfWeek }) {
     's5-visit-notes': (prior) => {
       if (!prior.some((t) => t.name === 'find_customer')) return tc('find_customer', { query: '932 Jacaranda Hollow' });
       if (!prior.some((t) => t.name === 'get_visit_history')) {
-        const m = findMatch(prior, (x) => x.addresses.some((a) => /932\s+Jacaranda/i.test(a.address)));
+        const m = findMatch(prior, (x) => x.addresses.some((a) => /932\s+Jacaranda/i.test(a.address) && /Miami Beach/i.test(a.address)));
         return tc('get_visit_history', { customer_id: m.customer_id, limit: 5 });
       }
       const visits = prior.find((t) => t.name === 'get_visit_history').result.visits;
@@ -164,6 +207,58 @@ export function makeFakeLlm(scenarioName, { todayEt, addDays, etDayOfWeek }) {
       const call = prior.find((t) => t.name === 'web_search');
       const r = call.result.results?.[0];
       return say(`I looked up the ${call.args.query}: ${r?.snippet ?? 'no details found'} — anything else about the unit I can check?`);
+    },
+
+    's9-new-customer-booking': (prior, h) => {
+      if (!prior.some((t) => t.name === 'find_customer')) return tc('find_customer', { query: 'Rachel Fontaine' });
+      if (!prior.some((t) => t.name === 'create_customer')) {
+        return tc('create_customer', {
+          first_name: 'Rachel',
+          last_name: 'Fontaine',
+          kind: 'homeowner',
+          address: { street: '7700 Bayshore Colony Drive', city: 'Miami', state: 'FL', zip: '33138' },
+        });
+      }
+      const created = prior.find((t) => t.name === 'create_customer').result;
+      const availCalls = prior.filter((t) => t.name === 'check_availability');
+      if (!availCalls.length) {
+        return tc('check_availability', { date: businessDay(h.todayEt, h.addDays, h.etDayOfWeek, 1), window: '8-10' });
+      }
+      const booked = prior.find((t) => t.name === 'book_appointment');
+      if (booked) {
+        return say(`You're all set, Rachel — booked for ${booked.result.date}, arrival window 8–10 AM. ${booked.result.techs?.[0] ?? 'A tech'} will come to 7700 Bayshore Colony Drive. Welcome to Gulf Breeze Air!`);
+      }
+      const last = availCalls.at(-1);
+      if (last.result.closed || (last.result.open_windows ?? []).length === 0) {
+        return tc('check_availability', { date: businessDay(() => last.args.date, h.addDays, h.etDayOfWeek, 1), window: '8-10' });
+      }
+      return tc('book_appointment', {
+        customer_id: created.customer_id,
+        address_id: created.address_id,
+        date: last.result.date,
+        window: last.result.open_windows[0].window,
+        description: 'AC blowing warm air',
+        notes: 'New customer registered by Marina on this call.',
+      });
+    },
+
+    's10-crew-line': (prior, h) => {
+      const crew = crewFixture();
+      const ids = prior.filter((t) => t.name === 'identify_employee');
+      if (!ids.length) return tc('identify_employee', { name: crew.techName });
+      if (!prior.some((t) => t.name === 'get_my_schedule')) {
+        return tc('get_my_schedule', { date: crew.date });
+      }
+      const sched = prior.find((t) => t.name === 'get_my_schedule').result;
+      const jobId = sched.jobs[0]?.job_id;
+      const completes = prior.filter((t) => t.name === 'complete_job');
+      if (!completes.length) return tc('complete_job', { job_id: jobId }); // refused: read scope only
+      if (!ids.some((t) => t.args.pin)) return tc('identify_employee', { name: crew.techName, pin: crew.pin });
+      if (!completes.some((t) => !t.result?.error)) return tc('complete_job', { job_id: jobId }); // now with full scope
+      if (!prior.some((t) => t.name === 'leave_message')) {
+        return tc('leave_message', { to: crew.coworkerName, message: 'the capacitor came in' });
+      }
+      return say(`Done — your first job is marked complete, and I've left the message for ${crew.coworkerName}: the capacitor came in.`);
     },
   };
 

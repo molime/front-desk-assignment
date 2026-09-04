@@ -6,6 +6,7 @@ import { createReadStream } from 'node:fs';
 import path from 'node:path';
 import apiRoutes from './routes/api.js';
 import platformRoutes from './routes/platform.js';
+import webcallRoutes from './routes/webcall.js';
 import twilioRoutes from './routes/twilio.js';
 import wsRoutes from './routes/ws.js';
 import mediaStreamRoute from './realtime/mediaStream.js';
@@ -15,6 +16,13 @@ import db from './db/index.js'; // opens the DB + ensures schema on boot
 import { runImport } from './db/import.js';
 
 const app = Fastify({ logger: true });
+
+// Tolerate empty JSON bodies on POST/PATCH (e.g. fetch with a JSON
+// content-type header but no payload) instead of a 400.
+app.addContentTypeParser('application/json', { parseAs: 'string' }, (req, body, done) => {
+  if (body === '' || body == null) return done(null, {});
+  try { done(null, JSON.parse(body)); } catch (err) { err.statusCode = 400; done(err); }
+});
 
 // First-boot auto-seed: a fresh container has an empty jobs table → import
 // from the read-only data/*.jsonl so the app works with zero manual steps.
@@ -52,6 +60,7 @@ await app.register(fastifyWebsocket);
 
 await app.register(apiRoutes);
 await app.register(platformRoutes);
+await app.register(webcallRoutes);
 await app.register(twilioRoutes);
 
 // WebSockets (must register after @fastify/websocket):

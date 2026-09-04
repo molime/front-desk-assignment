@@ -40,18 +40,18 @@ export default {
     if (!w || w.error) return;
 
     // Reply must be consistent with the verdict the tool actually returned.
-    const reply = ctx.finalReply.toLowerCase();
+    const reply = ctx.agentText.toLowerCase();
     if (w.labor_warranty.active) {
       ctx.check(
         'verdict is ACTIVE and reply says covered',
         /covered|active|under warranty|yes|good news/.test(reply) && !/not covered|no longer covered|has expired|warranty expired/.test(reply),
-        `verdict active but reply was: "${ctx.finalReply.slice(0, 160)}"`
+        'verdict active but agent messages did not say so'
       );
     } else {
       ctx.check(
         'verdict is INACTIVE and reply says not covered',
         /not covered|no longer|expired/.test(reply),
-        `verdict inactive but reply was: "${ctx.finalReply.slice(0, 160)}"`
+        'verdict inactive but agent messages did not say so'
       );
     }
   },

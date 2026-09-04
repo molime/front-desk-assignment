@@ -18,7 +18,7 @@ bookDate = addDays(bookDate, etDayOfWeek(bookDate) === 6 ? 2 : 1); // tomorrow, 
 if (etDayOfWeek(bookDate) === 0) bookDate = addDays(bookDate, 1);
 
 console.log('tools registered:', TOOL_NAMES.join(', '));
-check('all 13 tools registered', TOOL_NAMES.length === 13);
+check('all 18 tools registered', TOOL_NAMES.length === 18);
 
 // --- find_customer -------------------------------------------------------------
 console.log('\nfind_customer("89 Harborlight"):');
@@ -111,7 +111,14 @@ check('real weather data', wx.current?.temp_f !== undefined && wx.forecast?.high
 console.log('\nweb_search("Trane 4TWR5 model"):');
 const ws = await executeTool('web_search', { query: 'Trane 4TWR5 model' });
 console.log(' ', JSON.stringify(ws).slice(0, 600));
-check('search returns results', (ws.results?.length ?? 0) > 0 || ws.error, JSON.stringify(ws).slice(0, 200));
+check('search returns results', (ws.results?.length ?? 0) > 0 || ws.error, JSON.stringify(ws.results ?? ws).slice(0, 200));
+
+// --- cleanup: leave the dev DB exactly as we found it ------------------------------------------
+db.prepare(`DELETE FROM job_notes WHERE job_id = ?`).run(book.job_id);
+db.prepare(`DELETE FROM job_assignments WHERE job_id = ?`).run(book.job_id);
+db.prepare(`DELETE FROM jobs WHERE id = ?`).run(book.job_id);
+db.prepare(`DELETE FROM tasks WHERE id = ?`).run(ho.task_id);
+console.log('test rows cleaned up');
 
 console.log(`\n${passed} passed, ${failed} failed`);
 process.exit(failed ? 1 : 0);

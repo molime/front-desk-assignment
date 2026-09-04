@@ -4,6 +4,7 @@ import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import db from './index.js';
+import { ensureEmployeePins } from '../services/employeeService.js';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = path.resolve(here, '..', '..', '..', 'data');
@@ -141,6 +142,9 @@ export function runImport() {
   });
 
   const { noteCount, itemCount } = run();
+
+  // Crew-line PINs survive reseeds: only fills gaps for employees missing one.
+  ensureEmployeePins();
 
   const count = (t) => db.prepare(`SELECT COUNT(*) AS n FROM ${t}`).get().n;
   const counts = {};

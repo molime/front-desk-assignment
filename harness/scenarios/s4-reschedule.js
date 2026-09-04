@@ -11,8 +11,8 @@ export default {
   description: 'Caller moves an existing upcoming appointment to a later afternoon slot',
 
   callerTurns: [
-    'Hi, this is Jasmine Harrington. I have a maintenance visit booked with you and something came up — I need to move it.',
-    'Can we push it to later next week, in the afternoon? The 1 to 3 PM window if you have it.',
+    'Hi, this is Jasmine Harrington. I have a maintenance visit booked with you early next week and something came up — I need to move it.',
+    'The maintenance one, yes. Can we push it a few days later, in the afternoon? The 1 to 3 PM window if you have it.',
     "Yes, that works perfectly. Thanks!",
   ],
 
@@ -60,8 +60,8 @@ export default {
 
     ctx.check(
       'reply confirms the new date aloud',
-      mentionsDate(ctx.finalReply, newEtDate),
-      `moved to ${newEtDate} but reply was: "${ctx.finalReply.slice(0, 160)}"`
+      mentionsDate(ctx.agentText, newEtDate),
+      `moved to ${newEtDate} but never said in agent messages`
     );
   },
 };

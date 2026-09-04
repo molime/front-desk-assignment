@@ -3,7 +3,10 @@
 import db from '../db/index.js';
 import config from '../config.js';
 import * as callSvc from '../services/callService.js';
+import * as empSvc from '../services/employeeService.js';
 import { buildSessionConfig } from '../realtime/agent.js';
+import { todayEt } from '../lib/time.js';
+import { broadcast } from '../lib/events.js';
 
 const notFound = (reply, msg) => reply.code(404).send({ error: msg });
 
@@ -50,6 +53,22 @@ export default async function platformRoutes(app) {
     return task ?? notFound(reply, 'task not found');
   });
 
+  // --- employees (crew line) ---------------------------------------------------
+  app.get('/api/employees', async () => ({ employees: empSvc.roster() }));
+
+  app.get('/api/employees/:id/schedule', async (req, reply) => {
+    const emp = empSvc.getEmployee(req.params.id);
+    if (!emp) return notFound(reply, 'employee not found');
+    const date = req.query.date ?? todayEt();
+    return { employee: { id: emp.id, name: empSvc.fullName(emp), role: emp.role }, date, jobs: empSvc.scheduleFor(emp.id, date) };
+  });
+
+  app.get('/api/employees/:id/messages', async (req, reply) => {
+    const emp = empSvc.getEmployee(req.params.id);
+    if (!emp) return notFound(reply, 'employee not found');
+    return { employee: { id: emp.id, name: empSvc.fullName(emp) }, messages: empSvc.messagesFor(emp.id) };
+  });
+
   // --- web-call fallback (DESIGN.md §3) ---------------------------------------
   // Mints an ephemeral OpenAI Realtime client secret for browser WebRTC with
   // the SAME agent config (prompt + tools) as the phone bridge.
@@ -74,6 +93,10 @@ export default async function platformRoutes(app) {
       req.log.warn({ status: res.status }, 'realtime client_secrets failed');
       return reply.code(502).send({ error: `failed to mint realtime token (OpenAI HTTP ${res.status})` });
     }
-    return res.json();
+    // Register the browser call up front: the dashboard live panel lights up
+    // and /api/webcall/:callId/* can persist transcripts/actions against it.
+    const call = callSvc.createCall({ from_number: 'web-call', status: 'in-progress' });
+    broadcast('call.started', { call });
+    return { ...(await res.json()), call_id: call.id };
   });
 }
