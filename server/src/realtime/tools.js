@@ -225,8 +225,9 @@ const handlers = {
     if (!ctx?.callId) return { error: 'no call context' };
     const empName = employees.fullName(emp);
     if (pin == null || String(pin).trim() === '') {
-      employees.setCallAuth(ctx.callId, { employeeId: emp.id, scope: 'read' });
-      return { employee_id: emp.id, name: empName, role: emp.role, scope: 'read', note: 'read-only access — ask for their 4-digit PIN to make changes' };
+      // Bank-style: a name match only proves the roster entry exists. Nothing
+      // internal is read until the PIN checks out.
+      return { found: true, name: empName, needs_pin: true, note: 'roster match — ask the caller for their 4-digit PIN before reading anything internal' };
     }
     if (!employees.verifyPin(emp.id, pin)) return { error: 'PIN does not match' };
     employees.setCallAuth(ctx.callId, { employeeId: emp.id, scope: 'full' });
@@ -235,7 +236,7 @@ const handlers = {
 
   get_my_schedule({ date }, ctx) {
     const auth = employees.getCallAuth(ctx?.callId);
-    if (!auth) return { error: 'identify yourself first with identify_employee (your name is enough for read-only info)' };
+    if (!auth || auth.scope !== 'full') return { error: 'crew verification required — ask for their name and 4-digit PIN via identify_employee before reading anything internal' };
     const dateEt = date ?? todayEt();
     const emp = employees.getEmployee(auth.employeeId);
     const dayJobs = employees.scheduleFor(auth.employeeId, dateEt);
@@ -249,16 +250,15 @@ const handlers = {
 
   complete_job({ job_id }, ctx) {
     const auth = employees.getCallAuth(ctx?.callId);
-    if (!auth) return { error: 'identify yourself first with identify_employee' };
-    if (auth.scope !== 'full') {
-      return { error: 'marking a job complete changes records — ask for their 4-digit PIN and call identify_employee again with it' };
+    if (!auth || auth.scope !== 'full') {
+      return { error: 'crew verification required — ask for their name and 4-digit PIN via identify_employee' };
     }
     return employees.completeJobAs(job_id, auth.employeeId);
   },
 
   leave_message({ to, message }, ctx) {
     const auth = employees.getCallAuth(ctx?.callId);
-    if (!auth) return { error: 'identify yourself first with identify_employee so the office knows who left the message' };
+    if (!auth || auth.scope !== 'full') return { error: 'crew verification required — ask for their name and 4-digit PIN via identify_employee so the office knows who left the message' };
     const from = employees.getEmployee(auth.employeeId);
     let assignee = null;
     if (String(to).trim().toLowerCase() !== 'office') {

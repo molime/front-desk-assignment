@@ -101,6 +101,7 @@ function crewFixture() {
 }
 
 export function makeFakeLlm(scenarioName, { todayEt, addDays, etDayOfWeek }) {
+  const state = {}; // per-scenario scratch (e.g. s10's asked-for-PIN step)
   const scripts = {
     's1-last-visit': (prior) => {
       if (!prior.some((t) => t.name === 'find_customer')) return tc('find_customer', { query: '89 Harborlight Shores' });
@@ -247,16 +248,24 @@ export function makeFakeLlm(scenarioName, { todayEt, addDays, etDayOfWeek }) {
     's10-crew-line': (prior, h) => {
       const crew = crewFixture();
       const ids = prior.filter((t) => t.name === 'identify_employee');
-      if (!ids.length) return tc('identify_employee', { name: crew.techName });
+      // PIN-first flow: name alone grants nothing.
+      if (!ids.length) {
+        return tc('identify_employee', { name: crew.techName });
+      }
+      if (!ids.some((t) => t.args.pin && !t.result?.error)) {
+        if (!state.askedPin) {
+          state.askedPin = true;
+          return say(`Thanks ${crew.techName.split(' ')[0]} — before I pull up anything internal, could you give me your 4-digit PIN?`);
+        }
+        return tc('identify_employee', { name: crew.techName, pin: crew.pin });
+      }
       if (!prior.some((t) => t.name === 'get_my_schedule')) {
         return tc('get_my_schedule', { date: crew.date });
       }
       const sched = prior.find((t) => t.name === 'get_my_schedule').result;
       const jobId = sched.jobs[0]?.job_id;
       const completes = prior.filter((t) => t.name === 'complete_job');
-      if (!completes.length) return tc('complete_job', { job_id: jobId }); // refused: read scope only
-      if (!ids.some((t) => t.args.pin)) return tc('identify_employee', { name: crew.techName, pin: crew.pin });
-      if (!completes.some((t) => !t.result?.error)) return tc('complete_job', { job_id: jobId }); // now with full scope
+      if (!completes.some((t) => !t.result?.error)) return tc('complete_job', { job_id: jobId });
       if (!prior.some((t) => t.name === 'leave_message')) {
         return tc('leave_message', { to: crew.coworkerName, message: 'the capacitor came in' });
       }
