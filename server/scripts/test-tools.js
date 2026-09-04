@@ -18,7 +18,7 @@ bookDate = addDays(bookDate, etDayOfWeek(bookDate) === 6 ? 2 : 1); // tomorrow, 
 if (etDayOfWeek(bookDate) === 0) bookDate = addDays(bookDate, 1);
 
 console.log('tools registered:', TOOL_NAMES.join(', '));
-check('all 18 tools registered', TOOL_NAMES.length === 18);
+check('all 19 tools registered', TOOL_NAMES.length === 19);
 
 // --- find_customer -------------------------------------------------------------
 console.log('\nfind_customer("89 Harborlight"):');

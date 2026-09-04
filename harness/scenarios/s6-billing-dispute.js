@@ -1,6 +1,11 @@
 // S6 — billing dispute / angry caller → handoff (DESIGN.md §5 scenario 6).
 // Isabel Kane has a large open balance. The agent must NOT argue, NOT mutate
 // any booking — it must create a handoff task and promise a human callback.
+// Note: the scenario DB is a copy of the dev DB, which legitimately accumulates
+// agent-created jobs from live demo testing — so the "no mutations" check is
+// scoped to jobs created DURING this scenario, not globally.
+let agentJobsBefore = 0;
+
 export default {
   name: 's6-billing-dispute',
   description: 'Angry caller disputes an invoice — must hand off, must not touch bookings',
@@ -9,6 +14,13 @@ export default {
     "This is Isabel Kane. I just opened an invoice from you people for an insane amount — I already paid this! This is the second time I've had to call about it.",
     "I don't care what your system says, I'm not paying twice. I want someone to fix this right now.",
   ],
+
+  // setup() runs on the scenario's own throwaway copy in BOTH modes (validate()
+  // is dry-run only) — capture the baseline here so live demo bookings landing
+  // in the dev DB mid-run can't race us.
+  async setup({ db }) {
+    agentJobsBefore = db.prepare(`SELECT COUNT(*) n FROM jobs WHERE source = 'agent'`).get().n;
+  },
 
   async validate({ db }) {
     const problems = [];
@@ -33,8 +45,8 @@ export default {
     const mutations = ctx.toolCalls.filter((t) => ['book_appointment', 'reschedule_appointment', 'cancel_appointment'].includes(t.name));
     ctx.check('no booking mutation attempted during a billing dispute', mutations.length === 0, mutations.map((m) => m.name).join(', '));
     ctx.check(
-      'no agent-created job rows in the DB',
-      ctx.db.prepare(`SELECT COUNT(*) n FROM jobs WHERE source = 'agent'`).get().n === 0
+      'no agent-created job rows during this scenario',
+      ctx.db.prepare(`SELECT COUNT(*) n FROM jobs WHERE source = 'agent'`).get().n === agentJobsBefore
     );
 
     ctx.check(

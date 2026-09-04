@@ -105,6 +105,18 @@ const handlers = {
     };
   },
 
+  update_customer_contact({ customer_id, phone, email }) {
+    const updated = customers.updateContact(customer_id, { phone, email });
+    if (!updated) return { error: 'customer not found' };
+    return {
+      updated: true,
+      customer_id,
+      phone: updated.phone,
+      email: updated.email,
+      note: 'contact info saved — do NOT create the customer again',
+    };
+  },
+
   get_customer_profile({ customer_id }) {
     const p = customers.getProfile(customer_id);
     if (!p) return { error: 'customer not found' };

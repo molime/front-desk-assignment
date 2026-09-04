@@ -94,5 +94,12 @@ export default {
       .prepare(`SELECT COUNT(*) n FROM tasks WHERE call_id = ?`)
       .get(ctx.callId).n;
     ctx.check('no handoff task created for this call', handoffTasks === 0, `${handoffTasks} task(s)`);
+
+    // Real defect caught live: the model once re-created the customer and
+    // double-booked after the caller sent contact info in a later turn.
+    const creates = ctx.toolCalls.filter((t) => t.name === 'create_customer');
+    const books = ctx.toolCalls.filter((t) => t.name === 'book_appointment');
+    ctx.check('customer created exactly once (no duplicates)', creates.length === 1, `${creates.length} creates`);
+    ctx.check('booked exactly once (no double-booking)', books.length === 1, `${books.length} bookings`);
   },
 };

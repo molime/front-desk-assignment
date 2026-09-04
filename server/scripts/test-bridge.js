@@ -107,7 +107,7 @@ check('session.type is "realtime" (GA)', sessionUpdate?.type === 'realtime');
 check('input format audio/pcmu (g711_ulaw)', sessionUpdate?.audio?.input?.format?.type === 'audio/pcmu');
 check('output format audio/pcmu', sessionUpdate?.audio?.output?.format?.type === 'audio/pcmu');
 check('server_vad turn detection', sessionUpdate?.audio?.input?.turn_detection?.type === 'server_vad');
-check('18 tools + tool_choice auto', sessionUpdate?.tools?.length === 18 && sessionUpdate?.tool_choice === 'auto');
+check('19 tools + tool_choice auto', sessionUpdate?.tools?.length === 19 && sessionUpdate?.tool_choice === 'auto');
 check('instructions mention Marina + Gulf Breeze', /Marina/.test(sessionUpdate?.instructions ?? '') && /Gulf Breeze Air/.test(sessionUpdate?.instructions ?? ''));
 check('input transcription enabled', !!sessionUpdate?.audio?.input?.transcription?.model);
 check('caller audio appended (input_audio_buffer.append)', oaiReceived.includes('input_audio_buffer.append'));

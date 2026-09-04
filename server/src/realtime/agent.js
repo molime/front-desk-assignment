@@ -26,7 +26,7 @@ Context:
 - Never compute a weekday yourself: tool results carry date_long (e.g. "Wednesday, September 9, 2026") — quote it verbatim when confirming dates.
 
 Key behaviors:
-1. Identify the caller fast, but NEVER ask for information the caller already gave. If the caller's question contains the lookup key — a name, company, or address (e.g. "this is Maria at 89 Harborlight Shores, when were you last here?") — call find_customer with it immediately and answer their question. Do not ask "may I have your name/address" when they already said it. Ask a clarifying question ONLY when a lookup returns multiple plausible matches (e.g. the same street in two cities) or when booking still needs a detail they haven't given (which address, which day, which window) — for property managers with many addresses, confirm WHICH address before booking, never guess one. Answer the caller's actual question first, then offer next steps. If an address search returns nothing, retry with a shorter fragment (street number + name, e.g. "5245 Harborlight") before saying you can't find it. If the caller is NOT in the system at all (no match and they say they're a new customer), register them with create_customer (name, kind, address), then book or help them normally — hand off only if create_customer itself fails. For every NEW customer, always collect a callback phone number before finishing the booking, and an email if they'll give one. On a phone call, offer the number they're calling from ("shall we use this number as your callback?") — pass it to create_customer if they agree.
+1. Identify the caller fast, but NEVER ask for information the caller already gave. If the caller's question contains the lookup key — a name, company, or address (e.g. "this is Maria at 89 Harborlight Shores, when were you last here?") — call find_customer with it immediately and answer their question. Do not ask "may I have your name/address" when they already said it. Ask a clarifying question ONLY when a lookup returns multiple plausible matches (e.g. the same street in two cities) or when booking still needs a detail they haven't given (which address, which day, which window) — for property managers with many addresses, confirm WHICH address before booking, never guess one. Answer the caller's actual question first, then offer next steps. If an address search returns nothing, retry with a shorter fragment (street number + name, e.g. "5245 Harborlight") before saying you can't find it. If the caller is NOT in the system at all (no match and they say they're a new customer), register them with create_customer (name, kind, address), then book or help them normally — hand off only if create_customer itself fails. For every NEW customer, always collect a callback phone number before finishing the booking, and an email if they'll give one. On a phone call, offer the number they're calling from ("shall we use this number as your callback?") — pass it to create_customer if they agree. Create each customer ONCE per call: if contact details arrive after create_customer, save them with update_customer_contact — never create the customer again. And never book the same request twice: if the caller confirms after you already booked, just confirm the existing booking back to them.
 2. Answer questions from the data via tools — never from memory. "When were you last out here?" → get_visit_history. "What did the tech do?" → get_visit_history or add detail from notes. Visit history includes the invoice_number for each visit — that's the short number staff use, and you may share it with the customer when they ask.
 3. Warranty questions → check_warranty. State clearly what is covered and the date basis (e.g. "installed March 3rd 2026, so the 1-year labor warranty runs through March 3rd 2027"). If the data is ambiguous, say so honestly.
 4. Book, move, or cancel appointments ONLY after confirming the customer, the address, and the time window aloud with the caller. Read the confirmed booking back before hanging up. Check availability first with check_availability.
@@ -87,6 +87,16 @@ export const TOOL_SCHEMAS = [
       },
     },
     ['kind', 'address']
+  ),
+  fn(
+    'update_customer_contact',
+    'Update phone/email on an EXISTING customer (e.g. contact info arrives after create_customer). Never re-create a customer to add contact info — use this.',
+    {
+      customer_id: { type: 'string' },
+      phone: { type: 'string' },
+      email: { type: 'string' },
+    },
+    ['customer_id']
   ),
   fn(
     'get_customer_profile',

@@ -30,6 +30,15 @@ export function getById(id) {
   return parseCustomer(db.prepare(`SELECT * FROM customers WHERE id = ?`).get(id));
 }
 
+/** Update contact info on an existing customer (agent-captured). */
+export function updateContact(id, { phone = null, email = null } = {}) {
+  const existing = getById(id);
+  if (!existing) return null;
+  db.prepare(`UPDATE customers SET phone = COALESCE(?, phone), email = COALESCE(?, email) WHERE id = ?`)
+    .run(phone, email, id);
+  return getById(id);
+}
+
 /** Register a NEW customer + their address (agent-created). Returns both ids. */
 export function createCustomer({ first_name = null, last_name = null, company = null, kind = 'homeowner', phone = null, email = null, address = {} } = {}) {
   const customerId = `cus_agent_${randomUUID()}`;
@@ -101,7 +110,7 @@ export function getVisitHistory(id, limit = 10) {
     .prepare(
       `SELECT j.*, a.street, a.street_line_2, a.city, a.state, a.zip
        FROM jobs j LEFT JOIN customer_addresses a ON a.id = j.address_id
-       WHERE j.customer_id = ?
+       WHERE j.customer_id = ? AND j.scheduled_start <= datetime('now')
        ORDER BY j.scheduled_start DESC NULLS LAST
        LIMIT ?`
     )

@@ -39,6 +39,27 @@ export function clearCallAuth(callId) {
 // --- matching + PIN -------------------------------------------------------------
 
 /** Fuzzy employee match: case-insensitive substring over the full name. */
+// Tiny edit-distance for voice-transcription typos (Whisper hears "McGuire"
+// as "Maguire" etc.). Only used on tokens of ≥4 chars.
+function lev1(a, b) {
+  if (Math.abs(a.length - b.length) > 1) return false;
+  let i = 0, j = 0, edits = 0;
+  while (i < a.length && j < b.length) {
+    if (a[i] === b[j]) { i++; j++; continue; }
+    if (++edits > 1) return false;
+    if (a.length > b.length) i++;
+    else if (b.length > a.length) j++;
+    else { i++; j++; }
+  }
+  return edits + (a.length - i) + (b.length - j) <= 1;
+}
+
+function tokenMatch(qt, et) {
+  if (!qt) return true;
+  if (et.startsWith(qt) || qt.startsWith(et)) return true;
+  return qt.length >= 4 && et.length >= 4 && lev1(qt, et);
+}
+
 export function matchEmployee(name) {
   const q = String(name ?? '').trim().toLowerCase();
   if (!q) return [];
@@ -47,7 +68,11 @@ export function matchEmployee(name) {
     .all()
     .filter((e) => {
       const full = fullName(e).toLowerCase();
-      return full.includes(q) || q.split(/\s+/).every((p) => full.includes(p));
+      if (full.includes(q)) return true;
+      const qTokens = q.split(/\s+/).filter(Boolean);
+      const eTokens = full.split(/\s+/).filter(Boolean);
+      // every query token must match some name token (prefix or 1-edit fuzzy)
+      return qTokens.every((qt) => eTokens.some((et) => tokenMatch(qt, et)));
     });
 }
 
