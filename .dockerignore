@@ -1,0 +1,10 @@
+.git
+**/node_modules
+web/dist
+**/*.db
+**/*.db-shm
+**/*.db-wal
+harness/tmp
+ASSIGNMENT.docx
+**/.env
+**/.env.local

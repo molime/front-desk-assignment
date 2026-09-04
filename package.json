@@ -1,0 +1,13 @@
+{
+  "name": "gulf-breeze-front-desk",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Gulf Breeze Air front-desk: voice agent + live platform",
+  "scripts": {
+    "seed": "node server/src/db/import.js",
+    "dev": "node --watch server/src/index.js",
+    "build": "npm --prefix web run build",
+    "start": "node server/src/index.js",
+    "harness": "node harness/run.js"
+  }
+}
