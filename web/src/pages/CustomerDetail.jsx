@@ -39,6 +39,11 @@ export default function CustomerDetail() {
               <Tag tone={c.kind === 'commercial' ? 'amber' : 'slate'}>{c.kind ?? 'residential'}</Tag>
             </div>
             {c.company && <div className="text-[13px] text-slate-500">{c.company}</div>}
+            {(c.phone || c.email) && (
+              <div className="text-[13px] text-slate-500">
+                {[c.phone, c.email].filter(Boolean).join(' · ')}
+              </div>
+            )}
             <div className="mt-1 flex flex-wrap gap-1">
               {(c.tags ?? []).map((t) => <Tag key={t}>{t}</Tag>)}
             </div>

@@ -14,7 +14,7 @@ export default {
 
   callerTurns: [
     "Hi, this is Rachel Fontaine — I'm pretty sure I'm not in your system, I've never used you before. The AC at my place is blowing warm air. It's 7700 Bayshore Colony Drive in Miami. Could someone come out tomorrow morning?",
-    "Yes — tomorrow, the 8 to 10 window works great. Please book it.",
+    "Yes — tomorrow, the 8 to 10 window works great. Please book it. My callback number is 305-555-0142 and my email is rachel@fontaine.example.",
     "That's right. Thanks so much!",
   ],
 
@@ -53,6 +53,11 @@ export default {
 
     const customer = created && ctx.db.prepare(`SELECT * FROM customers WHERE id = ?`).get(created.customer_id);
     ctx.check('customer row exists and matches the caller', !!customer && NEW_NAME.test(customer.last_name ?? ''), JSON.stringify(customer));
+    ctx.check(
+      'contact info captured (phone and email stored)',
+      !!customer && /305.?555.?0142/.test(customer.phone ?? '') && /fontaine/i.test(customer.email ?? ''),
+      `phone=${customer?.phone} email=${customer?.email}`
+    );
     const address = created && ctx.db.prepare(`SELECT * FROM customer_addresses WHERE id = ?`).get(created.address_id);
     ctx.check(
       'address row exists and matches',

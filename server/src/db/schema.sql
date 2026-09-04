@@ -14,6 +14,8 @@ CREATE TABLE IF NOT EXISTS customers (
   last_name   TEXT,
   company     TEXT,
   kind        TEXT,
+  phone       TEXT,   -- agent-captured (source data has these stripped)
+  email       TEXT,   -- agent-captured
   tags        TEXT NOT NULL DEFAULT '[]',  -- JSON array
   job_count   INTEGER NOT NULL DEFAULT 0,
   first_job   TEXT,

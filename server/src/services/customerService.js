@@ -31,14 +31,14 @@ export function getById(id) {
 }
 
 /** Register a NEW customer + their address (agent-created). Returns both ids. */
-export function createCustomer({ first_name = null, last_name = null, company = null, kind = 'homeowner', address = {} } = {}) {
+export function createCustomer({ first_name = null, last_name = null, company = null, kind = 'homeowner', phone = null, email = null, address = {} } = {}) {
   const customerId = `cus_agent_${randomUUID()}`;
   const addressId = `adr_agent_${randomUUID()}`;
   const tx = db.transaction(() => {
     db.prepare(
-      `INSERT INTO customers (id, first_name, last_name, company, kind, tags, job_count, first_job, last_job)
-       VALUES (?, ?, ?, ?, ?, '[]', 0, NULL, NULL)`
-    ).run(customerId, first_name, last_name, company, kind === 'business' ? 'business' : 'homeowner');
+      `INSERT INTO customers (id, first_name, last_name, company, kind, phone, email, tags, job_count, first_job, last_job)
+       VALUES (?, ?, ?, ?, ?, ?, ?, '[]', 0, NULL, NULL)`
+    ).run(customerId, first_name, last_name, company, kind === 'business' ? 'business' : 'homeowner', phone, email);
     db.prepare(
       `INSERT INTO customer_addresses (id, customer_id, street, street_line_2, city, state, zip, lat, lng)
        VALUES (?, ?, ?, ?, ?, ?, ?, NULL, NULL)`

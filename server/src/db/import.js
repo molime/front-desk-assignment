@@ -29,6 +29,18 @@ const IMPORTED_TABLES = [
 
 /** Rebuild all imported tables from data/*.jsonl. Returns row counts per table. */
 export function runImport() {
+  // Snapshot agent-created rows first: they're platform data, not import data,
+  // and must survive reseeds (agent customers carry captured contact info).
+  const agentCustomers = db.prepare(`SELECT * FROM customers WHERE id LIKE 'cus_agent_%'`).all();
+  const agentAddresses = db.prepare(`SELECT * FROM customer_addresses WHERE id LIKE 'adr_agent_%'`).all();
+  const agentJobs = db.prepare(`SELECT * FROM jobs WHERE source = 'agent'`).all();
+  const agentJobIds = agentJobs.map((j) => j.id);
+  const inClause = agentJobIds.map(() => '?').join(',');
+  const agentNotes = agentJobIds.length
+    ? db.prepare(`SELECT * FROM job_notes WHERE job_id IN (${inClause})`).all(...agentJobIds) : [];
+  const agentAssignments = agentJobIds.length
+    ? db.prepare(`SELECT * FROM job_assignments WHERE job_id IN (${inClause})`).all(...agentJobIds) : [];
+
   const run = db.transaction(() => {
   for (const t of IMPORTED_TABLES) db.exec(`DROP TABLE IF EXISTS ${t}`);
   const schema = readFileSync(path.join(here, 'schema.sql'), 'utf8');
@@ -142,6 +154,22 @@ export function runImport() {
   });
 
   const { noteCount, itemCount } = run();
+
+  // Restore the agent-created rows snapshotted before the rebuild.
+  if (agentCustomers.length || agentJobs.length) {
+    const insertRow = (table, row) => {
+      const cols = Object.keys(row);
+      db.prepare(`INSERT OR REPLACE INTO ${table} (${cols.join(',')}) VALUES (${cols.map(() => '?').join(',')})`)
+        .run(...cols.map((c) => row[c]));
+    };
+    db.transaction(() => {
+      for (const r of agentCustomers) insertRow('customers', r);
+      for (const r of agentAddresses) insertRow('customer_addresses', r);
+      for (const r of agentJobs) insertRow('jobs', r);
+      for (const r of agentAssignments) insertRow('job_assignments', r);
+      for (const r of agentNotes) insertRow('job_notes', r);
+    })();
+  }
 
   // Crew-line PINs survive reseeds: only fills gaps for employees missing one.
   ensureEmployeePins();

@@ -216,6 +216,8 @@ export function makeFakeLlm(scenarioName, { todayEt, addDays, etDayOfWeek }) {
           first_name: 'Rachel',
           last_name: 'Fontaine',
           kind: 'homeowner',
+          phone: '305-555-0142',
+          email: 'rachel@fontaine.example',
           address: { street: '7700 Bayshore Colony Drive', city: 'Miami', state: 'FL', zip: '33138' },
         });
       }

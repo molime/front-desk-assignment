@@ -47,4 +47,11 @@ db.exec(schema);
   }
 }
 
+// customers predates agent-captured contact info.
+{
+  const cols = db.prepare(`PRAGMA table_info(customers)`).all().map((c) => c.name);
+  if (!cols.includes('phone')) db.exec(`ALTER TABLE customers ADD COLUMN phone TEXT`);
+  if (!cols.includes('email')) db.exec(`ALTER TABLE customers ADD COLUMN email TEXT`);
+}
+
 export default db;

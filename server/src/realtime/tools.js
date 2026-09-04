@@ -84,14 +84,23 @@ const handlers = {
     return results.length ? { matches: results } : { matches: [], note: `no customers matching "${query}"` };
   },
 
-  create_customer({ first_name, last_name, company, kind, address }) {
-    const created = customers.createCustomer({ first_name, last_name, company, kind, address });
+  create_customer({ first_name, last_name, company, kind, phone, email, address }, ctx) {
+    // Default the callback number to the number the caller is phoning from
+    // (phone calls only — browser calls have no caller number).
+    let contactPhone = phone ?? null;
+    if (!contactPhone && ctx?.callId) {
+      const row = calls.getCall(ctx.callId);
+      if (row?.from_number && row.from_number !== 'web-call') contactPhone = row.from_number;
+    }
+    const created = customers.createCustomer({ first_name, last_name, company, kind, phone: contactPhone, email, address });
     return {
       created: true,
       customer_id: created.customer_id,
       address_id: created.address_id,
       name: [first_name, last_name].filter(Boolean).join(' ') || company || null,
       address: oneLine(address),
+      phone: contactPhone,
+      email: email ?? null,
       note: 'new customer registered — proceed with booking using these ids',
     };
   },
