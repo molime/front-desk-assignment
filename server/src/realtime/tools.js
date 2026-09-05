@@ -15,6 +15,15 @@ import { utcToEtDate, todayEt } from '../lib/time.js';
 
 const fmtDate = (iso) => (iso ? utcToEtDate(iso) : null);
 
+// Housecall Pro's own automation writes draft artifacts into job notes: draft
+// customer-facing summary letters "[AI Auto-Complete … - REVIEW BEFORE INVOICING]"
+// and "=== AI STATUS FLAGS ===" blocks. They are office workflow data, not
+// something to read aloud to a caller — strip them from every agent-read path.
+const isAutomationDraftNote = (content) => {
+  const s = String(content ?? '').trimStart();
+  return s.startsWith('[AI Auto-Complete') || s.includes('=== AI STATUS FLAGS ===');
+};
+
 // Human date with weekday ("Wednesday, September 9, 2026") — the model must
 // never compute weekdays itself; tool results carry them (real call bug).
 const dtfLongEt = new Intl.DateTimeFormat('en-US', {
@@ -55,7 +64,10 @@ function visitSummary(j) {
     description: j.description,
     address: oneLine(j.address),
     techs: (j.techs ?? []).map((t) => `${t.first_name} ${t.last_name}`.trim()),
-    notes: (j.notes ?? []).slice(0, 2).map((n) => n.summary ?? n.content),
+    notes: (j.notes ?? [])
+      .filter((n) => !isAutomationDraftNote(n.summary ?? n.content))
+      .slice(0, 2)
+      .map((n) => n.summary ?? n.content),
   };
 }
 
@@ -177,10 +189,15 @@ const handlers = {
     if (avail.closed) return { date: avail.date, date_long, closed: true, reason: avail.reason, open_windows: [] };
     const open = avail.windows
       .filter((w) => w.open)
-      .map((w) => ({ window: w.label, slots_free: w.slots }));
-    return open.length
-      ? { date: avail.date, date_long, closed: false, open_windows: open }
-      : { date: avail.date, date_long, closed: false, open_windows: [], note: 'fully booked that day — suggest another day or a handoff' };
+      .map((w) => ({ window: w.window ?? w.label, slots_free: w.slots }));
+    const result = { date: avail.date, date_long, closed: false, open_windows: open };
+    if (!open.length) {
+      const past = avail.windows.filter((w) => w.past);
+      result.note = past.length === avail.windows.length
+        ? 'no windows left on that day (they have all passed) — offer the next business day instead'
+        : 'fully booked that day — suggest another day or a handoff';
+    }
+    return result;
   },
 
   book_appointment(args) {
@@ -229,7 +246,17 @@ const handlers = {
       // internal is read until the PIN checks out.
       return { found: true, name: empName, needs_pin: true, note: 'roster match — ask the caller for their 4-digit PIN before reading anything internal' };
     }
-    if (!employees.verifyPin(emp.id, pin)) return { error: 'PIN does not match' };
+    if (employees.crewLocked(emp.id, ctx.callId)) {
+      return { error: 'too many wrong PIN attempts on this call — crew access is locked. Offer a callback from the office instead.' };
+    }
+    if (!employees.verifyPin(emp.id, pin, ctx.callId)) {
+      const triesLeft = Math.max(0, 3 - employees.pinFailCount(emp.id, ctx.callId));
+      return {
+        error: triesLeft > 0
+          ? `PIN does not match (${triesLeft} attempt${triesLeft === 1 ? '' : 's'} left on this call)`
+          : 'PIN does not match — crew access is now locked for this call. Offer a callback from the office.',
+      };
+    }
     employees.setCallAuth(ctx.callId, { employeeId: emp.id, scope: 'full' });
     return { employee_id: emp.id, name: empName, role: emp.role, scope: 'full' };
   },
@@ -346,7 +373,9 @@ export function summarizeAction(name, args, result) {
     case 'web_search':
       return `Web search: "${args.query}"`;
     case 'identify_employee':
-      return `Identified ${result.name ?? args.name} (${result.scope} access)`;
+      if (result?.error) return `Tried to identify crew "${args.name}" — ${result.error}`;
+      if (result?.scope) return `Crew verified: ${result.name} (${result.scope} access)`;
+      return `Roster match: ${result?.name ?? args.name} — PIN required before any internal read`;
     case 'get_my_schedule':
       return `Read ${result.employee ?? 'crew member'}'s schedule for ${result.date} (${result.jobs?.length ?? 0} job(s))`;
     case 'complete_job':

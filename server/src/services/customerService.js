@@ -72,6 +72,14 @@ export function getProfile(id) {
   return { ...customer, addresses, open_balance: balance.open_balance };
 }
 
+// Housecall Pro automation drafts ("[AI Auto-Complete …]" letters, "=== AI
+// STATUS FLAGS ===" blocks) are office workflow data — never shown to callers
+// via visit history or crew schedule notes.
+const isAutomationDraftNote = (content) => {
+  const s = String(content ?? '').trimStart();
+  return s.startsWith('[AI Auto-Complete') || s.includes('=== AI STATUS FLAGS ===');
+};
+
 const techQ = db.prepare(
   `SELECT e.id, e.first_name, e.last_name FROM job_assignments ja
    JOIN employees e ON e.id = ja.employee_id WHERE ja.job_id = ?`
@@ -81,6 +89,7 @@ function jobRow(r, noteLimit) {
   const notes = db
     .prepare(`SELECT id, content, author, created_at FROM job_notes WHERE job_id = ?`)
     .all(r.id)
+    .filter((n) => !isAutomationDraftNote(n.content))
     .map((n) => ({
       ...n,
       summary: n.content && n.content.length > 200 ? `${n.content.slice(0, 200)}…` : n.content,

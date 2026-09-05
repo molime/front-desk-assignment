@@ -18,7 +18,6 @@ export default function Employees() {
             <tr className="border-b border-slate-100 text-left text-[11px] font-semibold uppercase tracking-wide text-slate-400">
               <th className="pb-2 pr-4">Name</th>
               <th className="pb-2 pr-4">Role</th>
-              <th className="pb-2 pr-4">PIN</th>
               <th className="pb-2 pr-4 text-right">Jobs today</th>
               <th className="pb-2 text-right">Total jobs</th>
             </tr>
@@ -34,7 +33,6 @@ export default function Employees() {
                 <td className="py-2.5 pr-4">
                   <Tag tone={e.role === 'field tech' ? 'brand' : 'slate'}>{e.role}</Tag>
                 </td>
-                <td className="py-2.5 pr-4 font-mono text-[12px] text-slate-600">{e.pin ?? '—'}</td>
                 <td className="py-2.5 pr-4 text-right text-[13px] text-slate-700">{e.jobs_today}</td>
                 <td className="py-2.5 text-right text-[12px] text-slate-400">{e.job_count}</td>
               </tr>

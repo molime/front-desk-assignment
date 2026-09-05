@@ -202,10 +202,10 @@ export const TOOL_SCHEMAS = [
   // --- crew line (employees calling in) -----------------------------------------
   fn(
     'identify_employee',
-    'Identify a Gulf Breeze Air EMPLOYEE calling the crew line. Name alone gives read-only access (their schedule, job info). Name + their 4-digit PIN gives full access (marking jobs complete).',
+    'Identify a Gulf Breeze Air EMPLOYEE calling the crew line. A name match alone proves nothing and grants NOTHING — always ask for their 4-digit PIN before reading or changing anything internal. Name + valid PIN = full access (schedule reads, job notes, completing jobs, leaving messages).',
     {
       name: { type: 'string', description: 'Employee first and/or last name' },
-      pin: { type: 'string', description: 'Their 4-digit PIN — only when they volunteer it for a change' },
+      pin: { type: 'string', description: 'Their 4-digit PIN — only when they volunteer it' },
     },
     ['name']
   ),

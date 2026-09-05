@@ -62,6 +62,19 @@ const sunday = await executeTool('check_availability', { date: next_dow(0) });
 function next_dow(dow) { let d = todayEt(); while (etDayOfWeek(d) !== dow) d = addDays(d, 1); return d; }
 check('Sunday closed', sunday.closed === true);
 
+// Past-date availability is never offered.
+const pastDate = addDays(todayEt(), -3);
+const pastAvail = await executeTool('check_availability', { date: pastDate });
+check('past date has no open windows (with helpful note)', pastAvail.open_windows.length === 0
+  && /passed/i.test(pastAvail.note ?? ''), JSON.stringify(pastAvail.note));
+// Same-day: after 14:00 ET (or when all windows started), nothing today is offered.
+const todayAvail = await executeTool('check_availability', { date: todayEt() });
+const nowEtHour = Number(new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York', hour: 'numeric', hourCycle: 'h23' }).format(new Date()));
+if (nowEtHour >= 14) {
+  check('same-day windows not offered after the 14:00 ET cutoff', todayAvail.open_windows.length === 0,
+    JSON.stringify(todayAvail.open_windows));
+}
+
 // --- book → reschedule → cancel roundtrip --------------------------------------------
 console.log('\nbook/reschedule/cancel roundtrip:');
 const book = await executeTool('book_appointment', {
@@ -100,6 +113,62 @@ const bad = await executeTool('book_appointment', { customer_id: 'cus_nope', dat
 check('tool errors come back as {error}, not thrown', typeof bad.error === 'string');
 const unknown = await executeTool('nope_tool', {});
 check('unknown tool → {error}', unknown.error === 'unknown tool: nope_tool');
+
+// --- crew line: PIN hygiene + lockout (regression for the PIN-leak fix) -----------------
+console.log('\ncrew line / PINs:');
+const employees = await import('../src/services/employeeService.js');
+employees.ensureEmployeePins();
+const roster = employees.roster();
+check('roster contains NO pins (public API must not leak credentials)',
+  roster.every((e) => e.pin === undefined));
+const aTech = roster.find((e) => e.role === 'field tech');
+const pin1 = employees.getPin(aTech.id);
+const pin2 = employees.getPin(aTech.id);
+check('PINs are deterministic (same employee, same PIN)', pin1 === pin2 && /^\d{4}$/.test(pin1));
+const rosterCallId = 'call_test_pins_1';
+const nameOnly = await executeTool('identify_employee', { name: aTech.name }, { callId: rosterCallId });
+check('name alone grants nothing (needs_pin, no scope)', nameOnly.found === true && nameOnly.needs_pin === true && !nameOnly.scope);
+const wrongPin = await executeTool('identify_employee', { name: aTech.name, pin: '0000' }, { callId: rosterCallId });
+check('wrong PIN rejected with attempts-left message', typeof wrongPin.error === 'string' && /PIN does not match/.test(wrongPin.error),
+  JSON.stringify(wrongPin.error));
+const wrongPin2 = await executeTool('identify_employee', { name: aTech.name, pin: '0001' }, { callId: rosterCallId });
+const wrongPin3 = await executeTool('identify_employee', { name: aTech.name, pin: '0002' }, { callId: rosterCallId });
+const lockedOut = await executeTool('identify_employee', { name: aTech.name, pin: '0003' }, { callId: rosterCallId });
+check('3 wrong PINs lock crew access for the call', /locked/i.test(String(lockedOut.error)),
+  JSON.stringify(lockedOut.error));
+// A new call starts clean — and the real PIN works on it.
+const freshCallId = 'call_test_pins_2';
+const okPin = await executeTool('identify_employee', { name: aTech.name, pin: pin1 }, { callId: freshCallId });
+check('correct PIN verifies on a fresh call (no sticky lockout)', okPin.scope === 'full' && okPin.employee_id === aTech.id,
+  JSON.stringify(okPin));
+// Wrong-PIN state must not leak into the fresh call either.
+const afterOk = await executeTool('identify_employee', { name: aTech.name, pin: '0000' }, { callId: freshCallId });
+check('fresh call gets its own attempt counter', /attempt/.test(String(afterOk.error)), JSON.stringify(afterOk.error));
+employees.setCallAuth(freshCallId, null);
+employees.clearCallAuth(rosterCallId);
+employees.clearCallAuth(freshCallId);
+
+// --- note hygiene: HCP automation drafts never reach the agent -------------------------
+console.log('\nnote hygiene (HCP automation drafts):');
+const draftNote = db.prepare(`SELECT COUNT(*) n FROM job_notes WHERE content LIKE '[AI Auto-Complete%'`).get().n;
+const flaggedNote = db.prepare(`SELECT COUNT(*) n FROM job_notes WHERE content LIKE '%=== AI STATUS FLAGS ===%'`).get().n;
+console.log(`  drafts in DB: ${draftNote} AI-Auto-Complete, ${flaggedNote} AI-STATUS-FLAGS`);
+check('automation drafts exist in the source data (fixture present)', draftNote > 0 && flaggedNote > 0);
+const draftJobs = db.prepare(`SELECT DISTINCT job_id FROM job_notes WHERE content LIKE '[AI Auto-Complete%' OR content LIKE '%=== AI STATUS FLAGS ===%' LIMIT 5`).all();
+let leaked = 0, checked = 0;
+for (const { job_id } of draftJobs) {
+  const cust = db.prepare(`SELECT customer_id FROM jobs WHERE id = ?`).get(job_id);
+  if (!cust?.customer_id) continue;
+  const hist = await executeTool('get_visit_history', { customer_id: cust.customer_id, limit: 10 });
+  for (const v of hist.visits ?? []) {
+    for (const n of v.notes ?? []) {
+      checked++;
+      if (String(n).includes('[AI Auto-Complete') || String(n).includes('=== AI STATUS FLAGS ===')) leaked++;
+    }
+  }
+}
+check('visit-history notes never include automation drafts', checked > 0 && leaked === 0,
+  `${leaked} leaked of ${checked} notes checked`);
 
 // --- get_weather (network) ------------------------------------------------------------------
 console.log('\nget_weather("Miami"):');

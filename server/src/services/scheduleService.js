@@ -12,6 +12,10 @@ export const ARRIVAL_WINDOWS = [
 
 const CAPACITY_PER_TECH_PER_WINDOW = 2;
 const ACTIVE_STATUSES = ['scheduled', 'in progress'];
+// Don't offer a window starting sooner than this — the crew can't teleport and
+// the office needs lead time to dispatch. Today's already-started windows are
+// closed no matter what.
+const SAME_DAY_CUTOFF_HOUR = 14; // ET hour after which same-day booking is off
 
 export function getWindow(label) {
   return ARRIVAL_WINDOWS.find((w) => w.label === label) ?? null;
@@ -42,6 +46,9 @@ export function techLoad(employeeId, winStartUtc, winEndUtc) {
 /**
  * Availability for one ET date. Returns { date, closed?, windows: [...] }.
  * Each window: label, ET start/end, UTC bounds, open, slots free, available techs.
+ * Windows already in the past are never open: on TODAY's date a window is only
+ * offered if it starts strictly in the future AND after the same-day cutoff —
+ * no dispatching a tech to a window that's half over (or already gone).
  */
 export function getAvailability(dateStr, windowPref = null) {
   if (!isValidDateStr(dateStr)) {
@@ -56,9 +63,37 @@ export function getAvailability(dateStr, windowPref = null) {
   const techs = listTechs();
   const loadQ = countStmt();
 
+  // ET "now" as {date, hour, minute} for past-window detection.
+  const now = new Date();
+  const nowParts = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'America/New_York', hourCycle: 'h23',
+    year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit',
+  }).formatToParts(now).reduce((acc, p) => { if (p.type !== 'literal') acc[p.type] = Number(p.value); return acc; }, {});
+  const nowEtDate = `${nowParts.year}-${String(nowParts.month).padStart(2, '0')}-${String(nowParts.day).padStart(2, '0')}`;
+  const isToday = dateStr === nowEtDate;
+  const isPastDate = dateStr < nowEtDate;
+
   let windows = ARRIVAL_WINDOWS.map((w) => {
     const startUtc = etToUtc(dateStr, w.startHour);
     const endUtc = etToUtc(dateStr, w.endHour);
+    // Past-window logic (today only): closed if the window has already started,
+    // or if it starts before the same-day cutoff hour.
+    let past = false;
+    let pastReason = null;
+    if (isPastDate) {
+      past = true;
+      pastReason = 'that day is already past';
+    } else if (isToday) {
+      const nowMin = nowParts.hour * 60 + nowParts.minute;
+      const startMin = w.startHour * 60;
+      if (startMin <= nowMin) {
+        past = true;
+        pastReason = 'that window has already started today';
+      } else if (nowMin > SAME_DAY_CUTOFF_HOUR * 60 && startMin <= SAME_DAY_CUTOFF_HOUR * 60) {
+        past = true;
+        pastReason = `too late in the day to dispatch a same-day visit (cutoff ${SAME_DAY_CUTOFF_HOUR}:00 ET)`;
+      }
+    }
     const techLoads = techs.map((t) => ({
       id: t.id,
       name: `${t.first_name} ${t.last_name}`.trim(),
@@ -72,7 +107,9 @@ export function getAvailability(dateStr, windowPref = null) {
       end_local: `${dateStr}T${String(w.endHour).padStart(2, '0')}:00:00-ET`,
       start_utc: startUtc,
       end_utc: endUtc,
-      open: slots > 0,
+      past,
+      past_reason: pastReason,
+      open: !past && slots > 0,
       slots,
       capacity: techs.length * CAPACITY_PER_TECH_PER_WINDOW,
       available_techs: available.map((t) => ({ id: t.id, name: t.name, jobs_in_window: t.jobs })),

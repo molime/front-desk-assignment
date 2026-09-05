@@ -126,6 +126,14 @@ Mon–Sat 8:00–17:00 ET. Speaks concise, warm, no jargon. Key behaviors:
 | `get_weather(city_or_zip, date?)` | Open-Meteo forecast/current for Miami area |
 | `web_search(query)` | DuckDuckGo instant answers + top results (model numbers, supplier hours) |
 | `request_handoff(reason)` | Creates handoff task, flags live call, tells caller a human will call back |
+| `identify_employee(name, pin?)` | Crew line: roster match; PIN required before any internal read/change |
+| `get_my_schedule(date?)` | Verified tech's jobs for a day (window, address, latest human note) |
+| `complete_job(job_id)` | Verified tech marks their own job complete |
+| `leave_message(to, message)` | Verified tech leaves a routed message (coworker or office) |
+
+Note hygiene: Housecall Pro automation drafts (`[AI Auto-Complete …]` letters,
+`=== AI STATUS FLAGS ===` blocks) are filtered from every agent-read path —
+they're office workflow data, never read to callers.
 
 ### Call lifecycle
 

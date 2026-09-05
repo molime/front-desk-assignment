@@ -18,6 +18,7 @@
     "seed": "node src/db/import.js",
     "dev": "node --watch src/index.js",
     "start": "node src/index.js",
+    "pins": "node scripts/show-pins.js",
     "test:tools": "node scripts/test-tools.js",
     "test:bridge": "node scripts/test-bridge.js"
   }

@@ -1,6 +1,6 @@
 // Crew line: employee identity, PINs, per-call verification, roster/schedule/
 // message reads (DESIGN: crew line MVP — read-only by name, mutations by PIN).
-import { randomInt } from 'node:crypto';
+import { createHmac } from 'node:crypto';
 import db from '../db/index.js';
 import { broadcast } from '../lib/events.js';
 import { etToUtc, todayEt, addDays } from '../lib/time.js';
@@ -9,16 +9,30 @@ const EXCLUDED_NAMES = new Set(['team phone']); // shared office line, not a per
 
 const fullName = (e) => `${e.first_name ?? ''} ${e.last_name ?? ''}`.trim();
 
-const genPin = () => String(randomInt(0, 10000)).padStart(4, '0');
+// Housecall Pro automation drafts ("[AI Auto-Complete …]" letters, "=== AI
+// STATUS FLAGS ===" blocks) are office workflow data — never read to callers.
+const isAutomationDraftNote = (content) => {
+  const s = String(content ?? '').trimStart();
+  return s.startsWith('[AI Auto-Complete') || s.includes('=== AI STATUS FLAGS ===');
+};
+
+// Deterministic 4-digit PIN per employee, derived from a seed. Random PINs
+// would silently change on every redeploy (ephemeral DB on Railway) and break
+// any PIN the office was told. Seed is overridable via CREW_PIN_SEED.
+const PIN_SEED = process.env.CREW_PIN_SEED ?? 'gba-crew-line-v1';
+const pinFor = (employeeId) =>
+  String(createHmac('sha256', PIN_SEED).update(employeeId).digest().readUInt32BE(0) % 10000).padStart(4, '0');
 
 /** Fill PIN gaps for employees who don't have one yet. Survives reseeds
- * (INSERT OR IGNORE; employee_auth is not an imported table). */
+ *  (INSERT OR IGNORE; employee_auth is not an imported table). Deterministic:
+ *  the same employee always gets the same PIN, so a redeploy (ephemeral DB on
+ *  Railway) never silently changes the PINs the office knows. */
 export function ensureEmployeePins() {
   const ins = db.prepare(`INSERT OR IGNORE INTO employee_auth (employee_id, pin) VALUES (?, ?)`);
   const emps = db.prepare(`SELECT id, first_name, last_name FROM employees`).all();
   for (const e of emps) {
     if (EXCLUDED_NAMES.has(fullName(e).toLowerCase())) continue;
-    ins.run(e.id, genPin());
+    ins.run(e.id, pinFor(e.id));
   }
 }
 
@@ -84,9 +98,33 @@ export function getPin(employeeId) {
   return db.prepare(`SELECT pin FROM employee_auth WHERE employee_id = ?`).get(employeeId)?.pin ?? null;
 }
 
-export function verifyPin(employeeId, pin) {
+export function verifyPin(employeeId, pin, callId = null) {
   const row = getPin(employeeId);
-  return row != null && row === String(pin ?? '').trim();
+  if (row != null && row === String(pin ?? '').trim()) {
+    pinFails.delete(employeeId);
+    return true;
+  }
+  // Throttle: 3 wrong PINs on one call lock crew access for the rest of THAT
+  // call. A new call starts with a clean slate (no lockout persistence).
+  const prev = pinFails.get(employeeId);
+  const count = prev && prev.callId === callId ? prev.count : 0;
+  pinFails.set(employeeId, { callId, count: count + 1 });
+  return false;
+}
+
+const pinFails = new Map(); // employeeId → { callId, count } wrong-PIN attempts
+
+const CREW_PIN_MAX_FAILS = 3;
+
+/** Wrong-PIN attempts on the current call (0 when none / a different call). */
+export function pinFailCount(employeeId, callId = null) {
+  const f = pinFails.get(employeeId);
+  return f && f.callId === callId ? f.count : 0;
+}
+
+/** True when the caller has burned their PIN tries on this call. */
+export function crewLocked(employeeId, callId = null) {
+  return pinFailCount(employeeId, callId) >= CREW_PIN_MAX_FAILS;
 }
 
 // --- reads for tools + REST -------------------------------------------------------
@@ -111,11 +149,13 @@ export function scheduleFor(employeeId, dateEt) {
     )
     .all(employeeId, startUtc, endUtc);
   const noteQ = db.prepare(
-    `SELECT content FROM job_notes WHERE job_id = ? AND content IS NOT NULL ORDER BY created_at DESC NULLS LAST LIMIT 1`
+    `SELECT content FROM job_notes WHERE job_id = ? AND content IS NOT NULL ORDER BY created_at DESC NULLS LAST`
   );
   const timeFmt = new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York', hour: 'numeric', minute: '2-digit' });
   return rows.map((r) => {
-    const note = noteQ.get(r.id)?.content ?? null;
+    // Latest HUMAN note — skip Housecall Pro automation drafts (AI Auto-Complete
+    // letters / AI STATUS FLAGS blocks) so they're never read to a caller.
+    const note = noteQ.all(r.id).find((n) => !isAutomationDraftNote(n.content))?.content ?? null;
     return {
       job_id: r.id,
       window: `${timeFmt.format(new Date(r.scheduled_start))} – ${timeFmt.format(new Date(r.scheduled_end))}`,
@@ -127,7 +167,10 @@ export function scheduleFor(employeeId, dateEt) {
   });
 }
 
-/** Roster for the office UI: includes PINs (internal tool, no auth — known tradeoff). */
+/** Roster for the office UI. PINs are NEVER included here: the platform has no
+ *  auth, so the roster is effectively public — a PIN in this payload would hand
+ *  out the crew-line credentials to anyone who opens the page. Office staff who
+ *  need a PIN use `npm --prefix server run pins` (prints them locally). */
 export function roster() {
   ensureEmployeePins();
   const today = todayEt();
@@ -140,8 +183,8 @@ export function roster() {
   );
   return db
     .prepare(
-      `SELECT e.id, e.first_name, e.last_name, e.role, e.job_count, ea.pin
-       FROM employees e LEFT JOIN employee_auth ea ON ea.employee_id = e.id
+      `SELECT e.id, e.first_name, e.last_name, e.role, e.job_count
+       FROM employees e
        ORDER BY e.role, e.last_name`
     )
     .all()
@@ -149,7 +192,6 @@ export function roster() {
       id: e.id,
       name: fullName(e),
       role: e.role,
-      pin: e.pin ?? null,
       job_count: e.job_count,
       jobs_today: todayQ.get(e.id, startUtc, endUtc).n,
     }));

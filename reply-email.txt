@@ -1,0 +1,23 @@
+Hi Mahamed,
+
+All done. Here's everything:
+
+Phone number: +1 424 544 8811
+Platform: https://front-desk-assignment-production.up.railway.app
+Repo: https://github.com/molime/front-desk-assignment (let me know if you can't access it and I'll add you)
+
+If you call the number, Marina picks up. A good first test: ask "when were you last at 89 Harborlight Shores and what did you do?" She'll pull the real answer from the job data (August 31, condensate pump on the 2nd floor system). Then try booking something while you keep the dashboard open on your screen. The job shows up while you're still on the call.
+
+Quick summary of what's in there. The agent is speech-to-speech (Twilio Media Streams into OpenAI Realtime), and it works off the six months of jobs, notes, and invoices you gave me. It can answer warranty questions, give out invoice numbers, book and move appointments against a real availability model, register brand new customers (it asks for a callback number), check live weather for attic jobs, and search the web when it hits a model number it doesn't know. When it can't handle something, like a billing dispute, it creates a handoff task instead of guessing.
+
+The platform is where the office side lives: today's schedule by tech, a live view of whatever call is in progress, and a full record of every call with transcripts and each action the agent took. That was the owner's biggest complaint, not knowing what the bot promised people, so every booking and note the agent makes is logged and visible.
+
+One thing I added past the spec: techs can call the same number. They give their name and a 4 digit PIN (bank style), and then they can hear their schedule, ask what was done last time at an address, mark a job complete, or leave a message for a coworker. Seemed like the natural extension since the brief mentioned owners and techs calling in.
+
+For the harness question: there's a harness folder in the repo with 10 scripted scenarios (emergency booking, warranty check, reschedule, angry customer, crew auth, new customer, and so on). Each one runs the same system prompt and tools as the phone agent against a throwaway copy of the database, and asserts what actually happened. It caught several real bugs while I was building, happy to walk through it.
+
+I didn't touch the data folder. Total cost was a few dollars across Twilio and OpenAI, receipts if you want them.
+
+Talk Friday or Saturday, whichever works for you.
+
+Diego

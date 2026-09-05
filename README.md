@@ -107,14 +107,16 @@ emergencies, hands off to a human when she should, and never invents prices,
 dates, or policies. Every tool call is persisted to `agent_actions` — the audit
 trail answering "what did it promise anyone?".
 
-**Tools (13):**
+**Tools (19):**
 
 - `find_customer` — search by name, company, or address fragment; returns matches with addresses
+- `create_customer` — register a new caller (name, address, callback number) and return ids for booking
+- `update_customer_contact` — save phone/email on an existing customer without re-creating it
 - `get_customer_profile` — customer 360: kind, addresses, job count, open balance
 - `get_visit_history` — recent visits with status, dates, techs, note summaries
 - `check_warranty` — warranty verdict with dates (1-yr labor warranty, warranty-tagged jobs/lines)
 - `get_upcoming_appointments` — scheduled/in-progress future jobs
-- `check_availability` — open arrival windows for a date (capacity from assignments)
+- `check_availability` — open arrival windows for a date (capacity from assignments; past windows never offered)
 - `book_appointment` — create a scheduled job with best-fit tech (broadcasts live)
 - `reschedule_appointment` — move date/window, keep the tech if free
 - `cancel_appointment` — cancel with a reason note
@@ -122,6 +124,25 @@ trail answering "what did it promise anyone?".
 - `get_weather` — Open-Meteo current/forecast for a Miami-area city or zip
 - `web_search` — DuckDuckGo instant answers + top results (model numbers, supplier hours)
 - `request_handoff` — create a handoff task and flag the live call on the dashboard
+- `identify_employee` — crew line: roster match + 4-digit PIN verification (name alone grants nothing)
+- `get_my_schedule` — a verified tech's jobs for a day (window, address, latest human note)
+- `complete_job` — a verified tech marks their own job complete
+- `leave_message` — a verified tech leaves a routed message for a coworker or the office
+
+Note hygiene: Housecall Pro's automation writes draft artifacts into job notes
+(`[AI Auto-Complete … REVIEW BEFORE INVOICING]` letters, `=== AI STATUS FLAGS ===`
+blocks). Those are office workflow data, never caller-facing — they're filtered
+out of every agent-read path (visit history, crew schedule notes).
+
+**Crew line.** Techs call the same number as customers. Bank-style verification:
+a name match alone grants nothing — Marina asks for a 4-digit PIN before reading
+anything internal; `get_my_schedule`, `complete_job`, and `leave_message` all
+require a verified PIN, and `complete_job` only works on the verified tech's own
+jobs. Three wrong PINs lock crew access for the rest of the call. PINs are
+derived deterministically per employee (`CREW_PIN_SEED`) so they survive
+reseeds/redeploys; the office looks them up locally with
+`npm --prefix server run pins` — they are deliberately absent from the dashboard
+and the API, which have no auth.
 
 If telephony is unavailable, a **"Call the front desk"** button on the dashboard
 uses the Realtime API over browser WebRTC with an ephemeral token
@@ -143,9 +164,10 @@ React SPA served live over `/ws` (`call.started`, `call.transcript`, `call.actio
 ## Verification & eval harness
 
 ```bash
-npm --prefix server run test:tools    # unit: all 13 tools against the real DB
+npm --prefix server run test:tools    # unit: all 19 tools against the real DB
 npm --prefix server run test:bridge   # integration: Twilio⇄Realtime bridge vs fake OpenAI + fake Twilio
-node harness/run.js                   # 8 scripted caller scenarios through the real tool layer
+npm --prefix server run pins          # print crew-line PINs locally (never exposed via API/UI)
+node harness/run.js                   # 10 scripted caller scenarios through the real tool layer
 node harness/run.js --dry-run         # validate scenarios without an OpenAI key
 HARNESS_FAKE_LLM=1 node harness/run.js  # fully deterministic, offline
 ```
@@ -167,7 +189,8 @@ behaviors (e.g. invented prices).
 - **No auth.** Internal office demo tool; add SSO/RBAC before real exposure.
 - **Capacity model:** 4 arrival windows/day (8–10, 10–12, 13–15, 15–17 ET),
   Mon–Sat 8:00–17:00, max 2 jobs per tech per window, computed from
-  `job_assignments`. Simple and explainable; no travel-time routing.
+  `job_assignments`. Windows already in the past are never offered or booked
+  (same-day cutoff 14:00 ET). Simple and explainable; no travel-time routing.
 - **One process for everything.** HTTP + both WS endpoints + static hosting in a
   single Fastify app; trivially deployable as one container. Doesn't scale
   horizontally without sticky sessions/event-bus fanout — irrelevant at this size.

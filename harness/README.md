@@ -1,7 +1,7 @@
 # Eval harness
 
 Proves the voice agent's decision-making layer without a phone call: scripted
-caller turns go through an LLM using the **same system prompt and the same 13
+caller turns go through an LLM using the **same system prompt and the same 19
 tool schemas** as the phone agent, and every tool call runs against the **real
 tool implementations**. Each scenario gets a fresh throwaway copy of
 `server/data/gulfbreeze.db` (`harness/tmp/`, via `GBA_DB_PATH` + one child
@@ -9,7 +9,7 @@ process per scenario); the source DB is hash-verified untouched after every run.
 
 ## Run
 
-- `npm run harness` — all 8 scenarios (needs `OPENAI_API_KEY`; model via `HARNESS_MODEL`, default `gpt-4o-mini`)
+- `npm run harness` — all 10 scenarios (needs `OPENAI_API_KEY`; model via `HARNESS_MODEL`, default `gpt-4o-mini`)
 - `npm run harness -- --scenario s3-emergency-booking` — one scenario
 - `npm run harness -- --dry-run` — validate scenario files + DB fixtures only, no API key needed
 - `HARNESS_FAKE_LLM=1 npm run harness` — deterministic fake LLM; full loop, no key

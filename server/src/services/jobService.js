@@ -71,7 +71,9 @@ function validateSlot(date, windowLabel) {
   const avail = schedule.getAvailability(date, windowLabel);
   if (avail.closed) throw badRequest(avail.reason ?? 'closed that day');
   const slot = avail.windows[0];
-  if (!slot || !slot.open) throw badRequest(`no capacity in window ${windowLabel} on ${date}`);
+  if (!slot) throw badRequest(`window ${windowLabel} is not offered on ${date}`);
+  if (slot.past) throw badRequest(slot.past_reason ?? `window ${windowLabel} on ${date} is already in the past`);
+  if (!slot.open) throw badRequest(`no capacity in window ${windowLabel} on ${date}`);
   return { w, slot };
 }
 
