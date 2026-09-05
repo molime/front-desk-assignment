@@ -6,22 +6,37 @@ const esc = (s) => s.replace(/[%_\\]/g, (c) => `\\${c}`);
 
 const parseCustomer = (row) => (row ? { ...row, tags: JSON.parse(row.tags || '[]') } : null);
 
-/** Search by name, company, or address fragment. Returns top matches with addresses. */
+/** Search by name, company, or address fragment. Returns top matches with addresses.
+ *  Callers speak whole phrases ("89 Harborlight Shores, Miami Beach"), which rarely
+ *  fit inside a single column — when the full query matches nothing, retry with
+ *  progressively shorter head fragments (street number + name) before giving up. */
 export function search(query, limit = 10) {
-  const q = `%${esc(String(query).trim())}%`;
-  const rows = db
-    .prepare(
-      `SELECT DISTINCT c.* FROM customers c
-       LEFT JOIN customer_addresses a ON a.customer_id = c.id
-       WHERE (c.first_name || ' ' || c.last_name) LIKE ? ESCAPE '\\'
-          OR c.company LIKE ? ESCAPE '\\'
-          OR a.street LIKE ? ESCAPE '\\'
-          OR a.city LIKE ? ESCAPE '\\'
-          OR a.zip LIKE ? ESCAPE '\\'
-       ORDER BY c.job_count DESC
-       LIMIT ?`
-    )
-    .all(q, q, q, q, q, limit);
+  const run = (q) => {
+    const like = `%${esc(String(q).trim())}%`;
+    return db
+      .prepare(
+        `SELECT DISTINCT c.* FROM customers c
+         LEFT JOIN customer_addresses a ON a.customer_id = c.id
+         WHERE (c.first_name || ' ' || c.last_name) LIKE ? ESCAPE '\\'
+            OR c.company LIKE ? ESCAPE '\\'
+            OR a.street LIKE ? ESCAPE '\\'
+            OR a.city LIKE ? ESCAPE '\\'
+            OR a.zip LIKE ? ESCAPE '\\'
+         ORDER BY c.job_count DESC
+         LIMIT ?`
+      )
+      .all(like, like, like, like, like, limit);
+  };
+  let rows = run(query);
+  if (rows.length === 0) {
+    // Drop trailing parts (city/state/zip) one at a time and retry — keeps the
+    // street fragment ("89 Harborlight Shores") which matches the address row.
+    const parts = String(query).trim().split(/[\s]*,[\s]*/).filter(Boolean);
+    for (let keep = parts.length - 1; keep >= 1; keep--) {
+      rows = run(parts.slice(0, keep).join(', '));
+      if (rows.length > 0) break;
+    }
+  }
   const addrQ = db.prepare(`SELECT * FROM customer_addresses WHERE customer_id = ?`);
   return rows.map((c) => ({ ...parseCustomer(c), addresses: addrQ.all(c.id) }));
 }

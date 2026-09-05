@@ -42,12 +42,21 @@ export function handleMediaStream(twilioWs, req) {
   let openAiReady = false;
   let ended = false;
 
+  // The GA Realtime API emits TWO events per function call: the item completion
+  // (response.output_item.done, item.type=function_call) and the arguments
+  // completion (response.function_call_arguments.done). Both carry the same
+  // call_id, and a retry/relay can resend either. Execute each call_id once:
+  // the first result is cached so a duplicate gets the same answer (same guard
+  // as the web-call relay — a prod call double-booked every tool before this).
+  const handledToolCalls = new Map();
+
   // Barge-in bookkeeping (canonical Twilio realtime pattern):
   // track which assistant item is playing and how much audio the caller heard.
   let latestMediaTimestamp = 0;
   let responseStartTimestamp = null;
   let lastAssistantItem = null;
   const markQueue = [];
+  let framesOut = 0; // agent audio frames sent to Twilio (zombie-stream watchdog)
 
   const sendTwilio = (msg) => {
     if (twilioWs.readyState === WebSocket.OPEN) twilioWs.send(JSON.stringify(msg));
@@ -65,6 +74,7 @@ export function handleMediaStream(twilioWs, req) {
   async function finalizeOnce(status = 'completed') {
     if (ended || !call) return;
     ended = true;
+    handledToolCalls.clear();
     clearCallAuth(call.id);
     const fresh = calls.getCall(call.id);
     if (!fresh?.ended_at) {
@@ -79,9 +89,19 @@ export function handleMediaStream(twilioWs, req) {
 
   async function handleFunctionCall(item) {
     const name = item.name;
+    // Dedupe: the realtime API emits BOTH response.output_item.done (item
+    // complete) and response.function_call_arguments.done (args complete) for
+    // the SAME function call — execute it once, ignore the duplicate entirely.
+    // (Live prod incident: every tool ran twice → two identical jobs booked.)
+    const key = item.call_id ?? `noid_${name}_${JSON.stringify(safeParse(item.arguments ?? ''))}`;
+    if (handledToolCalls.has(key)) {
+      log.debug({ tool: name, call_id: item.call_id }, 'duplicate function-call event ignored');
+      return;
+    }
     const args = safeParse(item.arguments ?? '') ?? {};
     log.info({ tool: name, call_id: item.call_id }, 'tool call');
     const result = await executeTool(name, args, { callId: call?.id ?? null });
+    handledToolCalls.set(key, result);
     if (call) {
       calls.addAgentAction(call.id, name, args, result);
       broadcast('call.action', {
@@ -139,6 +159,18 @@ export function handleMediaStream(twilioWs, req) {
             'Greet the caller briefly: "Thanks for calling Gulf Breeze Air, this is Marina. How can I help you today?"',
         },
       });
+      // Zombie-stream watchdog: if the greeting never produces audio frames to
+      // Twilio within 15s, the media path is dead even though the session
+      // acked (live incident: caller heard silence, socket stayed open 37s).
+      // Surface it loudly so the operator can tell the caller to redial.
+      setTimeout(() => {
+        if (!ended && framesOut === 0) {
+          log.warn('NO AGENT AUDIO within 15s of session start — media path may be dead; caller should redial');
+          if (twilioWs.readyState === WebSocket.OPEN) {
+            sendTwilio({ event: 'clear', streamSid });
+          }
+        }
+      }, 15000);
     });
 
     openAiWs.on('message', async (data) => {
@@ -179,6 +211,7 @@ export function handleMediaStream(twilioWs, req) {
       case 'response.output_audio.delta':
       case 'response.audio.delta': {
         if (!streamSid) break;
+        framesOut++;
         sendTwilio({ event: 'media', streamSid, media: { payload: msg.delta } });
         if (msg.item_id) lastAssistantItem = msg.item_id;
         if (responseStartTimestamp == null) responseStartTimestamp = latestMediaTimestamp;

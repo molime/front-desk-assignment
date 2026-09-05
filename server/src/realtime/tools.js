@@ -97,9 +97,13 @@ const handlers = {
   },
 
   create_customer({ first_name, last_name, company, kind, phone, email, address }, ctx) {
-    // Default the callback number to the number the caller is phoning from
-    // (phone calls only — browser calls have no caller number).
-    let contactPhone = phone ?? null;
+    // A real callback number looks like digits (optionally +, dashes, spaces,
+    // parens, an x for extensions). The model cannot know the caller's number
+    // on a phone call, so it sometimes passes a placeholder phrase like
+    // "caller's current number" (live-call incident) — treat anything without
+    // digits as "not provided" and let the fallback below capture the real one.
+    const isRealPhone = (s) => /\d/.test(String(s ?? '')) && String(s).trim().length >= 7;
+    let contactPhone = isRealPhone(phone) ? String(phone).trim() : null;
     if (!contactPhone && ctx?.callId) {
       const row = calls.getCall(ctx.callId);
       if (row?.from_number && row.from_number !== 'web-call') contactPhone = row.from_number;

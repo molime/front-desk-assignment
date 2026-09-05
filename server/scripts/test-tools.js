@@ -28,6 +28,16 @@ check('returns matches with addresses', found.matches?.length > 0 && found.match
 const customer = found.matches[0];
 const address = customer.addresses[0];
 
+// Live callers append the city ("89 Harborlight Shores, Miami Beach") — the
+// full phrase never fits one column; the fallback must retry the head part.
+console.log('\nfind_customer("89 Harborlight Shores, Miami Beach") [spoken with city]:');
+const spoken = await executeTool('find_customer', { query: '89 Harborlight Shores, Miami Beach' });
+check('spoken address + city still finds the customer', spoken.matches?.length > 0,
+  JSON.stringify(spoken).slice(0, 200));
+const spokenNoCity = await executeTool('find_customer', { query: '89 Harborlight Shores Blvd W' });
+check('street fragment alone still finds the customer', spokenNoCity.matches?.length > 0,
+  JSON.stringify(spokenNoCity).slice(0, 200));
+
 // --- get_customer_profile --------------------------------------------------------
 console.log('\nget_customer_profile:');
 const profile = await executeTool('get_customer_profile', { customer_id: customer.customer_id });
@@ -113,6 +123,39 @@ const bad = await executeTool('book_appointment', { customer_id: 'cus_nope', dat
 check('tool errors come back as {error}, not thrown', typeof bad.error === 'string');
 const unknown = await executeTool('nope_tool', {});
 check('unknown tool → {error}', unknown.error === 'unknown tool: nope_tool');
+
+// --- create_customer: phone capture (live incident: model passed the literal
+// placeholder "caller's current number" — must fall back to the real from_number)
+console.log('\ncreate_customer phone capture:');
+const { createCall } = await import('../src/services/callService.js');
+// Clean up rows from previous runs (call_sid is reused every run).
+for (const s of db.prepare(`SELECT id FROM calls WHERE call_sid = 'CAtestphone1'`).all()) {
+  db.prepare(`DELETE FROM agent_actions WHERE call_id = ?`).run(s.id);
+  db.prepare(`DELETE FROM calls WHERE id = ?`).run(s.id);
+}
+const pcCall = createCall({ call_sid: 'CAtestphone1', from_number: '+13055550142', status: 'in-progress' });
+const phoneCallId = pcCall.id;
+const createdPlaceholder = await executeTool('create_customer', {
+  first_name: 'Phone', last_name: 'Test', kind: 'homeowner',
+  phone: "caller's current number", // the exact placeholder from the live call
+  address: { street: '1 Phone Capture Ln', city: 'Miami', state: 'FL' },
+}, { callId: phoneCallId });
+check('placeholder phone string rejected → caller number captured instead',
+  createdPlaceholder.phone === '+13055550142', JSON.stringify(createdPlaceholder).slice(0, 200));
+const createdExplicit = await executeTool('create_customer', {
+  first_name: 'Phone', last_name: 'Test2', kind: 'homeowner',
+  phone: '(305) 555-0100', // a real dictated number must win
+  address: { street: '2 Phone Capture Ln', city: 'Miami', state: 'FL' },
+}, { callId: phoneCallId });
+check('real dictated phone wins over the caller number', createdExplicit.phone === '(305) 555-0100',
+  JSON.stringify(createdExplicit).slice(0, 200));
+check('both creates returned usable ids', Boolean(createdPlaceholder.customer_id && createdPlaceholder.address_id
+  && createdExplicit.customer_id && createdExplicit.address_id));
+// cleanup the two test customers + the call row
+db.prepare(`DELETE FROM customer_addresses WHERE customer_id IN (?, ?)`).run(createdPlaceholder.customer_id, createdExplicit.customer_id);
+db.prepare(`DELETE FROM customers WHERE id IN (?, ?)`).run(createdPlaceholder.customer_id, createdExplicit.customer_id);
+db.prepare(`DELETE FROM agent_actions WHERE call_id = ?`).run(phoneCallId);
+db.prepare(`DELETE FROM calls WHERE id = ?`).run(phoneCallId);
 
 // --- crew line: PIN hygiene + lockout (regression for the PIN-leak fix) -----------------
 console.log('\ncrew line / PINs:');

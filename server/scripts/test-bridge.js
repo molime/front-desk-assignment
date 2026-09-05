@@ -67,10 +67,17 @@ function driveConversation(ws) {
   send({ type: 'response.output_audio.delta', response_id: 'r1', item_id: 'a1', output_index: 0, content_index: 0, delta: Buffer.from('fake-mulaw-audio').toString('base64') }, 60);
   send({ type: 'input_audio_buffer.speech_started', item_id: 'u2', audio_start_ms: 0 }, 90); // barge-in
   send({ type: 'response.output_audio_transcript.done', response_id: 'r1', item_id: 'a1', transcript: 'Let me look that up for you.' }, 120);
+  // GA Realtime emits BOTH of these for one function call (same call_id) —
+  // the bridge must execute the tool once, not twice (live prod incident:
+  // every tool ran twice → two identical jobs booked).
   send({
     type: 'response.output_item.done', response_id: 'r2', output_index: 0,
     item: { type: 'function_call', call_id: 'fc_1', name: 'find_customer', arguments: JSON.stringify({ query: '89 Harborlight' }) },
   }, 160);
+  send({
+    type: 'response.function_call_arguments.done', response_id: 'r2', item_id: 'fc_1', call_id: 'fc_1',
+    name: 'find_customer', arguments: JSON.stringify({ query: '89 Harborlight' }),
+  }, 190);
 }
 
 // --- boot the real server -------------------------------------------------------------
@@ -129,8 +136,10 @@ const transcripts = db.prepare(`SELECT * FROM call_transcripts WHERE call_id = ?
 check('caller + agent transcripts persisted', transcripts.length === 2
   && transcripts.some((t) => t.speaker === 'caller') && transcripts.some((t) => t.speaker === 'agent'),
   JSON.stringify(transcripts.map((t) => [t.speaker, t.text])));
-const action = db.prepare(`SELECT * FROM agent_actions WHERE call_id = ?`).get(call.id);
-check('agent_action persisted', action?.tool === 'find_customer' && JSON.parse(action.result).matches?.length > 0);
+const action = db.prepare(`SELECT * FROM agent_actions WHERE call_id = ?`).all(call.id);
+check('agent_action persisted', action.length === 1 && action[0].tool === 'find_customer' && JSON.parse(action[0].result).matches?.length > 0);
+check('duplicate function-call event did NOT double-execute (GA dual-event regression)',
+  action.length === 1, `${action.length} agent_actions for one tool call`);
 
 console.log('\n— event bus —');
 const ev = (n) => busEvents.filter((e) => e.event === n);
