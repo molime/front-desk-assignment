@@ -22,6 +22,10 @@ import path from 'node:path';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(here, '..');
+
+// Pick up OPENAI_API_KEY from server/.env when present, so `npm run harness`
+// works without exporting anything. Children inherit process.env.
+try { process.loadEnvFile(path.join(ROOT, 'server', '.env')); } catch { /* no .env */ }
 const SRC_DB = path.join(ROOT, 'server', 'data', 'gulfbreeze.db');
 const TMP_DIR = path.join(here, 'tmp');
 const SCEN_DIR = path.join(here, 'scenarios');
