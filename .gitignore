@@ -11,3 +11,17 @@ server/data/*.db-shm
 server/data/*.db-wal
 harness/tmp/
 reply-email.txt
+
+# AI tooling & working notes
+UNDERSTANDING.md
+call-agenda.txt
+follow-up-email.txt
+CLAUDE.md
+AGENTS.md
+.claude/
+.cursor/
+.cursorrules
+.windsurf/
+.aider*
+.continue/
+.kimi/
